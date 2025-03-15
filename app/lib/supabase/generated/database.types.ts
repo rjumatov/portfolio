@@ -29,7 +29,7 @@ export type Database = {
           name: string
           project_details: string
           role?: string | null
-          status: Database["public"]["Enums"]["status"]
+          status?: Database["public"]["Enums"]["status"]
           verification_token?: string | null
         }
         Update: {
