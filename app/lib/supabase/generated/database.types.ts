@@ -29,7 +29,7 @@ export type Database = {
           name: string
           project_details: string
           role?: string | null
-          status?: Database["public"]["Enums"]["status"]
+          status: Database["public"]["Enums"]["status"]
           verification_token?: string | null
         }
         Update: {
@@ -55,7 +55,7 @@ export type Database = {
     Enums: {
       status:
         | "PENDING_VERIFICATION"
-        | "PENDING_RESPONSE"
+        | "AWAITING_RESPONSE"
         | "SCHEDULING_CALL"
         | "DECLINED"
         | "IN_PROGRESS"
