@@ -7,16 +7,22 @@ type Props = {
   title?: string | null;
   description?: string | null;
   delay: number;
+  isInView: boolean;
 };
 
-export default function StepItem({ index, title, description, delay }: Props) {
+export default function StepItem({
+  index,
+  title,
+  description,
+  delay,
+  isInView,
+}: Props) {
   return (
     <li className="flex items-start gap-4 sm:gap-6">
       <motion.span
         className="flex min-h-7 min-w-7 items-center justify-center rounded-lg border border-(--highlight) font-semibold backdrop-blur sm:min-h-8 sm:min-w-8 sm:text-lg"
         initial={{ opacity: 0, scale: 0.5 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
+        animate={isInView && { opacity: 1, scale: 1 }}
         transition={{
           duration: 0.4,
           delay,
@@ -27,8 +33,7 @@ export default function StepItem({ index, title, description, delay }: Props) {
       </motion.span>
       <motion.span
         initial={{ opacity: 0, x: -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
+        animate={isInView && { opacity: 1, x: 0 }}
         transition={{
           duration: 0.5,
           delay,

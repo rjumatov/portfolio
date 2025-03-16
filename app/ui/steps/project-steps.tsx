@@ -2,7 +2,8 @@
 
 import type { ProjectStep } from '@/app/lib/contentful/generated/sdk';
 import StepItem from '@/app/ui/steps/step-item';
-import { motion } from 'motion/react';
+import { motion, useInView } from 'motion/react';
+import { useRef } from 'react';
 
 type Props = {
   content?: ProjectStep[];
@@ -14,9 +15,12 @@ export default function ProjectSteps({ content }: Props) {
   const steps = content.slice(0, -1);
   const lastStep = content[content.length - 1];
 
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <>
-      <div className="relative">
+      <div ref={ref} className="relative">
         <motion.span
           className="absolute top-6 left-3.5 w-px bg-(--highlight) sm:top-7 sm:left-4"
           initial={{ height: 0 }}
@@ -32,6 +36,7 @@ export default function ProjectSteps({ content }: Props) {
               title={title}
               description={description}
               delay={index * 0.3}
+              isInView={isInView}
             />
           ))}
         </ul>
@@ -43,6 +48,7 @@ export default function ProjectSteps({ content }: Props) {
             title={lastStep.title}
             description={lastStep.description}
             delay={steps.length * 0.3}
+            isInView={isInView}
           />
         </ul>
       )}

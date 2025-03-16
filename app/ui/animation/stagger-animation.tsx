@@ -1,4 +1,5 @@
 'use client';
+
 import { type Variants, motion } from 'motion/react';
 import type { ReactElement } from 'react';
 
