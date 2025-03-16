@@ -33,7 +33,7 @@ export default function FormTextarea<T extends FieldValues>({
       : errorMessage;
 
   return (
-    <>
+    <div>
       <div
         className={`base-border relative max-h-36 rounded-xl duration-300 hover:bg-(--hover-color) ${errorMessage ? 'border-(--error-color)' : ''}`}
       >
@@ -64,6 +64,6 @@ export default function FormTextarea<T extends FieldValues>({
       >
         {message}
       </p>
-    </>
+    </div>
   );
 }
