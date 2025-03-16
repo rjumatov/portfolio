@@ -461,7 +461,7 @@ export type Contact = Entry & _Node & {
   _id: Scalars['ID']['output'];
   contentfulMetadata: ContentfulMetadata;
   linkedFrom?: Maybe<ContactLinkingCollections>;
-  projectStepsCollection?: Maybe<ContactProjectStepsCollection>;
+  processStepsCollection?: Maybe<ContactProcessStepsCollection>;
   subTitleHighlight?: Maybe<Scalars['String']['output']>;
   subTitleMain?: Maybe<Scalars['String']['output']>;
   sys: Sys;
@@ -476,13 +476,13 @@ export type ContactLinkedFromArgs = {
 
 
 /** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/contact) */
-export type ContactProjectStepsCollectionArgs = {
+export type ContactProcessStepsCollectionArgs = {
   limit?: InputMaybe<Scalars['Int']['input']>;
   locale?: InputMaybe<Scalars['String']['input']>;
-  order?: InputMaybe<Array<InputMaybe<ContactProjectStepsCollectionOrder>>>;
+  order?: InputMaybe<Array<InputMaybe<ContactProcessStepsCollectionOrder>>>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   skip?: InputMaybe<Scalars['Int']['input']>;
-  where?: InputMaybe<ProjectStepFilter>;
+  where?: InputMaybe<ProcessStepFilter>;
 };
 
 
@@ -515,8 +515,8 @@ export type ContactFilter = {
   AND?: InputMaybe<Array<InputMaybe<ContactFilter>>>;
   OR?: InputMaybe<Array<InputMaybe<ContactFilter>>>;
   contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
-  projectSteps?: InputMaybe<CfProjectStepNestedFilter>;
-  projectStepsCollection_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  processSteps?: InputMaybe<CfProcessStepNestedFilter>;
+  processStepsCollection_exists?: InputMaybe<Scalars['Boolean']['input']>;
   subTitleHighlight?: InputMaybe<Scalars['String']['input']>;
   subTitleHighlight_contains?: InputMaybe<Scalars['String']['input']>;
   subTitleHighlight_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -571,15 +571,15 @@ export enum ContactOrder {
   TitleDesc = 'title_DESC'
 }
 
-export type ContactProjectStepsCollection = {
-  __typename?: 'ContactProjectStepsCollection';
-  items: Array<Maybe<ProjectStep>>;
+export type ContactProcessStepsCollection = {
+  __typename?: 'ContactProcessStepsCollection';
+  items: Array<Maybe<ProcessStep>>;
   limit: Scalars['Int']['output'];
   skip: Scalars['Int']['output'];
   total: Scalars['Int']['output'];
 };
 
-export enum ContactProjectStepsCollectionOrder {
+export enum ContactProcessStepsCollectionOrder {
   DescriptionAsc = 'description_ASC',
   DescriptionDesc = 'description_DESC',
   SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
@@ -4519,46 +4519,46 @@ export enum PrivacyPolicyOrder {
   TitleDesc = 'title_DESC'
 }
 
-/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/projectStep) */
-export type ProjectStep = Entry & _Node & {
-  __typename?: 'ProjectStep';
+/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/processStep) */
+export type ProcessStep = Entry & _Node & {
+  __typename?: 'ProcessStep';
   _id: Scalars['ID']['output'];
   contentfulMetadata: ContentfulMetadata;
   description?: Maybe<Scalars['String']['output']>;
-  linkedFrom?: Maybe<ProjectStepLinkingCollections>;
+  linkedFrom?: Maybe<ProcessStepLinkingCollections>;
   sys: Sys;
   title?: Maybe<Scalars['String']['output']>;
 };
 
 
-/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/projectStep) */
-export type ProjectStepDescriptionArgs = {
+/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/processStep) */
+export type ProcessStepDescriptionArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
 
-/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/projectStep) */
-export type ProjectStepLinkedFromArgs = {
+/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/processStep) */
+export type ProcessStepLinkedFromArgs = {
   allowedLocales?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
 
-/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/projectStep) */
-export type ProjectStepTitleArgs = {
+/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/processStep) */
+export type ProcessStepTitleArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type ProjectStepCollection = {
-  __typename?: 'ProjectStepCollection';
-  items: Array<Maybe<ProjectStep>>;
+export type ProcessStepCollection = {
+  __typename?: 'ProcessStepCollection';
+  items: Array<Maybe<ProcessStep>>;
   limit: Scalars['Int']['output'];
   skip: Scalars['Int']['output'];
   total: Scalars['Int']['output'];
 };
 
-export type ProjectStepFilter = {
-  AND?: InputMaybe<Array<InputMaybe<ProjectStepFilter>>>;
-  OR?: InputMaybe<Array<InputMaybe<ProjectStepFilter>>>;
+export type ProcessStepFilter = {
+  AND?: InputMaybe<Array<InputMaybe<ProcessStepFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<ProcessStepFilter>>>;
   contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
   description?: InputMaybe<Scalars['String']['input']>;
   description_contains?: InputMaybe<Scalars['String']['input']>;
@@ -4577,30 +4577,30 @@ export type ProjectStepFilter = {
   title_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
-export type ProjectStepLinkingCollections = {
-  __typename?: 'ProjectStepLinkingCollections';
+export type ProcessStepLinkingCollections = {
+  __typename?: 'ProcessStepLinkingCollections';
   contactCollection?: Maybe<ContactCollection>;
   entryCollection?: Maybe<EntryCollection>;
 };
 
 
-export type ProjectStepLinkingCollectionsContactCollectionArgs = {
+export type ProcessStepLinkingCollectionsContactCollectionArgs = {
   limit?: InputMaybe<Scalars['Int']['input']>;
   locale?: InputMaybe<Scalars['String']['input']>;
-  order?: InputMaybe<Array<InputMaybe<ProjectStepLinkingCollectionsContactCollectionOrder>>>;
+  order?: InputMaybe<Array<InputMaybe<ProcessStepLinkingCollectionsContactCollectionOrder>>>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   skip?: InputMaybe<Scalars['Int']['input']>;
 };
 
 
-export type ProjectStepLinkingCollectionsEntryCollectionArgs = {
+export type ProcessStepLinkingCollectionsEntryCollectionArgs = {
   limit?: InputMaybe<Scalars['Int']['input']>;
   locale?: InputMaybe<Scalars['String']['input']>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   skip?: InputMaybe<Scalars['Int']['input']>;
 };
 
-export enum ProjectStepLinkingCollectionsContactCollectionOrder {
+export enum ProcessStepLinkingCollectionsContactCollectionOrder {
   SubTitleHighlightAsc = 'subTitleHighlight_ASC',
   SubTitleHighlightDesc = 'subTitleHighlight_DESC',
   SubTitleMainAsc = 'subTitleMain_ASC',
@@ -4617,7 +4617,7 @@ export enum ProjectStepLinkingCollectionsContactCollectionOrder {
   TitleDesc = 'title_DESC'
 }
 
-export enum ProjectStepOrder {
+export enum ProcessStepOrder {
   DescriptionAsc = 'description_ASC',
   DescriptionDesc = 'description_DESC',
   SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
@@ -4672,8 +4672,8 @@ export type Query = {
   privacyOverviewCollection?: Maybe<PrivacyOverviewCollection>;
   privacyPolicy?: Maybe<PrivacyPolicy>;
   privacyPolicyCollection?: Maybe<PrivacyPolicyCollection>;
-  projectStep?: Maybe<ProjectStep>;
-  projectStepCollection?: Maybe<ProjectStepCollection>;
+  processStep?: Maybe<ProcessStep>;
+  processStepCollection?: Maybe<ProcessStepCollection>;
   service?: Maybe<Service>;
   serviceCollection?: Maybe<ServiceCollection>;
   services?: Maybe<Services>;
@@ -5012,20 +5012,20 @@ export type QueryPrivacyPolicyCollectionArgs = {
 };
 
 
-export type QueryProjectStepArgs = {
+export type QueryProcessStepArgs = {
   id: Scalars['String']['input'];
   locale?: InputMaybe<Scalars['String']['input']>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
 
-export type QueryProjectStepCollectionArgs = {
+export type QueryProcessStepCollectionArgs = {
   limit?: InputMaybe<Scalars['Int']['input']>;
   locale?: InputMaybe<Scalars['String']['input']>;
-  order?: InputMaybe<Array<InputMaybe<ProjectStepOrder>>>;
+  order?: InputMaybe<Array<InputMaybe<ProcessStepOrder>>>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   skip?: InputMaybe<Scalars['Int']['input']>;
-  where?: InputMaybe<ProjectStepFilter>;
+  where?: InputMaybe<ProcessStepFilter>;
 };
 
 
@@ -6727,9 +6727,9 @@ export type CfPrivacyOverviewNestedFilter = {
   userRightsTitle_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
-export type CfProjectStepNestedFilter = {
-  AND?: InputMaybe<Array<InputMaybe<CfProjectStepNestedFilter>>>;
-  OR?: InputMaybe<Array<InputMaybe<CfProjectStepNestedFilter>>>;
+export type CfProcessStepNestedFilter = {
+  AND?: InputMaybe<Array<InputMaybe<CfProcessStepNestedFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<CfProcessStepNestedFilter>>>;
   contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
   description?: InputMaybe<Scalars['String']['input']>;
   description_contains?: InputMaybe<Scalars['String']['input']>;
@@ -6887,7 +6887,7 @@ export type ContactContentQueryVariables = Exact<{
 }>;
 
 
-export type ContactContentQuery = { __typename?: 'Query', contactCollection?: { __typename?: 'ContactCollection', items: Array<{ __typename?: 'Contact', title?: string | null, subTitleMain?: string | null, subTitleHighlight?: string | null, projectStepsCollection?: { __typename?: 'ContactProjectStepsCollection', items: Array<{ __typename?: 'ProjectStep', title?: string | null, description?: string | null } | null> } | null } | null> } | null, formCollection?: { __typename?: 'FormCollection', items: Array<{ __typename?: 'Form', gdprNoticeIntro?: string | null, gdprNoticeLinkText?: string | null, gdprNoticeDetails?: string | null, sendButtonLabel?: string | null, errorTitle?: string | null, errorIntro?: string | null, errorEditPrompt?: string | null, errorEditAriaLabel?: string | null, errorDescription?: string | null, errorContactEmail?: string | null, errorButtonLabel?: string | null, emailVerificationTitle?: string | null, emailVerificationDescription?: string | null, emailResendButtonLabel?: string | null, emailEditPrompt?: string | null, emailEditAriaLabel?: string | null, attemptsLabel?: string | null, attemptLabel?: string | null, labels?: { __typename?: 'Label', name?: string | null, email?: string | null, role?: string | null, projectDetails?: string | null } | null, validationMessages?: { __typename?: 'ValidationMessages', nameRequired?: string | null, nameMaxLength?: string | null, emailInvalid?: string | null, emailMaxLength?: string | null, roleMaxLength?: string | null, projectDetailsRequired?: string | null, projectDetailsMaxLength?: string | null, consentRequired?: string | null } | null } | null> } | null, testimonialsCollection?: { __typename?: 'TestimonialsCollection', items: Array<{ __typename?: 'Testimonials', title?: string | null, prevSlideLabel?: string | null, nextSlideLabel?: string | null, testimonialEntriesCollection?: { __typename?: 'TestimonialsTestimonialEntriesCollection', items: Array<{ __typename?: 'Testimonial', quote?: string | null, author?: string | null, jobTitle?: string | null, logoInvert?: boolean | null, logo?: { __typename?: 'Asset', url?: string | null, width?: number | null, height?: number | null, description?: string | null } | null } | null> } | null } | null> } | null };
+export type ContactContentQuery = { __typename?: 'Query', contactCollection?: { __typename?: 'ContactCollection', items: Array<{ __typename?: 'Contact', title?: string | null, subTitleMain?: string | null, subTitleHighlight?: string | null, processStepsCollection?: { __typename?: 'ContactProcessStepsCollection', items: Array<{ __typename?: 'ProcessStep', title?: string | null, description?: string | null } | null> } | null } | null> } | null, formCollection?: { __typename?: 'FormCollection', items: Array<{ __typename?: 'Form', gdprNoticeIntro?: string | null, gdprNoticeLinkText?: string | null, gdprNoticeDetails?: string | null, sendButtonLabel?: string | null, errorTitle?: string | null, errorIntro?: string | null, errorEditPrompt?: string | null, errorEditAriaLabel?: string | null, errorDescription?: string | null, errorContactEmail?: string | null, errorButtonLabel?: string | null, emailVerificationTitle?: string | null, emailVerificationDescription?: string | null, emailResendButtonLabel?: string | null, emailEditPrompt?: string | null, emailEditAriaLabel?: string | null, attemptsLabel?: string | null, attemptLabel?: string | null, labels?: { __typename?: 'Label', name?: string | null, email?: string | null, role?: string | null, projectDetails?: string | null } | null, validationMessages?: { __typename?: 'ValidationMessages', nameRequired?: string | null, nameMaxLength?: string | null, emailInvalid?: string | null, emailMaxLength?: string | null, roleMaxLength?: string | null, projectDetailsRequired?: string | null, projectDetailsMaxLength?: string | null, consentRequired?: string | null } | null } | null> } | null, testimonialsCollection?: { __typename?: 'TestimonialsCollection', items: Array<{ __typename?: 'Testimonials', title?: string | null, prevSlideLabel?: string | null, nextSlideLabel?: string | null, testimonialEntriesCollection?: { __typename?: 'TestimonialsTestimonialEntriesCollection', items: Array<{ __typename?: 'Testimonial', quote?: string | null, author?: string | null, jobTitle?: string | null, logoInvert?: boolean | null, logo?: { __typename?: 'Asset', url?: string | null, width?: number | null, height?: number | null, description?: string | null } | null } | null> } | null } | null> } | null };
 
 export type EmailContentQueryVariables = Exact<{
   locale?: InputMaybe<Scalars['String']['input']>;
@@ -7011,9 +7011,9 @@ export const ContactContentDocument = gql`
       title
       subTitleMain
       subTitleHighlight
-      projectStepsCollection {
+      processStepsCollection {
         items {
-          ... on ProjectStep {
+          ... on ProcessStep {
             title
             description
           }

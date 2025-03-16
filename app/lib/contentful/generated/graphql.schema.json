@@ -3410,7 +3410,7 @@
             "deprecationReason": null
           },
           {
-            "name": "projectStepsCollection",
+            "name": "processStepsCollection",
             "description": null,
             "args": [
               {
@@ -3445,7 +3445,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "ENUM",
-                    "name": "ContactProjectStepsCollectionOrder",
+                    "name": "ContactProcessStepsCollectionOrder",
                     "ofType": null
                   }
                 },
@@ -3482,7 +3482,7 @@
                 "description": null,
                 "type": {
                   "kind": "INPUT_OBJECT",
-                  "name": "ProjectStepFilter",
+                  "name": "ProcessStepFilter",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -3492,7 +3492,7 @@
             ],
             "type": {
               "kind": "OBJECT",
-              "name": "ContactProjectStepsCollection",
+              "name": "ContactProcessStepsCollection",
               "ofType": null
             },
             "isDeprecated": false,
@@ -3738,11 +3738,11 @@
             "deprecationReason": null
           },
           {
-            "name": "projectSteps",
+            "name": "processSteps",
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "cfProjectStepNestedFilter",
+              "name": "cfProcessStepNestedFilter",
               "ofType": null
             },
             "defaultValue": null,
@@ -3750,7 +3750,7 @@
             "deprecationReason": null
           },
           {
-            "name": "projectStepsCollection_exists",
+            "name": "processStepsCollection_exists",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -4225,7 +4225,7 @@
       },
       {
         "kind": "OBJECT",
-        "name": "ContactProjectStepsCollection",
+        "name": "ContactProcessStepsCollection",
         "description": null,
         "isOneOf": null,
         "fields": [
@@ -4241,7 +4241,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "ProjectStep",
+                  "name": "ProcessStep",
                   "ofType": null
                 }
               }
@@ -4305,7 +4305,7 @@
       },
       {
         "kind": "ENUM",
-        "name": "ContactProjectStepsCollectionOrder",
+        "name": "ContactProcessStepsCollectionOrder",
         "description": null,
         "isOneOf": null,
         "fields": null,
@@ -8613,7 +8613,7 @@
           },
           {
             "kind": "OBJECT",
-            "name": "ProjectStep",
+            "name": "ProcessStep",
             "ofType": null
           },
           {
@@ -34517,8 +34517,8 @@
       },
       {
         "kind": "OBJECT",
-        "name": "ProjectStep",
-        "description": "[See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/projectStep)",
+        "name": "ProcessStep",
+        "description": "[See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/processStep)",
         "isOneOf": null,
         "fields": [
           {
@@ -34601,7 +34601,7 @@
             ],
             "type": {
               "kind": "OBJECT",
-              "name": "ProjectStepLinkingCollections",
+              "name": "ProcessStepLinkingCollections",
               "ofType": null
             },
             "isDeprecated": false,
@@ -34667,7 +34667,7 @@
       },
       {
         "kind": "OBJECT",
-        "name": "ProjectStepCollection",
+        "name": "ProcessStepCollection",
         "description": null,
         "isOneOf": null,
         "fields": [
@@ -34683,7 +34683,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "ProjectStep",
+                  "name": "ProcessStep",
                   "ofType": null
                 }
               }
@@ -34747,7 +34747,7 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "ProjectStepFilter",
+        "name": "ProcessStepFilter",
         "description": null,
         "isOneOf": false,
         "fields": null,
@@ -34760,7 +34760,7 @@
               "name": null,
               "ofType": {
                 "kind": "INPUT_OBJECT",
-                "name": "ProjectStepFilter",
+                "name": "ProcessStepFilter",
                 "ofType": null
               }
             },
@@ -34776,7 +34776,7 @@
               "name": null,
               "ofType": {
                 "kind": "INPUT_OBJECT",
-                "name": "ProjectStepFilter",
+                "name": "ProcessStepFilter",
                 "ofType": null
               }
             },
@@ -34999,7 +34999,7 @@
       },
       {
         "kind": "OBJECT",
-        "name": "ProjectStepLinkingCollections",
+        "name": "ProcessStepLinkingCollections",
         "description": null,
         "isOneOf": null,
         "fields": [
@@ -35039,7 +35039,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "ENUM",
-                    "name": "ProjectStepLinkingCollectionsContactCollectionOrder",
+                    "name": "ProcessStepLinkingCollectionsContactCollectionOrder",
                     "ofType": null
                   }
                 },
@@ -35149,7 +35149,7 @@
       },
       {
         "kind": "ENUM",
-        "name": "ProjectStepLinkingCollectionsContactCollectionOrder",
+        "name": "ProcessStepLinkingCollectionsContactCollectionOrder",
         "description": null,
         "isOneOf": null,
         "fields": null,
@@ -35245,7 +35245,7 @@
       },
       {
         "kind": "ENUM",
-        "name": "ProjectStepOrder",
+        "name": "ProcessStepOrder",
         "description": null,
         "isOneOf": null,
         "fields": null,
@@ -38043,7 +38043,7 @@
             "deprecationReason": null
           },
           {
-            "name": "projectStep",
+            "name": "processStep",
             "description": null,
             "args": [
               {
@@ -38089,14 +38089,14 @@
             ],
             "type": {
               "kind": "OBJECT",
-              "name": "ProjectStep",
+              "name": "ProcessStep",
               "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "projectStepCollection",
+            "name": "processStepCollection",
             "description": null,
             "args": [
               {
@@ -38131,7 +38131,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "ENUM",
-                    "name": "ProjectStepOrder",
+                    "name": "ProcessStepOrder",
                     "ofType": null
                   }
                 },
@@ -38168,7 +38168,7 @@
                 "description": null,
                 "type": {
                   "kind": "INPUT_OBJECT",
-                  "name": "ProjectStepFilter",
+                  "name": "ProcessStepFilter",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -38178,7 +38178,7 @@
             ],
             "type": {
               "kind": "OBJECT",
-              "name": "ProjectStepCollection",
+              "name": "ProcessStepCollection",
               "ofType": null
             },
             "isDeprecated": false,
@@ -46738,7 +46738,7 @@
           },
           {
             "kind": "OBJECT",
-            "name": "ProjectStep",
+            "name": "ProcessStep",
             "ofType": null
           },
           {
@@ -55366,7 +55366,7 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "cfProjectStepNestedFilter",
+        "name": "cfProcessStepNestedFilter",
         "description": null,
         "isOneOf": false,
         "fields": null,
@@ -55379,7 +55379,7 @@
               "name": null,
               "ofType": {
                 "kind": "INPUT_OBJECT",
-                "name": "cfProjectStepNestedFilter",
+                "name": "cfProcessStepNestedFilter",
                 "ofType": null
               }
             },
@@ -55395,7 +55395,7 @@
               "name": null,
               "ofType": {
                 "kind": "INPUT_OBJECT",
-                "name": "cfProjectStepNestedFilter",
+                "name": "cfProcessStepNestedFilter",
                 "ofType": null
               }
             },

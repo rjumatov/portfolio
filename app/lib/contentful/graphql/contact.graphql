@@ -4,9 +4,9 @@ query contactContent($locale: String) {
       title
       subTitleMain
       subTitleHighlight
-      projectStepsCollection {
+      processStepsCollection {
         items {
-          ... on ProjectStep {
+          ... on ProcessStep {
             title
             description
           }

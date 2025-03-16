@@ -10,7 +10,7 @@ type Props = {
   isInView: boolean;
 };
 
-export default function StepItem({
+export default function ProcessStepItem({
   index,
   title,
   description,

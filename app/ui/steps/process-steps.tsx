@@ -1,15 +1,15 @@
 'use client';
 
-import type { ProjectStep } from '@/app/lib/contentful/generated/sdk';
-import StepItem from '@/app/ui/steps/step-item';
+import type { ProcessStep } from '@/app/lib/contentful/generated/sdk';
+import ProcessStepItem from '@/app/ui/steps/process-step-item';
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 
 type Props = {
-  content?: ProjectStep[];
+  content?: ProcessStep[];
 };
 
-export default function ProjectSteps({ content }: Props) {
+export default function ProcessSteps({ content }: Props) {
   if (!content || content.length === 0) return null;
 
   const steps = content.slice(0, -1);
@@ -30,7 +30,7 @@ export default function ProjectSteps({ content }: Props) {
         />
         <ul className="space-y-2 sm:space-y-4 md:space-y-6">
           {steps.map(({ title, description }, index) => (
-            <StepItem
+            <ProcessStepItem
               key={title}
               index={index}
               title={title}
@@ -43,7 +43,7 @@ export default function ProjectSteps({ content }: Props) {
       </div>
       {lastStep && (
         <ul className="mt-4">
-          <StepItem
+          <ProcessStepItem
             index={steps.length}
             title={lastStep.title}
             description={lastStep.description}

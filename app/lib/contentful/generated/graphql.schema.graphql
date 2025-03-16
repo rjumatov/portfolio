@@ -267,7 +267,7 @@ type Contact implements Entry & _Node {
   _id: ID!
   contentfulMetadata: ContentfulMetadata!
   linkedFrom(allowedLocales: [String]): ContactLinkingCollections
-  projectStepsCollection(limit: Int = 100, locale: String, order: [ContactProjectStepsCollectionOrder], preview: Boolean, skip: Int = 0, where: ProjectStepFilter): ContactProjectStepsCollection
+  processStepsCollection(limit: Int = 100, locale: String, order: [ContactProcessStepsCollectionOrder], preview: Boolean, skip: Int = 0, where: ProcessStepFilter): ContactProcessStepsCollection
   subTitleHighlight(locale: String): String
   subTitleMain(locale: String): String
   sys: Sys!
@@ -285,8 +285,8 @@ input ContactFilter {
   AND: [ContactFilter]
   OR: [ContactFilter]
   contentfulMetadata: ContentfulMetadataFilter
-  projectSteps: cfProjectStepNestedFilter
-  projectStepsCollection_exists: Boolean
+  processSteps: cfProcessStepNestedFilter
+  processStepsCollection_exists: Boolean
   subTitleHighlight: String
   subTitleHighlight_contains: String
   subTitleHighlight_exists: Boolean
@@ -332,14 +332,14 @@ enum ContactOrder {
   title_DESC
 }
 
-type ContactProjectStepsCollection {
-  items: [ProjectStep]!
+type ContactProcessStepsCollection {
+  items: [ProcessStep]!
   limit: Int!
   skip: Int!
   total: Int!
 }
 
-enum ContactProjectStepsCollectionOrder {
+enum ContactProcessStepsCollectionOrder {
   description_ASC
   description_DESC
   sys_firstPublishedAt_ASC
@@ -2965,27 +2965,27 @@ enum PrivacyPolicyOrder {
 }
 
 """
-[See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/projectStep)
+[See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/processStep)
 """
-type ProjectStep implements Entry & _Node {
+type ProcessStep implements Entry & _Node {
   _id: ID!
   contentfulMetadata: ContentfulMetadata!
   description(locale: String): String
-  linkedFrom(allowedLocales: [String]): ProjectStepLinkingCollections
+  linkedFrom(allowedLocales: [String]): ProcessStepLinkingCollections
   sys: Sys!
   title(locale: String): String
 }
 
-type ProjectStepCollection {
-  items: [ProjectStep]!
+type ProcessStepCollection {
+  items: [ProcessStep]!
   limit: Int!
   skip: Int!
   total: Int!
 }
 
-input ProjectStepFilter {
-  AND: [ProjectStepFilter]
-  OR: [ProjectStepFilter]
+input ProcessStepFilter {
+  AND: [ProcessStepFilter]
+  OR: [ProcessStepFilter]
   contentfulMetadata: ContentfulMetadataFilter
   description: String
   description_contains: String
@@ -3004,12 +3004,12 @@ input ProjectStepFilter {
   title_not_in: [String]
 }
 
-type ProjectStepLinkingCollections {
-  contactCollection(limit: Int = 100, locale: String, order: [ProjectStepLinkingCollectionsContactCollectionOrder], preview: Boolean, skip: Int = 0): ContactCollection
+type ProcessStepLinkingCollections {
+  contactCollection(limit: Int = 100, locale: String, order: [ProcessStepLinkingCollectionsContactCollectionOrder], preview: Boolean, skip: Int = 0): ContactCollection
   entryCollection(limit: Int = 100, locale: String, preview: Boolean, skip: Int = 0): EntryCollection
 }
 
-enum ProjectStepLinkingCollectionsContactCollectionOrder {
+enum ProcessStepLinkingCollectionsContactCollectionOrder {
   subTitleHighlight_ASC
   subTitleHighlight_DESC
   subTitleMain_ASC
@@ -3026,7 +3026,7 @@ enum ProjectStepLinkingCollectionsContactCollectionOrder {
   title_DESC
 }
 
-enum ProjectStepOrder {
+enum ProcessStepOrder {
   description_ASC
   description_DESC
   sys_firstPublishedAt_ASC
@@ -3085,8 +3085,8 @@ type Query {
   privacyOverviewCollection(limit: Int = 100, locale: String, order: [PrivacyOverviewOrder], preview: Boolean, skip: Int = 0, where: PrivacyOverviewFilter): PrivacyOverviewCollection
   privacyPolicy(id: String!, locale: String, preview: Boolean): PrivacyPolicy
   privacyPolicyCollection(limit: Int = 100, locale: String, order: [PrivacyPolicyOrder], preview: Boolean, skip: Int = 0, where: PrivacyPolicyFilter): PrivacyPolicyCollection
-  projectStep(id: String!, locale: String, preview: Boolean): ProjectStep
-  projectStepCollection(limit: Int = 100, locale: String, order: [ProjectStepOrder], preview: Boolean, skip: Int = 0, where: ProjectStepFilter): ProjectStepCollection
+  processStep(id: String!, locale: String, preview: Boolean): ProcessStep
+  processStepCollection(limit: Int = 100, locale: String, order: [ProcessStepOrder], preview: Boolean, skip: Int = 0, where: ProcessStepFilter): ProcessStepCollection
   service(id: String!, locale: String, preview: Boolean): Service
   serviceCollection(limit: Int = 100, locale: String, order: [ServiceOrder], preview: Boolean, skip: Int = 0, where: ServiceFilter): ServiceCollection
   services(id: String!, locale: String, preview: Boolean): Services
@@ -4387,9 +4387,9 @@ input cfPrivacyOverviewNestedFilter {
   userRightsTitle_not_in: [String]
 }
 
-input cfProjectStepNestedFilter {
-  AND: [cfProjectStepNestedFilter]
-  OR: [cfProjectStepNestedFilter]
+input cfProcessStepNestedFilter {
+  AND: [cfProcessStepNestedFilter]
+  OR: [cfProcessStepNestedFilter]
   contentfulMetadata: ContentfulMetadataFilter
   description: String
   description_contains: String

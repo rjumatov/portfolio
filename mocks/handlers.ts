@@ -75,7 +75,7 @@ export const handlers = [
               title: 'Get in Touch!',
               subTitleMain: 'Send a',
               subTitleHighlight: 'Message.',
-              projectStepsCollection: {
+              processStepsCollection: {
                 items: [
                   {
                     title: 'Submit your project details',
@@ -85,7 +85,7 @@ export const handlers = [
                   {
                     title: 'Receive an offer',
                     description:
-                      'Based on the consultation, I’ll share my standard hourly or day rate. For specific projects, I’ll provide an estimate of the total cost, helping you decide if my services align with your budget.',
+                      'After the consultation, I’ll share my standard hourly or daily rate. If your project requires a fixed-price estimate, I’ll provide one within three business days, helping you decide if my services align with your budget.',
                   },
                   {
                     title: 'Work begins',

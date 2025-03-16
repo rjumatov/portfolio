@@ -1,14 +1,14 @@
 import contentfulClient from '@/app/lib/contentful/client';
 import type {
   Form,
-  ProjectStep,
+  ProcessStep,
   Testimonials,
 } from '@/app/lib/contentful/generated/sdk';
 import RadialAnimation from '@/app/ui/animation/radial-animation';
 import ViewAnimation from '@/app/ui/animation/view-animation';
 import ContactForm from '@/app/ui/form/contact-form';
 import TestimonialSlider from '@/app/ui/slider/testimonial-slider';
-import ProjectSteps from '@/app/ui/steps/project-steps';
+import ProcessSteps from '@/app/ui/steps/process-steps';
 import type { Locale } from 'next-intl';
 
 type Props = {
@@ -37,8 +37,8 @@ export default async function ContactSection({ locale }: Props) {
             <ContactForm content={query.formCollection?.items[0] as Form} />
           </ViewAnimation>
           <div className="lg:w-1/2">
-            <ProjectSteps
-              content={content?.projectStepsCollection?.items as ProjectStep[]}
+            <ProcessSteps
+              content={content?.processStepsCollection?.items as ProcessStep[]}
             />
           </div>
         </div>
