@@ -1,25 +1,22 @@
-## Portfolio Project
+# Freelance Developer Portfolio
 
-### About this Project
+## 🌐 Overview
 
-This is the source code for my **personal portfolio website**, built to showcase my **skills, experience, and services** as a freelance software developer.  
-It serves as a **technical demonstration** of my expertise in **Next.js, TypeScript, and full-stack web development**.
-
-While the primary audience of the website is clients, this repository is meant for **developers** who are interested in the tech stack, best practices, and implementation details.
+This repository contains the source code for my personal website, designed to highlight my expertise, experience, and services as a freelance software developer.
 
 ## ✨ Features
 
 - 🌍 **Multi-Language Support**: Fully localized content with [next-intl](https://next-intl.dev/) to cater to a global audience
 - ✅ **Form Validation**: Built with [react-hook-form](https://react-hook-form.com) and [zod](https://zod.dev) for reliable, smooth user experience
-- 💾 **Form Integration**: Submissions stored in [Supabase](https://supabase.com) for seamless backend management
-- 📧 **Email Verification**: Implements a secure email verification process on form submissions using [Nodemailer](https://nodemailer.com)
-- 📄 **Content Management**: Manage content via [Contentful](https://contentful.com), integrated with [GraphQL](https://graphql.org/) queries
-- 🌙 **Dark Mode Support**: Switch between light and dark mode, powered by [next-themes](https://github.com/pacocoursey/next-themes)
-- 📱 **Mobile-First Styling**: Developed with [Tailwind CSS](https://tailwindcss.com) to ensure a responsive, fluid layout across all devices
+- 💾 **Form Integration**: Stores submissions in [Supabase](https://supabase.com) for seamless backend management
+- 📧 **Email Verification**: Secures form submissions with an email verification process using [Nodemailer](https://nodemailer.com)
+- 🪷️ **Email Templating**: Generates beautiful, customizable emails with [React Email](https://react.email/) using React and TypeScript
+- 📄 **Content Management**: Manages content via [Contentful](https://contentful.com), integrated with [GraphQL](https://graphql.org/) queries
+- 🌙 **Dark Mode Support**: Supports light/dark mode switching with [next-themes](https://github.com/pacocoursey/next-themes)
+- 📱 **Mobile-First Styling**: Ensures a responsive, fluid layout across all devices with [Tailwind CSS](https://tailwindcss.com)
 - 👁 **Accessibility Testing**: Automatically detects WCAG A & AA violations using [axe-core](https://github.com/dequelabs/axe-core)
 - 🖋️ **Modern Typography**: Uses the [Geist font](https://vercel.com/font) from Vercel for clean, readable text
-- 🖼️ **Lightweight Icons**: Integrated with [hugeicons-react](https://hugeicons.com) for scalable, high-quality icons
-- 🌀 **Smooth Animations**: Engaging animations and scroll effects powered by [Motion](https://motion.dev/)
+- 🌀 **Smooth Animations**: Enhances the user experience with engaging animations powered by [Motion](https://motion.dev/)
 
 ## 🛠 Commands
 
