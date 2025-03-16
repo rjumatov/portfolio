@@ -4,7 +4,7 @@ import {
   Button,
   Container,
   Head,
-  Heading,
+  Hr,
   Html,
   Img,
   Link,
@@ -47,21 +47,25 @@ export default async function VerifyTemplate({
         </Head>
         <Preview>{content?.preview || ''}</Preview>
         <Body>
-          <Container className="rounded bg-neutral-900 px-8 pt-8 pb-2">
-            <Img
-              className="mb-[24px] h-12 w-auto"
-              src={content?.logo?.url || undefined}
-              alt={content?.logo?.description || undefined}
-            />
-            <Heading className="text-white">{content?.heading}</Heading>
+          <Container className="rounded-t-[8px] bg-neutral-900 px-[32px]">
+            <Link href={content?.websiteUrl || ''}>
+              <Img
+                className="my-[32px] h-[48px] w-auto"
+                src={content?.logo?.url || undefined}
+                alt={content?.logo?.description || undefined}
+              />
+            </Link>
+            <Hr className="border-neutral-700" />
+          </Container>
+          <Container className="rounded-b-[8px] bg-neutral-900 px-[32px] pb-[8px]">
             <Section className="text-neutral-300">
               <Text>
-                {content?.greeting} {name}!
+                {content?.greeting} {name},
               </Text>
               <Text>{content?.description}</Text>
               <Button
                 href={verifyUrl}
-                className="rounded-full bg-highlight px-6 py-3 font-medium text-white leading-4 tracking-wide"
+                className="rounded-full bg-highlight px-[24px] py-[12px] font-bold text-white"
               >
                 {content?.buttonLabel}
               </Button>
@@ -69,9 +73,12 @@ export default async function VerifyTemplate({
             <Section className="text-neutral-300">
               <Text>{content?.linkDescription}</Text>
               <Link href={verifyUrl}>{verifyUrl}</Link>
-            </Section>
-            <Section className="text-neutral-300">
-              <Text className="mb-0">{content?.ignoreDisclaimer}</Text>
+              <Text>{content?.ignoreDisclaimer}</Text>
+              <Text>
+                {content?.closingRemark}
+                <br />
+                {content?.signature}
+              </Text>
             </Section>
           </Container>
         </Body>

@@ -607,16 +607,18 @@ scalar Dimension
 type Email implements Entry & _Node {
   _id: ID!
   buttonLabel(locale: String): String
+  closingRemark(locale: String): String
   contentfulMetadata: ContentfulMetadata!
   description(locale: String): String
   greeting(locale: String): String
-  heading(locale: String): String
   ignoreDisclaimer(locale: String): String
   linkDescription(locale: String): String
   linkedFrom(allowedLocales: [String]): EmailLinkingCollections
   logo(locale: String, preview: Boolean): Asset
   preview(locale: String): String
+  signature(locale: String): String
   sys: Sys!
+  websiteUrl(locale: String): String
 }
 
 type EmailCollection {
@@ -636,6 +638,13 @@ input EmailFilter {
   buttonLabel_not: String
   buttonLabel_not_contains: String
   buttonLabel_not_in: [String]
+  closingRemark: String
+  closingRemark_contains: String
+  closingRemark_exists: Boolean
+  closingRemark_in: [String]
+  closingRemark_not: String
+  closingRemark_not_contains: String
+  closingRemark_not_in: [String]
   contentfulMetadata: ContentfulMetadataFilter
   description: String
   description_contains: String
@@ -651,13 +660,6 @@ input EmailFilter {
   greeting_not: String
   greeting_not_contains: String
   greeting_not_in: [String]
-  heading: String
-  heading_contains: String
-  heading_exists: Boolean
-  heading_in: [String]
-  heading_not: String
-  heading_not_contains: String
-  heading_not_in: [String]
   ignoreDisclaimer: String
   ignoreDisclaimer_contains: String
   ignoreDisclaimer_exists: Boolean
@@ -680,7 +682,21 @@ input EmailFilter {
   preview_not: String
   preview_not_contains: String
   preview_not_in: [String]
+  signature: String
+  signature_contains: String
+  signature_exists: Boolean
+  signature_in: [String]
+  signature_not: String
+  signature_not_contains: String
+  signature_not_in: [String]
   sys: SysFilter
+  websiteUrl: String
+  websiteUrl_contains: String
+  websiteUrl_exists: Boolean
+  websiteUrl_in: [String]
+  websiteUrl_not: String
+  websiteUrl_not_contains: String
+  websiteUrl_not_in: [String]
 }
 
 type EmailLinkingCollections {
@@ -690,18 +706,20 @@ type EmailLinkingCollections {
 enum EmailOrder {
   buttonLabel_ASC
   buttonLabel_DESC
+  closingRemark_ASC
+  closingRemark_DESC
   description_ASC
   description_DESC
   greeting_ASC
   greeting_DESC
-  heading_ASC
-  heading_DESC
   ignoreDisclaimer_ASC
   ignoreDisclaimer_DESC
   linkDescription_ASC
   linkDescription_DESC
   preview_ASC
   preview_DESC
+  signature_ASC
+  signature_DESC
   sys_firstPublishedAt_ASC
   sys_firstPublishedAt_DESC
   sys_id_ASC
@@ -710,6 +728,8 @@ enum EmailOrder {
   sys_publishedAt_DESC
   sys_publishedVersion_ASC
   sys_publishedVersion_DESC
+  websiteUrl_ASC
+  websiteUrl_DESC
 }
 
 interface Entry {

@@ -949,21 +949,29 @@ export type Email = Entry & _Node & {
   __typename?: 'Email';
   _id: Scalars['ID']['output'];
   buttonLabel?: Maybe<Scalars['String']['output']>;
+  closingRemark?: Maybe<Scalars['String']['output']>;
   contentfulMetadata: ContentfulMetadata;
   description?: Maybe<Scalars['String']['output']>;
   greeting?: Maybe<Scalars['String']['output']>;
-  heading?: Maybe<Scalars['String']['output']>;
   ignoreDisclaimer?: Maybe<Scalars['String']['output']>;
   linkDescription?: Maybe<Scalars['String']['output']>;
   linkedFrom?: Maybe<EmailLinkingCollections>;
   logo?: Maybe<Asset>;
   preview?: Maybe<Scalars['String']['output']>;
+  signature?: Maybe<Scalars['String']['output']>;
   sys: Sys;
+  websiteUrl?: Maybe<Scalars['String']['output']>;
 };
 
 
 /** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/email) */
 export type EmailButtonLabelArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/email) */
+export type EmailClosingRemarkArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -976,12 +984,6 @@ export type EmailDescriptionArgs = {
 
 /** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/email) */
 export type EmailGreetingArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/email) */
-export type EmailHeadingArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -1016,6 +1018,18 @@ export type EmailPreviewArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
+
+/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/email) */
+export type EmailSignatureArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/email) */
+export type EmailWebsiteUrlArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type EmailCollection = {
   __typename?: 'EmailCollection';
   items: Array<Maybe<Email>>;
@@ -1034,6 +1048,13 @@ export type EmailFilter = {
   buttonLabel_not?: InputMaybe<Scalars['String']['input']>;
   buttonLabel_not_contains?: InputMaybe<Scalars['String']['input']>;
   buttonLabel_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  closingRemark?: InputMaybe<Scalars['String']['input']>;
+  closingRemark_contains?: InputMaybe<Scalars['String']['input']>;
+  closingRemark_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  closingRemark_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  closingRemark_not?: InputMaybe<Scalars['String']['input']>;
+  closingRemark_not_contains?: InputMaybe<Scalars['String']['input']>;
+  closingRemark_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
   description?: InputMaybe<Scalars['String']['input']>;
   description_contains?: InputMaybe<Scalars['String']['input']>;
@@ -1049,13 +1070,6 @@ export type EmailFilter = {
   greeting_not?: InputMaybe<Scalars['String']['input']>;
   greeting_not_contains?: InputMaybe<Scalars['String']['input']>;
   greeting_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  heading?: InputMaybe<Scalars['String']['input']>;
-  heading_contains?: InputMaybe<Scalars['String']['input']>;
-  heading_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  heading_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  heading_not?: InputMaybe<Scalars['String']['input']>;
-  heading_not_contains?: InputMaybe<Scalars['String']['input']>;
-  heading_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   ignoreDisclaimer?: InputMaybe<Scalars['String']['input']>;
   ignoreDisclaimer_contains?: InputMaybe<Scalars['String']['input']>;
   ignoreDisclaimer_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -1078,7 +1092,21 @@ export type EmailFilter = {
   preview_not?: InputMaybe<Scalars['String']['input']>;
   preview_not_contains?: InputMaybe<Scalars['String']['input']>;
   preview_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  signature?: InputMaybe<Scalars['String']['input']>;
+  signature_contains?: InputMaybe<Scalars['String']['input']>;
+  signature_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  signature_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  signature_not?: InputMaybe<Scalars['String']['input']>;
+  signature_not_contains?: InputMaybe<Scalars['String']['input']>;
+  signature_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   sys?: InputMaybe<SysFilter>;
+  websiteUrl?: InputMaybe<Scalars['String']['input']>;
+  websiteUrl_contains?: InputMaybe<Scalars['String']['input']>;
+  websiteUrl_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  websiteUrl_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  websiteUrl_not?: InputMaybe<Scalars['String']['input']>;
+  websiteUrl_not_contains?: InputMaybe<Scalars['String']['input']>;
+  websiteUrl_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
 export type EmailLinkingCollections = {
@@ -1097,18 +1125,20 @@ export type EmailLinkingCollectionsEntryCollectionArgs = {
 export enum EmailOrder {
   ButtonLabelAsc = 'buttonLabel_ASC',
   ButtonLabelDesc = 'buttonLabel_DESC',
+  ClosingRemarkAsc = 'closingRemark_ASC',
+  ClosingRemarkDesc = 'closingRemark_DESC',
   DescriptionAsc = 'description_ASC',
   DescriptionDesc = 'description_DESC',
   GreetingAsc = 'greeting_ASC',
   GreetingDesc = 'greeting_DESC',
-  HeadingAsc = 'heading_ASC',
-  HeadingDesc = 'heading_DESC',
   IgnoreDisclaimerAsc = 'ignoreDisclaimer_ASC',
   IgnoreDisclaimerDesc = 'ignoreDisclaimer_DESC',
   LinkDescriptionAsc = 'linkDescription_ASC',
   LinkDescriptionDesc = 'linkDescription_DESC',
   PreviewAsc = 'preview_ASC',
   PreviewDesc = 'preview_DESC',
+  SignatureAsc = 'signature_ASC',
+  SignatureDesc = 'signature_DESC',
   SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
   SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
   SysIdAsc = 'sys_id_ASC',
@@ -1116,7 +1146,9 @@ export enum EmailOrder {
   SysPublishedAtAsc = 'sys_publishedAt_ASC',
   SysPublishedAtDesc = 'sys_publishedAt_DESC',
   SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
-  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
+  WebsiteUrlAsc = 'websiteUrl_ASC',
+  WebsiteUrlDesc = 'websiteUrl_DESC'
 }
 
 export type Entry = {
@@ -6894,7 +6926,7 @@ export type EmailContentQueryVariables = Exact<{
 }>;
 
 
-export type EmailContentQuery = { __typename?: 'Query', emailCollection?: { __typename?: 'EmailCollection', items: Array<{ __typename?: 'Email', preview?: string | null, heading?: string | null, greeting?: string | null, description?: string | null, buttonLabel?: string | null, linkDescription?: string | null, ignoreDisclaimer?: string | null, logo?: { __typename?: 'Asset', url?: string | null, description?: string | null } | null } | null> } | null };
+export type EmailContentQuery = { __typename?: 'Query', emailCollection?: { __typename?: 'EmailCollection', items: Array<{ __typename?: 'Email', preview?: string | null, websiteUrl?: string | null, greeting?: string | null, description?: string | null, buttonLabel?: string | null, linkDescription?: string | null, ignoreDisclaimer?: string | null, closingRemark?: string | null, signature?: string | null, logo?: { __typename?: 'Asset', url?: string | null, description?: string | null } | null } | null> } | null };
 
 export type FooterContentQueryVariables = Exact<{
   locale?: InputMaybe<Scalars['String']['input']>;
@@ -7089,16 +7121,18 @@ export const EmailContentDocument = gql`
   emailCollection(limit: 1, locale: $locale) {
     items {
       preview
+      websiteUrl
       logo {
         url
         description
       }
-      heading
       greeting
       description
       buttonLabel
       linkDescription
       ignoreDisclaimer
+      closingRemark
+      signature
     }
   }
 }

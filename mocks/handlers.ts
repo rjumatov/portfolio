@@ -223,19 +223,21 @@ export const handlers = [
           items: [
             {
               preview: 'Click the button below to confirm your email.',
-              heading: 'Confirm your email address',
-              greeting: 'Hi',
+              logo: {
+                url: MOCK_IMAGE_URL,
+                description: 'BrandIcon placeholder',
+              },
+              websiteUrl: MOCK_URL,
+              greeting: 'Hello',
               description:
-                'Thank you for reaching out! To confirm your email address and complete your request, please click the button below:',
+                'thank you for reaching out! To confirm your email address and complete your request, please click the button below:',
               buttonLabel: 'Confirm email',
               linkDescription:
                 'If the button doesn’t work, you can use the following link:',
               ignoreDisclaimer:
                 'If you didn’t request this, you can ignore this email.',
-              logo: {
-                url: MOCK_IMAGE_URL,
-                description: 'BrandIcon placeholder',
-              },
+              closingRemark: 'Best regards,',
+              signature: 'Roman Jumatov',
             },
           ],
         },

@@ -2,16 +2,18 @@ query emailContent($locale: String) {
   emailCollection(limit: 1, locale: $locale) {
     items {
       preview
+      websiteUrl
       logo {
         url
         description
       }
-      heading
       greeting
       description
       buttonLabel
       linkDescription
       ignoreDisclaimer
+      closingRemark
+      signature
     }
   }
 }
