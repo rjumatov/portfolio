@@ -57,6 +57,7 @@ export type Database = {
         | "PENDING_VERIFICATION"
         | "AWAITING_RESPONSE"
         | "SCHEDULING_CALL"
+        | "AWAITING_ESTIMATE"
         | "DECLINED"
         | "IN_PROGRESS"
         | "ON_HOLD"
