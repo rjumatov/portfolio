@@ -3,7 +3,7 @@ import type { Metric } from '@/app/lib/contentful/generated/sdk';
 import { calculateAge } from '@/app/lib/date-utils';
 import ViewAnimation from '@/app/ui/animation/view-animation';
 import ExperienceCounter from '@/app/ui/counter/experience-counter';
-import type { Locale } from '@/i18n/routing';
+import type { Locale } from 'next-intl';
 import Image from 'next/image';
 
 type Props = {

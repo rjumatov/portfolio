@@ -4,7 +4,7 @@ import RadialAnimation from '@/app/ui/animation/radial-animation';
 import StaggerAnimation from '@/app/ui/animation/stagger-animation';
 import ViewAnimation from '@/app/ui/animation/view-animation';
 import ServiceCard from '@/app/ui/card/service-card';
-import type { Locale } from '@/i18n/routing';
+import type { Locale } from 'next-intl';
 
 type Props = {
   locale: Locale;

@@ -4,8 +4,8 @@ import ArrowItem from '@/app/ui/footer/arrow-item';
 import ExternalLink from '@/app/ui/link/external-link';
 import MailLink from '@/app/ui/link/mail-link';
 import TitledSection from '@/app/ui/section/titled-section';
-import type { Locale } from '@/i18n/routing';
 import type { Metadata } from 'next';
+import type { Locale } from 'next-intl';
 
 type Props = {
   params: Promise<{ locale: Locale }>;

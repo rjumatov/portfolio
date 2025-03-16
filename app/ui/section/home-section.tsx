@@ -4,8 +4,9 @@ import RadialAnimation from '@/app/ui/animation/radial-animation';
 import RevealAnimation from '@/app/ui/animation/reveal-animation';
 import ViewAnimation from '@/app/ui/animation/view-animation';
 import ShiningButton from '@/app/ui/button/shining-button';
-import { Link, type Locale } from '@/i18n/routing';
+import { Link } from '@/i18n/navigation';
 import { ArrowDown01Icon } from 'hugeicons-react';
+import type { Locale } from 'next-intl';
 import Image from 'next/image';
 
 type Props = {

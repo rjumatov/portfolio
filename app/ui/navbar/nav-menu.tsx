@@ -2,7 +2,7 @@
 
 import { useActiveSection, useScrolled } from '@/app/lib/hooks/use-scroll';
 import Tooltip from '@/app/ui/tooltip/tooltip';
-import { Link, usePathname } from '@/i18n/routing';
+import { Link, usePathname } from '@/i18n/navigation';
 import {
   ContractsIcon,
   GridViewIcon,

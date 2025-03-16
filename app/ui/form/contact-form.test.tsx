@@ -3,7 +3,6 @@ import nodemailerClient from '@/app/lib/nodemailer/client';
 import { type ContactFormData, ValidationMessages } from '@/app/lib/schemas';
 import supabaseClient from '@/app/lib/supabase/client';
 import ContactForm from '@/app/ui/form/contact-form';
-import { routing } from '@/i18n/routing';
 import { cleanup, render, screen } from '@testing-library/react';
 import userEvent, { type UserEvent } from '@testing-library/user-event';
 import { NextIntlClientProvider } from 'next-intl';
@@ -40,6 +39,10 @@ const mocks = vi.hoisted(() => {
     nodemailerClient,
   };
 });
+
+vi.mock('@/i18n/navigation', () => ({
+  Link: vi.fn(),
+}));
 
 vi.mock('@/app/lib/supabase/client', () => ({
   default: mocks.supabaseClient,
@@ -87,7 +90,7 @@ describe('ContactForm', () => {
   beforeEach(() => {
     user = userEvent.setup();
     render(
-      <NextIntlClientProvider locale={routing.defaultLocale}>
+      <NextIntlClientProvider locale="en">
         <ContactForm content={content as Form} />
       </NextIntlClientProvider>,
     );

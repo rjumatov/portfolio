@@ -12,7 +12,6 @@ import FormErrorCard from '@/app/ui/form/card/form-error-card';
 import SubmittedStatusCard from '@/app/ui/form/card/form-success-card';
 import ContactFormFields from '@/app/ui/form/contact-form-fields';
 import LoadingSpinner from '@/app/ui/loading/loading-spinner';
-import type { Locale } from '@/i18n/routing';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useLocale } from 'next-intl';
 import { useActionState, useEffect, useState, useTransition } from 'react';
@@ -23,7 +22,7 @@ type Props = {
 };
 
 export default function ContactForm({ content }: Props) {
-  const locale = useLocale() as Locale;
+  const locale = useLocale();
   const [pending, startTransaction] = useTransition();
   const [submitted, setSubmitted] = useState(false);
   const [state, formAction] = useActionState<SaveMessageStatus, FormData>(

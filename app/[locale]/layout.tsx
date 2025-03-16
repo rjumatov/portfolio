@@ -1,5 +1,5 @@
-import { type Locale, routing } from '@/i18n/routing';
-import { NextIntlClientProvider } from 'next-intl';
+import { routing } from '@/i18n/routing';
+import { type Locale, NextIntlClientProvider, hasLocale } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { ThemeProvider } from 'next-themes';
 import { Geist, Geist_Mono } from 'next/font/google';
@@ -37,7 +37,7 @@ const geistMono = Geist_Mono({
 
 export default async function RootLayout({ children, params }: Props) {
   const { locale } = await params;
-  if (!routing.locales.includes(locale)) {
+  if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
@@ -50,7 +50,9 @@ export default async function RootLayout({ children, params }: Props) {
         className={`${geistSans.variable} ${geistMono.variable} font-(family-name:--font-geist-sans) antialiased`}
       >
         <ThemeProvider attribute="class" disableTransitionOnChange>
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          <NextIntlClientProvider messages={null} formats={null}>
+            {children}
+          </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>

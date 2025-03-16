@@ -9,7 +9,7 @@ import ViewAnimation from '@/app/ui/animation/view-animation';
 import ContactForm from '@/app/ui/form/contact-form';
 import TestimonialSlider from '@/app/ui/slider/testimonial-slider';
 import ProjectSteps from '@/app/ui/steps/project-steps';
-import type { Locale } from '@/i18n/routing';
+import type { Locale } from 'next-intl';
 
 type Props = {
   locale: Locale;

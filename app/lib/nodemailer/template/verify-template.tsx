@@ -1,5 +1,4 @@
 import contentfulClient from '@/app/lib/contentful/client';
-import type { Locale } from '@/i18n/routing';
 import {
   Body,
   Button,
@@ -14,6 +13,7 @@ import {
   Tailwind,
   Text,
 } from '@react-email/components';
+import type { Locale } from 'next-intl';
 
 type Props = {
   locale: Locale;

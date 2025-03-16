@@ -2,9 +2,9 @@
 
 import { useScrolled } from '@/app/lib/hooks/use-scroll';
 import PresenceAnimation from '@/app/ui/animation/presence-animation';
-import { type Locale, usePathname, useRouter } from '@/i18n/routing';
+import { usePathname, useRouter } from '@/i18n/navigation';
 import { LanguageSkillIcon } from 'hugeicons-react';
-import { useLocale } from 'next-intl';
+import { type Locale, useLocale } from 'next-intl';
 import Image from 'next/image';
 import { type KeyboardEvent, useEffect, useRef, useState } from 'react';
 
@@ -26,7 +26,7 @@ export default function LanguageDropdown({
   const scrolled = useScrolled();
   const router = useRouter();
   const pathname = usePathname();
-  const locale = useLocale() as Locale;
+  const locale = useLocale();
 
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);

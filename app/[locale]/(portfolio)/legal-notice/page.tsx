@@ -2,8 +2,9 @@ import contentfulClient from '@/app/lib/contentful/client';
 import RevealAnimation from '@/app/ui/animation/reveal-animation';
 import MailLink from '@/app/ui/link/mail-link';
 import TitledSection from '@/app/ui/section/titled-section';
-import { Link, type Locale } from '@/i18n/routing';
+import { Link } from '@/i18n/navigation';
 import type { Metadata } from 'next';
+import type { Locale } from 'next-intl';
 
 type Props = {
   params: Promise<{ locale: Locale }>;

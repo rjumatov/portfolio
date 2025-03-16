@@ -5,7 +5,7 @@ import KofiIcon from '@/app/ui/footer/icon/kofi-icon';
 import ActiveStyledLink from '@/app/ui/link/active-styled-link';
 import ExternalIconLink from '@/app/ui/link/external-icon-link';
 import ExternalLink from '@/app/ui/link/external-link';
-import type { Locale } from '@/i18n/routing';
+import type { Locale } from 'next-intl';
 
 type Props = {
   locale: Locale;

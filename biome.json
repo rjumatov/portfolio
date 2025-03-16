@@ -42,7 +42,7 @@
           "level": "error",
           "options": {
             "paths": {
-              "next/link": "Please import from `@/i18n/routing` instead."
+              "next/link": "Please import from `@/i18n/navigation` instead."
             }
           }
         },
