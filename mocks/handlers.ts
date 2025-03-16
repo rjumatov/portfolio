@@ -83,7 +83,7 @@ export const handlers = [
                       'Tell me about your project, your goals, and what you’re looking for. If I’m a good fit, I’ll invite you to schedule a free 30-minute consultation.',
                   },
                   {
-                    title: 'Receive an offer',
+                    title: 'Receive a cost estimate',
                     description:
                       'After the consultation, I’ll share my standard hourly or daily rate. If your project requires a fixed-price estimate, I’ll provide one within three business days, helping you decide if my services align with your budget.',
                   },
