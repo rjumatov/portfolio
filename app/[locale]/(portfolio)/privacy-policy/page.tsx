@@ -46,14 +46,14 @@ export default async function Page({ params }: Props) {
           </TitledSection>
 
           <TitledSection title={content?.privacyOverview?.dataCollectionTitle}>
-            <h5 className="mb-2 font-semibold text-lg">
+            <h5 className="mb-2 font-semibold text-base">
               {content?.privacyOverview?.responsiblePartyTitle}
             </h5>
             <p className="mb-2 text-(--secondary)">
               {content?.privacyOverview?.responsiblePartyDescription}
             </p>
 
-            <h5 className="mb-2 font-semibold text-lg">
+            <h5 className="mb-2 font-semibold text-base">
               {content?.privacyOverview?.dataCaptureTitle}
             </h5>
             <p className="mb-2 text-(--secondary)">
@@ -63,14 +63,14 @@ export default async function Page({ params }: Props) {
               {content?.privacyOverview?.dataAutomaticCaptureText}
             </p>
 
-            <h5 className="mb-2 font-semibold text-lg">
+            <h5 className="mb-2 font-semibold text-base">
               {content?.privacyOverview?.dataPurposeTitle}
             </h5>
             <p className="mb-2 text-(--secondary)">
               {content?.privacyOverview?.dataPurposeDescription}
             </p>
 
-            <h5 className="mb-2 font-semibold text-lg">
+            <h5 className="mb-2 font-semibold text-base">
               {content?.privacyOverview?.userRightsTitle}
             </h5>
             <p className="mb-2 text-(--secondary)">
@@ -85,7 +85,7 @@ export default async function Page({ params }: Props) {
               {content?.privacyOverview?.userRightsContactText}
             </p>
 
-            <h5 className="mb-2 font-semibold text-lg">
+            <h5 className="mb-2 font-semibold text-base">
               {content?.privacyOverview?.analysisToolsTitle}
             </h5>
             <p className="mb-2 text-(--secondary)">
@@ -290,7 +290,7 @@ export default async function Page({ params }: Props) {
               />
               .
             </p>
-            <h5 className="mb-2 font-semibold text-lg">
+            <h5 className="mb-2 font-semibold text-base">
               {content?.dataCollection?.legalBasisTitle}
             </h5>
             <ul className="text-(--secondary)">
@@ -309,7 +309,7 @@ export default async function Page({ params }: Props) {
                 })}
             </ul>
 
-            <h5 className="mb-2 font-semibold text-lg">
+            <h5 className="mb-2 font-semibold text-base">
               {content?.dataCollection?.storageDurationTitle}
             </h5>
             <p className="mb-2 text-(--secondary)">
