@@ -1,6 +1,6 @@
 # Freelance Developer Portfolio
 
-## 🌐 Overview
+## Overview
 
 This repository contains the source code for my personal website, designed to highlight my expertise, experience, and services as a freelance software developer.
 
