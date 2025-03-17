@@ -24,7 +24,7 @@ export default function RevealAnimation({ children, className }: Props) {
         transitionEnd: { maskImage: 'none', filter: 'initial' },
       }}
       transition={{
-        duration: 1,
+        duration: 0.6,
         ease: 'easeOut',
       }}
       style={{

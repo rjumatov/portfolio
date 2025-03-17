@@ -58,21 +58,19 @@ export default async function AboutSection({ locale }: Props) {
               <ViewAnimation delay={0.3} direction="fromBottom">
                 <p className="text-(--secondary)">{content?.description}</p>
               </ViewAnimation>
-              <div className="flex flex-col justify-between space-y-4 sm:flex-row sm:space-x-16 sm:space-y-0 lg:space-x-32">
+              <ViewAnimation
+                className="flex flex-col justify-between space-y-4 sm:flex-row sm:space-x-16 sm:space-y-0 lg:space-x-32"
+                delay={0.3}
+              >
                 {content?.experienceMetricsCollection?.items
                   .filter((item) => item !== null)
                   .map((item) => (
-                    <ViewAnimation
+                    <ExperienceCounter
                       key={`${item.labelPrefix}${item.labelSuffix}`}
-                      delay={0.5}
-                      duration={0.4}
-                      translation={30}
-                      direction="fromLeft"
-                    >
-                      <ExperienceCounter content={item as Metric} />
-                    </ViewAnimation>
+                      content={item as Metric}
+                    />
                   ))}
-              </div>
+              </ViewAnimation>
             </div>
           </div>
         </div>
