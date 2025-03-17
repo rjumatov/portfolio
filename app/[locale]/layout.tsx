@@ -19,9 +19,6 @@ if (process.env.NEXT_RUNTIME === 'nodejs' && process.env.MOCKS_ENABLED) {
   );
 }
 
-// caching content for 24 hours
-export const revalidate = 86400;
-
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
