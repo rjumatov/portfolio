@@ -15,12 +15,12 @@ export default function ProcessSteps({ content }: Props) {
   const steps = content.slice(0, -1);
   const lastStep = content[content.length - 1];
 
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true });
+  const ref = useRef<HTMLUListElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 'some' });
 
   return (
     <>
-      <div ref={ref} className="relative">
+      <div className="relative">
         <motion.span
           className="absolute top-6 left-3.5 w-px bg-(--highlight) sm:top-7 sm:left-4"
           initial={{ height: 0 }}
@@ -28,7 +28,7 @@ export default function ProcessSteps({ content }: Props) {
           viewport={{ once: true }}
           transition={{ duration: 1.2, delay: 0.2 }}
         />
-        <ul className="space-y-2 sm:space-y-4 md:space-y-6">
+        <ul ref={ref} className="space-y-2 sm:space-y-4 md:space-y-6">
           {steps.map(({ title, description }, index) => (
             <ProcessStepItem
               key={title}
