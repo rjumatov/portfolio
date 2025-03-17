@@ -28,7 +28,7 @@ export default async function HomeSection({ locale }: Props) {
         delay={0.4}
         className="pointer-events-none absolute inset-0"
       >
-        <div className="-bottom-2/12 pointer-events-none absolute left-2/12 max-h-3/4 opacity-50 sm:pointer-events-auto sm:left-1/3 sm:opacity-100 md:left-1/2 dark:opacity-40 dark:sm:opacity-100">
+        <div className="-translate-y-1/6 absolute top-1/2 left-1/4 max-h-3/4 opacity-50 sm:pointer-events-auto sm:left-1/3 sm:opacity-100 md:left-1/2 dark:opacity-40 dark:sm:opacity-100">
           <HeroAnimation floatingLabel={content?.floatingLabel} />
         </div>
       </ViewAnimation>
