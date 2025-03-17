@@ -25,16 +25,15 @@ query privacyPolicyContent($locale: String) {
       }
       hosting {
         title
-        netlifyTitle
-        netlifyHostingInfo
-        netlifyDataProcessing
-        netlifyDataProcessingLink
-        netlifyContractualClauses
-        netlifyContractualClausesLink
-        netlifyDataProcessingAgreement
-        netlifyDataProcessingAgreementLink
-        netlifyPrivacyPolicy
-        netlifyPrivacyPolicyLink
+        vercelTitle
+        vercelHostingInfo
+        vercelDataProcessing
+        vercelContractualClauses
+        vercelContractualClausesLink
+        vercelDataProcessingAgreement
+        vercelDataProcessingAgreementLink
+        vercelPrivacyPolicy
+        vercelPrivacyPolicyLink
       }
       notesAndLegalInformation {
         title

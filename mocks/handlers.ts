@@ -457,21 +457,20 @@ export const handlers = [
               },
               hosting: {
                 title: '2. Hosting',
-                netlifyTitle: 'Netlify',
-                netlifyHostingInfo:
-                  'Our website is hosted by Netlify. The provider is Netlify Inc., 2325 3rd Street, Suite 29, San Francisco, CA 94104, USA.',
-                netlifyDataProcessing:
-                  'Netlify processes personal data in the USA as well. The company is a participant in the EU-US Data Privacy Framework. This framework governs the secure and privacy-compliant transfer of data from the EU to the USA. Further information on this can be found at',
-                netlifyDataProcessingLink: MOCK_URL,
-                netlifyContractualClauses:
-                  'Additionally, Netlify uses standard contractual clauses in accordance with Art. 46(2) and (3) of the GDPR. These model contracts, provided by the EU Commission, ensure that your data meets European data protection standards even in third countries such as the USA. The relevant decision by the EU Commission can be found here',
-                netlifyContractualClausesLink: MOCK_URL,
-                netlifyDataProcessingAgreement:
-                  'Netlify offers a Data Processing Agreement in accordance with Art. 28 of the GDPR, based on the EU standard contractual clauses. Further information on this can be found at',
-                netlifyDataProcessingAgreementLink: MOCK_URL,
-                netlifyPrivacyPolicy:
-                  'Details regarding the processing of your data by Netlify can be found in Netlify’s Privacy Policy at',
-                netlifyPrivacyPolicyLink: MOCK_URL,
+                vercelTitle: 'Vercel',
+                vercelHostingInfo:
+                  'Our website is hosted by Netlify. The provider is Netlify Inc., 2325 3rd Street, Suite 29, San Francisco, CA 94104, UOur website is hosted on Vercel, a cloud deployment platform. The service provider is Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA.',
+                vercelDataProcessing:
+                  'Vercel processes your data in the USA as well. We would like to point out that the European Court of Justice currently does not consider the level of data protection in the USA to be adequate. This may involve risks regarding the security and legality of data processing.',
+                vercelContractualClauses:
+                  'To protect your data, Vercel relies on Standard Contractual Clauses (SCC) in accordance with Art. 46 (2) and (3) of the GDPR. These model contracts, provided by the European Commission, are intended to ensure that your data complies with European data protection standards even when processed in third countries. Details can be found here:',
+                vercelContractualClausesLink: MOCK_URL,
+                vercelDataProcessingAgreement:
+                  'You can find Vercel’s Data Processing Addendum (DPA), which complies with the Standard Contractual Clauses, here:',
+                vercelDataProcessingAgreementLink: MOCK_URL,
+                vercelPrivacyPolicy:
+                  'For more information on how Vercel processes your data, please refer to Vercel’s Privacy Policy at:',
+                vercelPrivacyPolicyLink: MOCK_URL,
               },
               notesAndLegalInformation: {
                 title: '3. General Notes and Mandatory Information',

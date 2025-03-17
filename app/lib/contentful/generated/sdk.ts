@@ -2026,18 +2026,17 @@ export type Hosting = Entry & _Node & {
   _id: Scalars['ID']['output'];
   contentfulMetadata: ContentfulMetadata;
   linkedFrom?: Maybe<HostingLinkingCollections>;
-  netlifyContractualClauses?: Maybe<Scalars['String']['output']>;
-  netlifyContractualClausesLink?: Maybe<Scalars['String']['output']>;
-  netlifyDataProcessing?: Maybe<Scalars['String']['output']>;
-  netlifyDataProcessingAgreement?: Maybe<Scalars['String']['output']>;
-  netlifyDataProcessingAgreementLink?: Maybe<Scalars['String']['output']>;
-  netlifyDataProcessingLink?: Maybe<Scalars['String']['output']>;
-  netlifyHostingInfo?: Maybe<Scalars['String']['output']>;
-  netlifyPrivacyPolicy?: Maybe<Scalars['String']['output']>;
-  netlifyPrivacyPolicyLink?: Maybe<Scalars['String']['output']>;
-  netlifyTitle?: Maybe<Scalars['String']['output']>;
   sys: Sys;
   title?: Maybe<Scalars['String']['output']>;
+  vercelContractualClauses?: Maybe<Scalars['String']['output']>;
+  vercelContractualClausesLink?: Maybe<Scalars['String']['output']>;
+  vercelDataProcessing?: Maybe<Scalars['String']['output']>;
+  vercelDataProcessingAgreement?: Maybe<Scalars['String']['output']>;
+  vercelDataProcessingAgreementLink?: Maybe<Scalars['String']['output']>;
+  vercelHostingInfo?: Maybe<Scalars['String']['output']>;
+  vercelPrivacyPolicy?: Maybe<Scalars['String']['output']>;
+  vercelPrivacyPolicyLink?: Maybe<Scalars['String']['output']>;
+  vercelTitle?: Maybe<Scalars['String']['output']>;
 };
 
 
@@ -2048,67 +2047,61 @@ export type HostingLinkedFromArgs = {
 
 
 /** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/hosting) */
-export type HostingNetlifyContractualClausesArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/hosting) */
-export type HostingNetlifyContractualClausesLinkArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/hosting) */
-export type HostingNetlifyDataProcessingArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/hosting) */
-export type HostingNetlifyDataProcessingAgreementArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/hosting) */
-export type HostingNetlifyDataProcessingAgreementLinkArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/hosting) */
-export type HostingNetlifyDataProcessingLinkArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/hosting) */
-export type HostingNetlifyHostingInfoArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/hosting) */
-export type HostingNetlifyPrivacyPolicyArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/hosting) */
-export type HostingNetlifyPrivacyPolicyLinkArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/hosting) */
-export type HostingNetlifyTitleArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/hosting) */
 export type HostingTitleArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/hosting) */
+export type HostingVercelContractualClausesArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/hosting) */
+export type HostingVercelContractualClausesLinkArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/hosting) */
+export type HostingVercelDataProcessingArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/hosting) */
+export type HostingVercelDataProcessingAgreementArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/hosting) */
+export type HostingVercelDataProcessingAgreementLinkArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/hosting) */
+export type HostingVercelHostingInfoArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/hosting) */
+export type HostingVercelPrivacyPolicyArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/hosting) */
+export type HostingVercelPrivacyPolicyLinkArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/hosting) */
+export type HostingVercelTitleArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -2124,76 +2117,6 @@ export type HostingFilter = {
   AND?: InputMaybe<Array<InputMaybe<HostingFilter>>>;
   OR?: InputMaybe<Array<InputMaybe<HostingFilter>>>;
   contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
-  netlifyContractualClauses?: InputMaybe<Scalars['String']['input']>;
-  netlifyContractualClausesLink?: InputMaybe<Scalars['String']['input']>;
-  netlifyContractualClausesLink_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyContractualClausesLink_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  netlifyContractualClausesLink_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyContractualClausesLink_not?: InputMaybe<Scalars['String']['input']>;
-  netlifyContractualClausesLink_not_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyContractualClausesLink_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyContractualClauses_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyContractualClauses_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  netlifyContractualClauses_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyContractualClauses_not?: InputMaybe<Scalars['String']['input']>;
-  netlifyContractualClauses_not_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyContractualClauses_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyDataProcessing?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingAgreement?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingAgreementLink?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingAgreementLink_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingAgreementLink_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  netlifyDataProcessingAgreementLink_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyDataProcessingAgreementLink_not?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingAgreementLink_not_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingAgreementLink_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyDataProcessingAgreement_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingAgreement_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  netlifyDataProcessingAgreement_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyDataProcessingAgreement_not?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingAgreement_not_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingAgreement_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyDataProcessingLink?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingLink_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingLink_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  netlifyDataProcessingLink_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyDataProcessingLink_not?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingLink_not_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingLink_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyDataProcessing_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessing_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  netlifyDataProcessing_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyDataProcessing_not?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessing_not_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessing_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyHostingInfo?: InputMaybe<Scalars['String']['input']>;
-  netlifyHostingInfo_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyHostingInfo_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  netlifyHostingInfo_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyHostingInfo_not?: InputMaybe<Scalars['String']['input']>;
-  netlifyHostingInfo_not_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyHostingInfo_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyPrivacyPolicy?: InputMaybe<Scalars['String']['input']>;
-  netlifyPrivacyPolicyLink?: InputMaybe<Scalars['String']['input']>;
-  netlifyPrivacyPolicyLink_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyPrivacyPolicyLink_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  netlifyPrivacyPolicyLink_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyPrivacyPolicyLink_not?: InputMaybe<Scalars['String']['input']>;
-  netlifyPrivacyPolicyLink_not_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyPrivacyPolicyLink_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyPrivacyPolicy_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyPrivacyPolicy_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  netlifyPrivacyPolicy_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyPrivacyPolicy_not?: InputMaybe<Scalars['String']['input']>;
-  netlifyPrivacyPolicy_not_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyPrivacyPolicy_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyTitle?: InputMaybe<Scalars['String']['input']>;
-  netlifyTitle_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyTitle_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  netlifyTitle_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyTitle_not?: InputMaybe<Scalars['String']['input']>;
-  netlifyTitle_not_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyTitle_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   sys?: InputMaybe<SysFilter>;
   title?: InputMaybe<Scalars['String']['input']>;
   title_contains?: InputMaybe<Scalars['String']['input']>;
@@ -2202,6 +2125,69 @@ export type HostingFilter = {
   title_not?: InputMaybe<Scalars['String']['input']>;
   title_not_contains?: InputMaybe<Scalars['String']['input']>;
   title_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelContractualClauses?: InputMaybe<Scalars['String']['input']>;
+  vercelContractualClausesLink?: InputMaybe<Scalars['String']['input']>;
+  vercelContractualClausesLink_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelContractualClausesLink_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  vercelContractualClausesLink_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelContractualClausesLink_not?: InputMaybe<Scalars['String']['input']>;
+  vercelContractualClausesLink_not_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelContractualClausesLink_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelContractualClauses_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelContractualClauses_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  vercelContractualClauses_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelContractualClauses_not?: InputMaybe<Scalars['String']['input']>;
+  vercelContractualClauses_not_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelContractualClauses_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelDataProcessing?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessingAgreement?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessingAgreementLink?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessingAgreementLink_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessingAgreementLink_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  vercelDataProcessingAgreementLink_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelDataProcessingAgreementLink_not?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessingAgreementLink_not_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessingAgreementLink_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelDataProcessingAgreement_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessingAgreement_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  vercelDataProcessingAgreement_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelDataProcessingAgreement_not?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessingAgreement_not_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessingAgreement_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelDataProcessing_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessing_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  vercelDataProcessing_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelDataProcessing_not?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessing_not_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessing_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelHostingInfo?: InputMaybe<Scalars['String']['input']>;
+  vercelHostingInfo_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelHostingInfo_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  vercelHostingInfo_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelHostingInfo_not?: InputMaybe<Scalars['String']['input']>;
+  vercelHostingInfo_not_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelHostingInfo_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelPrivacyPolicy?: InputMaybe<Scalars['String']['input']>;
+  vercelPrivacyPolicyLink?: InputMaybe<Scalars['String']['input']>;
+  vercelPrivacyPolicyLink_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelPrivacyPolicyLink_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  vercelPrivacyPolicyLink_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelPrivacyPolicyLink_not?: InputMaybe<Scalars['String']['input']>;
+  vercelPrivacyPolicyLink_not_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelPrivacyPolicyLink_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelPrivacyPolicy_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelPrivacyPolicy_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  vercelPrivacyPolicy_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelPrivacyPolicy_not?: InputMaybe<Scalars['String']['input']>;
+  vercelPrivacyPolicy_not_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelPrivacyPolicy_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelTitle?: InputMaybe<Scalars['String']['input']>;
+  vercelTitle_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelTitle_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  vercelTitle_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelTitle_not?: InputMaybe<Scalars['String']['input']>;
+  vercelTitle_not_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelTitle_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
 export type HostingLinkingCollections = {
@@ -2243,22 +2229,6 @@ export enum HostingLinkingCollectionsPrivacyPolicyCollectionOrder {
 }
 
 export enum HostingOrder {
-  NetlifyContractualClausesLinkAsc = 'netlifyContractualClausesLink_ASC',
-  NetlifyContractualClausesLinkDesc = 'netlifyContractualClausesLink_DESC',
-  NetlifyDataProcessingAgreementLinkAsc = 'netlifyDataProcessingAgreementLink_ASC',
-  NetlifyDataProcessingAgreementLinkDesc = 'netlifyDataProcessingAgreementLink_DESC',
-  NetlifyDataProcessingAgreementAsc = 'netlifyDataProcessingAgreement_ASC',
-  NetlifyDataProcessingAgreementDesc = 'netlifyDataProcessingAgreement_DESC',
-  NetlifyDataProcessingLinkAsc = 'netlifyDataProcessingLink_ASC',
-  NetlifyDataProcessingLinkDesc = 'netlifyDataProcessingLink_DESC',
-  NetlifyHostingInfoAsc = 'netlifyHostingInfo_ASC',
-  NetlifyHostingInfoDesc = 'netlifyHostingInfo_DESC',
-  NetlifyPrivacyPolicyLinkAsc = 'netlifyPrivacyPolicyLink_ASC',
-  NetlifyPrivacyPolicyLinkDesc = 'netlifyPrivacyPolicyLink_DESC',
-  NetlifyPrivacyPolicyAsc = 'netlifyPrivacyPolicy_ASC',
-  NetlifyPrivacyPolicyDesc = 'netlifyPrivacyPolicy_DESC',
-  NetlifyTitleAsc = 'netlifyTitle_ASC',
-  NetlifyTitleDesc = 'netlifyTitle_DESC',
   SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
   SysFirstPublishedAtDesc = 'sys_firstPublishedAt_DESC',
   SysIdAsc = 'sys_id_ASC',
@@ -2268,7 +2238,21 @@ export enum HostingOrder {
   SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
   SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
   TitleAsc = 'title_ASC',
-  TitleDesc = 'title_DESC'
+  TitleDesc = 'title_DESC',
+  VercelContractualClausesLinkAsc = 'vercelContractualClausesLink_ASC',
+  VercelContractualClausesLinkDesc = 'vercelContractualClausesLink_DESC',
+  VercelDataProcessingAgreementLinkAsc = 'vercelDataProcessingAgreementLink_ASC',
+  VercelDataProcessingAgreementLinkDesc = 'vercelDataProcessingAgreementLink_DESC',
+  VercelDataProcessingAgreementAsc = 'vercelDataProcessingAgreement_ASC',
+  VercelDataProcessingAgreementDesc = 'vercelDataProcessingAgreement_DESC',
+  VercelHostingInfoAsc = 'vercelHostingInfo_ASC',
+  VercelHostingInfoDesc = 'vercelHostingInfo_DESC',
+  VercelPrivacyPolicyLinkAsc = 'vercelPrivacyPolicyLink_ASC',
+  VercelPrivacyPolicyLinkDesc = 'vercelPrivacyPolicyLink_DESC',
+  VercelPrivacyPolicyAsc = 'vercelPrivacyPolicy_ASC',
+  VercelPrivacyPolicyDesc = 'vercelPrivacyPolicy_DESC',
+  VercelTitleAsc = 'vercelTitle_ASC',
+  VercelTitleDesc = 'vercelTitle_DESC'
 }
 
 export enum ImageFormat {
@@ -6280,76 +6264,6 @@ export type CfHostingNestedFilter = {
   AND?: InputMaybe<Array<InputMaybe<CfHostingNestedFilter>>>;
   OR?: InputMaybe<Array<InputMaybe<CfHostingNestedFilter>>>;
   contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
-  netlifyContractualClauses?: InputMaybe<Scalars['String']['input']>;
-  netlifyContractualClausesLink?: InputMaybe<Scalars['String']['input']>;
-  netlifyContractualClausesLink_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyContractualClausesLink_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  netlifyContractualClausesLink_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyContractualClausesLink_not?: InputMaybe<Scalars['String']['input']>;
-  netlifyContractualClausesLink_not_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyContractualClausesLink_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyContractualClauses_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyContractualClauses_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  netlifyContractualClauses_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyContractualClauses_not?: InputMaybe<Scalars['String']['input']>;
-  netlifyContractualClauses_not_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyContractualClauses_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyDataProcessing?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingAgreement?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingAgreementLink?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingAgreementLink_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingAgreementLink_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  netlifyDataProcessingAgreementLink_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyDataProcessingAgreementLink_not?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingAgreementLink_not_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingAgreementLink_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyDataProcessingAgreement_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingAgreement_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  netlifyDataProcessingAgreement_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyDataProcessingAgreement_not?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingAgreement_not_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingAgreement_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyDataProcessingLink?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingLink_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingLink_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  netlifyDataProcessingLink_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyDataProcessingLink_not?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingLink_not_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessingLink_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyDataProcessing_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessing_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  netlifyDataProcessing_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyDataProcessing_not?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessing_not_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyDataProcessing_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyHostingInfo?: InputMaybe<Scalars['String']['input']>;
-  netlifyHostingInfo_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyHostingInfo_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  netlifyHostingInfo_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyHostingInfo_not?: InputMaybe<Scalars['String']['input']>;
-  netlifyHostingInfo_not_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyHostingInfo_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyPrivacyPolicy?: InputMaybe<Scalars['String']['input']>;
-  netlifyPrivacyPolicyLink?: InputMaybe<Scalars['String']['input']>;
-  netlifyPrivacyPolicyLink_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyPrivacyPolicyLink_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  netlifyPrivacyPolicyLink_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyPrivacyPolicyLink_not?: InputMaybe<Scalars['String']['input']>;
-  netlifyPrivacyPolicyLink_not_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyPrivacyPolicyLink_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyPrivacyPolicy_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyPrivacyPolicy_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  netlifyPrivacyPolicy_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyPrivacyPolicy_not?: InputMaybe<Scalars['String']['input']>;
-  netlifyPrivacyPolicy_not_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyPrivacyPolicy_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyTitle?: InputMaybe<Scalars['String']['input']>;
-  netlifyTitle_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyTitle_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  netlifyTitle_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  netlifyTitle_not?: InputMaybe<Scalars['String']['input']>;
-  netlifyTitle_not_contains?: InputMaybe<Scalars['String']['input']>;
-  netlifyTitle_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   sys?: InputMaybe<SysFilter>;
   title?: InputMaybe<Scalars['String']['input']>;
   title_contains?: InputMaybe<Scalars['String']['input']>;
@@ -6358,6 +6272,69 @@ export type CfHostingNestedFilter = {
   title_not?: InputMaybe<Scalars['String']['input']>;
   title_not_contains?: InputMaybe<Scalars['String']['input']>;
   title_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelContractualClauses?: InputMaybe<Scalars['String']['input']>;
+  vercelContractualClausesLink?: InputMaybe<Scalars['String']['input']>;
+  vercelContractualClausesLink_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelContractualClausesLink_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  vercelContractualClausesLink_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelContractualClausesLink_not?: InputMaybe<Scalars['String']['input']>;
+  vercelContractualClausesLink_not_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelContractualClausesLink_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelContractualClauses_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelContractualClauses_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  vercelContractualClauses_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelContractualClauses_not?: InputMaybe<Scalars['String']['input']>;
+  vercelContractualClauses_not_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelContractualClauses_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelDataProcessing?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessingAgreement?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessingAgreementLink?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessingAgreementLink_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessingAgreementLink_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  vercelDataProcessingAgreementLink_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelDataProcessingAgreementLink_not?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessingAgreementLink_not_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessingAgreementLink_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelDataProcessingAgreement_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessingAgreement_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  vercelDataProcessingAgreement_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelDataProcessingAgreement_not?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessingAgreement_not_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessingAgreement_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelDataProcessing_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessing_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  vercelDataProcessing_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelDataProcessing_not?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessing_not_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelDataProcessing_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelHostingInfo?: InputMaybe<Scalars['String']['input']>;
+  vercelHostingInfo_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelHostingInfo_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  vercelHostingInfo_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelHostingInfo_not?: InputMaybe<Scalars['String']['input']>;
+  vercelHostingInfo_not_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelHostingInfo_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelPrivacyPolicy?: InputMaybe<Scalars['String']['input']>;
+  vercelPrivacyPolicyLink?: InputMaybe<Scalars['String']['input']>;
+  vercelPrivacyPolicyLink_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelPrivacyPolicyLink_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  vercelPrivacyPolicyLink_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelPrivacyPolicyLink_not?: InputMaybe<Scalars['String']['input']>;
+  vercelPrivacyPolicyLink_not_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelPrivacyPolicyLink_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelPrivacyPolicy_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelPrivacyPolicy_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  vercelPrivacyPolicy_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelPrivacyPolicy_not?: InputMaybe<Scalars['String']['input']>;
+  vercelPrivacyPolicy_not_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelPrivacyPolicy_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelTitle?: InputMaybe<Scalars['String']['input']>;
+  vercelTitle_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelTitle_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  vercelTitle_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  vercelTitle_not?: InputMaybe<Scalars['String']['input']>;
+  vercelTitle_not_contains?: InputMaybe<Scalars['String']['input']>;
+  vercelTitle_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
 export type CfLabelNestedFilter = {
@@ -6989,7 +6966,7 @@ export type PrivacyPolicyContentQueryVariables = Exact<{
 }>;
 
 
-export type PrivacyPolicyContentQuery = { __typename?: 'Query', privacyPolicyCollection?: { __typename?: 'PrivacyPolicyCollection', items: Array<{ __typename?: 'PrivacyPolicy', title?: string | null, lastModified?: string | null, privacyOverview?: { __typename?: 'PrivacyOverview', title?: string | null, generalInfoTitle?: string | null, generalInfoDescription?: string | null, dataCollectionTitle?: string | null, responsiblePartyTitle?: string | null, responsiblePartyDescription?: string | null, dataCaptureTitle?: string | null, dataDirectCaptureText?: string | null, dataAutomaticCaptureText?: string | null, dataPurposeTitle?: string | null, dataPurposeDescription?: string | null, userRightsTitle?: string | null, userRightsIntroText?: string | null, userRightsList?: Array<string | null> | null, userRightsContactText?: string | null, analysisToolsTitle?: string | null, analysisToolsIntroText?: string | null, analysisToolsDetailsText?: string | null } | null, hosting?: { __typename?: 'Hosting', title?: string | null, netlifyTitle?: string | null, netlifyHostingInfo?: string | null, netlifyDataProcessing?: string | null, netlifyDataProcessingLink?: string | null, netlifyContractualClauses?: string | null, netlifyContractualClausesLink?: string | null, netlifyDataProcessingAgreement?: string | null, netlifyDataProcessingAgreementLink?: string | null, netlifyPrivacyPolicy?: string | null, netlifyPrivacyPolicyLink?: string | null } | null, notesAndLegalInformation?: { __typename?: 'NotesAndLegalInformation', title?: string | null, dataProtectionTitle?: string | null, dataProtectionIntro?: string | null, dataProtectionDetails?: string | null, dataProtectionNotice?: string | null, responsiblePartyTitle?: string | null, responsiblePartyIntro?: string | null, responsiblePartyName?: string | null, responsiblePartyRole?: string | null, responsiblePartyStreet?: string | null, responsiblePartyPostalCode?: string | null, responsiblePartyCity?: string | null, responsiblePartyEmailLabel?: string | null, responsiblePartyEmail?: string | null, responsiblePartyInfo?: string | null, dataStorageDurationTitle?: string | null, dataStorageDurationDetails?: string | null, legalBasisTitle?: string | null, legalBasisIntro?: string | null, legalBasisList?: Array<string | null> | null, legalBasisDetails?: string | null, userRightsTitle?: string | null, userRightsIntro?: string | null, userRightsList?: Array<string | null> | null, complaintRightTitle?: string | null, complaintRightDetails?: string | null, sslTlsEncryptionTitle?: string | null, sslTlsEncryptionIntro?: string | null, sslTlsEncryptionDetails?: string | null } | null, dataCollection?: { __typename?: 'DataCollection', title?: string | null, cloudflareTitle?: string | null, cloudflareIntro?: string | null, cloudflareDetails?: string | null, cloudflarePrivacyPolicy?: string | null, cloudflarePrivacyPolicyLink?: string | null, contactFormTitle?: string | null, contactFormIntro?: string | null, contactFormSupabase?: string | null, contactFormSupabasePrivacyPolicy?: string | null, contactFormSupabasePrivacyPolicyLink?: string | null, legalBasisTitle?: string | null, legalBasisList?: Array<string | null> | null, storageDurationTitle?: string | null, storageDurationDetails?: string | null } | null } | null> } | null };
+export type PrivacyPolicyContentQuery = { __typename?: 'Query', privacyPolicyCollection?: { __typename?: 'PrivacyPolicyCollection', items: Array<{ __typename?: 'PrivacyPolicy', title?: string | null, lastModified?: string | null, privacyOverview?: { __typename?: 'PrivacyOverview', title?: string | null, generalInfoTitle?: string | null, generalInfoDescription?: string | null, dataCollectionTitle?: string | null, responsiblePartyTitle?: string | null, responsiblePartyDescription?: string | null, dataCaptureTitle?: string | null, dataDirectCaptureText?: string | null, dataAutomaticCaptureText?: string | null, dataPurposeTitle?: string | null, dataPurposeDescription?: string | null, userRightsTitle?: string | null, userRightsIntroText?: string | null, userRightsList?: Array<string | null> | null, userRightsContactText?: string | null, analysisToolsTitle?: string | null, analysisToolsIntroText?: string | null, analysisToolsDetailsText?: string | null } | null, hosting?: { __typename?: 'Hosting', title?: string | null, vercelTitle?: string | null, vercelHostingInfo?: string | null, vercelDataProcessing?: string | null, vercelContractualClauses?: string | null, vercelContractualClausesLink?: string | null, vercelDataProcessingAgreement?: string | null, vercelDataProcessingAgreementLink?: string | null, vercelPrivacyPolicy?: string | null, vercelPrivacyPolicyLink?: string | null } | null, notesAndLegalInformation?: { __typename?: 'NotesAndLegalInformation', title?: string | null, dataProtectionTitle?: string | null, dataProtectionIntro?: string | null, dataProtectionDetails?: string | null, dataProtectionNotice?: string | null, responsiblePartyTitle?: string | null, responsiblePartyIntro?: string | null, responsiblePartyName?: string | null, responsiblePartyRole?: string | null, responsiblePartyStreet?: string | null, responsiblePartyPostalCode?: string | null, responsiblePartyCity?: string | null, responsiblePartyEmailLabel?: string | null, responsiblePartyEmail?: string | null, responsiblePartyInfo?: string | null, dataStorageDurationTitle?: string | null, dataStorageDurationDetails?: string | null, legalBasisTitle?: string | null, legalBasisIntro?: string | null, legalBasisList?: Array<string | null> | null, legalBasisDetails?: string | null, userRightsTitle?: string | null, userRightsIntro?: string | null, userRightsList?: Array<string | null> | null, complaintRightTitle?: string | null, complaintRightDetails?: string | null, sslTlsEncryptionTitle?: string | null, sslTlsEncryptionIntro?: string | null, sslTlsEncryptionDetails?: string | null } | null, dataCollection?: { __typename?: 'DataCollection', title?: string | null, cloudflareTitle?: string | null, cloudflareIntro?: string | null, cloudflareDetails?: string | null, cloudflarePrivacyPolicy?: string | null, cloudflarePrivacyPolicyLink?: string | null, contactFormTitle?: string | null, contactFormIntro?: string | null, contactFormSupabase?: string | null, contactFormSupabasePrivacyPolicy?: string | null, contactFormSupabasePrivacyPolicyLink?: string | null, legalBasisTitle?: string | null, legalBasisList?: Array<string | null> | null, storageDurationTitle?: string | null, storageDurationDetails?: string | null } | null } | null> } | null };
 
 export type ServicesContentQueryVariables = Exact<{
   locale?: InputMaybe<Scalars['String']['input']>;
@@ -7297,16 +7274,15 @@ export const PrivacyPolicyContentDocument = gql`
       }
       hosting {
         title
-        netlifyTitle
-        netlifyHostingInfo
-        netlifyDataProcessing
-        netlifyDataProcessingLink
-        netlifyContractualClauses
-        netlifyContractualClausesLink
-        netlifyDataProcessingAgreement
-        netlifyDataProcessingAgreementLink
-        netlifyPrivacyPolicy
-        netlifyPrivacyPolicyLink
+        vercelTitle
+        vercelHostingInfo
+        vercelDataProcessing
+        vercelContractualClauses
+        vercelContractualClausesLink
+        vercelDataProcessingAgreement
+        vercelDataProcessingAgreementLink
+        vercelPrivacyPolicy
+        vercelPrivacyPolicyLink
       }
       notesAndLegalInformation {
         title

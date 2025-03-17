@@ -1303,18 +1303,17 @@ type Hosting implements Entry & _Node {
   _id: ID!
   contentfulMetadata: ContentfulMetadata!
   linkedFrom(allowedLocales: [String]): HostingLinkingCollections
-  netlifyContractualClauses(locale: String): String
-  netlifyContractualClausesLink(locale: String): String
-  netlifyDataProcessing(locale: String): String
-  netlifyDataProcessingAgreement(locale: String): String
-  netlifyDataProcessingAgreementLink(locale: String): String
-  netlifyDataProcessingLink(locale: String): String
-  netlifyHostingInfo(locale: String): String
-  netlifyPrivacyPolicy(locale: String): String
-  netlifyPrivacyPolicyLink(locale: String): String
-  netlifyTitle(locale: String): String
   sys: Sys!
   title(locale: String): String
+  vercelContractualClauses(locale: String): String
+  vercelContractualClausesLink(locale: String): String
+  vercelDataProcessing(locale: String): String
+  vercelDataProcessingAgreement(locale: String): String
+  vercelDataProcessingAgreementLink(locale: String): String
+  vercelHostingInfo(locale: String): String
+  vercelPrivacyPolicy(locale: String): String
+  vercelPrivacyPolicyLink(locale: String): String
+  vercelTitle(locale: String): String
 }
 
 type HostingCollection {
@@ -1328,76 +1327,6 @@ input HostingFilter {
   AND: [HostingFilter]
   OR: [HostingFilter]
   contentfulMetadata: ContentfulMetadataFilter
-  netlifyContractualClauses: String
-  netlifyContractualClausesLink: String
-  netlifyContractualClausesLink_contains: String
-  netlifyContractualClausesLink_exists: Boolean
-  netlifyContractualClausesLink_in: [String]
-  netlifyContractualClausesLink_not: String
-  netlifyContractualClausesLink_not_contains: String
-  netlifyContractualClausesLink_not_in: [String]
-  netlifyContractualClauses_contains: String
-  netlifyContractualClauses_exists: Boolean
-  netlifyContractualClauses_in: [String]
-  netlifyContractualClauses_not: String
-  netlifyContractualClauses_not_contains: String
-  netlifyContractualClauses_not_in: [String]
-  netlifyDataProcessing: String
-  netlifyDataProcessingAgreement: String
-  netlifyDataProcessingAgreementLink: String
-  netlifyDataProcessingAgreementLink_contains: String
-  netlifyDataProcessingAgreementLink_exists: Boolean
-  netlifyDataProcessingAgreementLink_in: [String]
-  netlifyDataProcessingAgreementLink_not: String
-  netlifyDataProcessingAgreementLink_not_contains: String
-  netlifyDataProcessingAgreementLink_not_in: [String]
-  netlifyDataProcessingAgreement_contains: String
-  netlifyDataProcessingAgreement_exists: Boolean
-  netlifyDataProcessingAgreement_in: [String]
-  netlifyDataProcessingAgreement_not: String
-  netlifyDataProcessingAgreement_not_contains: String
-  netlifyDataProcessingAgreement_not_in: [String]
-  netlifyDataProcessingLink: String
-  netlifyDataProcessingLink_contains: String
-  netlifyDataProcessingLink_exists: Boolean
-  netlifyDataProcessingLink_in: [String]
-  netlifyDataProcessingLink_not: String
-  netlifyDataProcessingLink_not_contains: String
-  netlifyDataProcessingLink_not_in: [String]
-  netlifyDataProcessing_contains: String
-  netlifyDataProcessing_exists: Boolean
-  netlifyDataProcessing_in: [String]
-  netlifyDataProcessing_not: String
-  netlifyDataProcessing_not_contains: String
-  netlifyDataProcessing_not_in: [String]
-  netlifyHostingInfo: String
-  netlifyHostingInfo_contains: String
-  netlifyHostingInfo_exists: Boolean
-  netlifyHostingInfo_in: [String]
-  netlifyHostingInfo_not: String
-  netlifyHostingInfo_not_contains: String
-  netlifyHostingInfo_not_in: [String]
-  netlifyPrivacyPolicy: String
-  netlifyPrivacyPolicyLink: String
-  netlifyPrivacyPolicyLink_contains: String
-  netlifyPrivacyPolicyLink_exists: Boolean
-  netlifyPrivacyPolicyLink_in: [String]
-  netlifyPrivacyPolicyLink_not: String
-  netlifyPrivacyPolicyLink_not_contains: String
-  netlifyPrivacyPolicyLink_not_in: [String]
-  netlifyPrivacyPolicy_contains: String
-  netlifyPrivacyPolicy_exists: Boolean
-  netlifyPrivacyPolicy_in: [String]
-  netlifyPrivacyPolicy_not: String
-  netlifyPrivacyPolicy_not_contains: String
-  netlifyPrivacyPolicy_not_in: [String]
-  netlifyTitle: String
-  netlifyTitle_contains: String
-  netlifyTitle_exists: Boolean
-  netlifyTitle_in: [String]
-  netlifyTitle_not: String
-  netlifyTitle_not_contains: String
-  netlifyTitle_not_in: [String]
   sys: SysFilter
   title: String
   title_contains: String
@@ -1406,6 +1335,69 @@ input HostingFilter {
   title_not: String
   title_not_contains: String
   title_not_in: [String]
+  vercelContractualClauses: String
+  vercelContractualClausesLink: String
+  vercelContractualClausesLink_contains: String
+  vercelContractualClausesLink_exists: Boolean
+  vercelContractualClausesLink_in: [String]
+  vercelContractualClausesLink_not: String
+  vercelContractualClausesLink_not_contains: String
+  vercelContractualClausesLink_not_in: [String]
+  vercelContractualClauses_contains: String
+  vercelContractualClauses_exists: Boolean
+  vercelContractualClauses_in: [String]
+  vercelContractualClauses_not: String
+  vercelContractualClauses_not_contains: String
+  vercelContractualClauses_not_in: [String]
+  vercelDataProcessing: String
+  vercelDataProcessingAgreement: String
+  vercelDataProcessingAgreementLink: String
+  vercelDataProcessingAgreementLink_contains: String
+  vercelDataProcessingAgreementLink_exists: Boolean
+  vercelDataProcessingAgreementLink_in: [String]
+  vercelDataProcessingAgreementLink_not: String
+  vercelDataProcessingAgreementLink_not_contains: String
+  vercelDataProcessingAgreementLink_not_in: [String]
+  vercelDataProcessingAgreement_contains: String
+  vercelDataProcessingAgreement_exists: Boolean
+  vercelDataProcessingAgreement_in: [String]
+  vercelDataProcessingAgreement_not: String
+  vercelDataProcessingAgreement_not_contains: String
+  vercelDataProcessingAgreement_not_in: [String]
+  vercelDataProcessing_contains: String
+  vercelDataProcessing_exists: Boolean
+  vercelDataProcessing_in: [String]
+  vercelDataProcessing_not: String
+  vercelDataProcessing_not_contains: String
+  vercelDataProcessing_not_in: [String]
+  vercelHostingInfo: String
+  vercelHostingInfo_contains: String
+  vercelHostingInfo_exists: Boolean
+  vercelHostingInfo_in: [String]
+  vercelHostingInfo_not: String
+  vercelHostingInfo_not_contains: String
+  vercelHostingInfo_not_in: [String]
+  vercelPrivacyPolicy: String
+  vercelPrivacyPolicyLink: String
+  vercelPrivacyPolicyLink_contains: String
+  vercelPrivacyPolicyLink_exists: Boolean
+  vercelPrivacyPolicyLink_in: [String]
+  vercelPrivacyPolicyLink_not: String
+  vercelPrivacyPolicyLink_not_contains: String
+  vercelPrivacyPolicyLink_not_in: [String]
+  vercelPrivacyPolicy_contains: String
+  vercelPrivacyPolicy_exists: Boolean
+  vercelPrivacyPolicy_in: [String]
+  vercelPrivacyPolicy_not: String
+  vercelPrivacyPolicy_not_contains: String
+  vercelPrivacyPolicy_not_in: [String]
+  vercelTitle: String
+  vercelTitle_contains: String
+  vercelTitle_exists: Boolean
+  vercelTitle_in: [String]
+  vercelTitle_not: String
+  vercelTitle_not_contains: String
+  vercelTitle_not_in: [String]
 }
 
 type HostingLinkingCollections {
@@ -1429,22 +1421,6 @@ enum HostingLinkingCollectionsPrivacyPolicyCollectionOrder {
 }
 
 enum HostingOrder {
-  netlifyContractualClausesLink_ASC
-  netlifyContractualClausesLink_DESC
-  netlifyDataProcessingAgreementLink_ASC
-  netlifyDataProcessingAgreementLink_DESC
-  netlifyDataProcessingAgreement_ASC
-  netlifyDataProcessingAgreement_DESC
-  netlifyDataProcessingLink_ASC
-  netlifyDataProcessingLink_DESC
-  netlifyHostingInfo_ASC
-  netlifyHostingInfo_DESC
-  netlifyPrivacyPolicyLink_ASC
-  netlifyPrivacyPolicyLink_DESC
-  netlifyPrivacyPolicy_ASC
-  netlifyPrivacyPolicy_DESC
-  netlifyTitle_ASC
-  netlifyTitle_DESC
   sys_firstPublishedAt_ASC
   sys_firstPublishedAt_DESC
   sys_id_ASC
@@ -1455,6 +1431,20 @@ enum HostingOrder {
   sys_publishedVersion_DESC
   title_ASC
   title_DESC
+  vercelContractualClausesLink_ASC
+  vercelContractualClausesLink_DESC
+  vercelDataProcessingAgreementLink_ASC
+  vercelDataProcessingAgreementLink_DESC
+  vercelDataProcessingAgreement_ASC
+  vercelDataProcessingAgreement_DESC
+  vercelHostingInfo_ASC
+  vercelHostingInfo_DESC
+  vercelPrivacyPolicyLink_ASC
+  vercelPrivacyPolicyLink_DESC
+  vercelPrivacyPolicy_ASC
+  vercelPrivacyPolicy_DESC
+  vercelTitle_ASC
+  vercelTitle_DESC
 }
 
 enum ImageFormat {
@@ -3928,76 +3918,6 @@ input cfHostingNestedFilter {
   AND: [cfHostingNestedFilter]
   OR: [cfHostingNestedFilter]
   contentfulMetadata: ContentfulMetadataFilter
-  netlifyContractualClauses: String
-  netlifyContractualClausesLink: String
-  netlifyContractualClausesLink_contains: String
-  netlifyContractualClausesLink_exists: Boolean
-  netlifyContractualClausesLink_in: [String]
-  netlifyContractualClausesLink_not: String
-  netlifyContractualClausesLink_not_contains: String
-  netlifyContractualClausesLink_not_in: [String]
-  netlifyContractualClauses_contains: String
-  netlifyContractualClauses_exists: Boolean
-  netlifyContractualClauses_in: [String]
-  netlifyContractualClauses_not: String
-  netlifyContractualClauses_not_contains: String
-  netlifyContractualClauses_not_in: [String]
-  netlifyDataProcessing: String
-  netlifyDataProcessingAgreement: String
-  netlifyDataProcessingAgreementLink: String
-  netlifyDataProcessingAgreementLink_contains: String
-  netlifyDataProcessingAgreementLink_exists: Boolean
-  netlifyDataProcessingAgreementLink_in: [String]
-  netlifyDataProcessingAgreementLink_not: String
-  netlifyDataProcessingAgreementLink_not_contains: String
-  netlifyDataProcessingAgreementLink_not_in: [String]
-  netlifyDataProcessingAgreement_contains: String
-  netlifyDataProcessingAgreement_exists: Boolean
-  netlifyDataProcessingAgreement_in: [String]
-  netlifyDataProcessingAgreement_not: String
-  netlifyDataProcessingAgreement_not_contains: String
-  netlifyDataProcessingAgreement_not_in: [String]
-  netlifyDataProcessingLink: String
-  netlifyDataProcessingLink_contains: String
-  netlifyDataProcessingLink_exists: Boolean
-  netlifyDataProcessingLink_in: [String]
-  netlifyDataProcessingLink_not: String
-  netlifyDataProcessingLink_not_contains: String
-  netlifyDataProcessingLink_not_in: [String]
-  netlifyDataProcessing_contains: String
-  netlifyDataProcessing_exists: Boolean
-  netlifyDataProcessing_in: [String]
-  netlifyDataProcessing_not: String
-  netlifyDataProcessing_not_contains: String
-  netlifyDataProcessing_not_in: [String]
-  netlifyHostingInfo: String
-  netlifyHostingInfo_contains: String
-  netlifyHostingInfo_exists: Boolean
-  netlifyHostingInfo_in: [String]
-  netlifyHostingInfo_not: String
-  netlifyHostingInfo_not_contains: String
-  netlifyHostingInfo_not_in: [String]
-  netlifyPrivacyPolicy: String
-  netlifyPrivacyPolicyLink: String
-  netlifyPrivacyPolicyLink_contains: String
-  netlifyPrivacyPolicyLink_exists: Boolean
-  netlifyPrivacyPolicyLink_in: [String]
-  netlifyPrivacyPolicyLink_not: String
-  netlifyPrivacyPolicyLink_not_contains: String
-  netlifyPrivacyPolicyLink_not_in: [String]
-  netlifyPrivacyPolicy_contains: String
-  netlifyPrivacyPolicy_exists: Boolean
-  netlifyPrivacyPolicy_in: [String]
-  netlifyPrivacyPolicy_not: String
-  netlifyPrivacyPolicy_not_contains: String
-  netlifyPrivacyPolicy_not_in: [String]
-  netlifyTitle: String
-  netlifyTitle_contains: String
-  netlifyTitle_exists: Boolean
-  netlifyTitle_in: [String]
-  netlifyTitle_not: String
-  netlifyTitle_not_contains: String
-  netlifyTitle_not_in: [String]
   sys: SysFilter
   title: String
   title_contains: String
@@ -4006,6 +3926,69 @@ input cfHostingNestedFilter {
   title_not: String
   title_not_contains: String
   title_not_in: [String]
+  vercelContractualClauses: String
+  vercelContractualClausesLink: String
+  vercelContractualClausesLink_contains: String
+  vercelContractualClausesLink_exists: Boolean
+  vercelContractualClausesLink_in: [String]
+  vercelContractualClausesLink_not: String
+  vercelContractualClausesLink_not_contains: String
+  vercelContractualClausesLink_not_in: [String]
+  vercelContractualClauses_contains: String
+  vercelContractualClauses_exists: Boolean
+  vercelContractualClauses_in: [String]
+  vercelContractualClauses_not: String
+  vercelContractualClauses_not_contains: String
+  vercelContractualClauses_not_in: [String]
+  vercelDataProcessing: String
+  vercelDataProcessingAgreement: String
+  vercelDataProcessingAgreementLink: String
+  vercelDataProcessingAgreementLink_contains: String
+  vercelDataProcessingAgreementLink_exists: Boolean
+  vercelDataProcessingAgreementLink_in: [String]
+  vercelDataProcessingAgreementLink_not: String
+  vercelDataProcessingAgreementLink_not_contains: String
+  vercelDataProcessingAgreementLink_not_in: [String]
+  vercelDataProcessingAgreement_contains: String
+  vercelDataProcessingAgreement_exists: Boolean
+  vercelDataProcessingAgreement_in: [String]
+  vercelDataProcessingAgreement_not: String
+  vercelDataProcessingAgreement_not_contains: String
+  vercelDataProcessingAgreement_not_in: [String]
+  vercelDataProcessing_contains: String
+  vercelDataProcessing_exists: Boolean
+  vercelDataProcessing_in: [String]
+  vercelDataProcessing_not: String
+  vercelDataProcessing_not_contains: String
+  vercelDataProcessing_not_in: [String]
+  vercelHostingInfo: String
+  vercelHostingInfo_contains: String
+  vercelHostingInfo_exists: Boolean
+  vercelHostingInfo_in: [String]
+  vercelHostingInfo_not: String
+  vercelHostingInfo_not_contains: String
+  vercelHostingInfo_not_in: [String]
+  vercelPrivacyPolicy: String
+  vercelPrivacyPolicyLink: String
+  vercelPrivacyPolicyLink_contains: String
+  vercelPrivacyPolicyLink_exists: Boolean
+  vercelPrivacyPolicyLink_in: [String]
+  vercelPrivacyPolicyLink_not: String
+  vercelPrivacyPolicyLink_not_contains: String
+  vercelPrivacyPolicyLink_not_in: [String]
+  vercelPrivacyPolicy_contains: String
+  vercelPrivacyPolicy_exists: Boolean
+  vercelPrivacyPolicy_in: [String]
+  vercelPrivacyPolicy_not: String
+  vercelPrivacyPolicy_not_contains: String
+  vercelPrivacyPolicy_not_in: [String]
+  vercelTitle: String
+  vercelTitle_contains: String
+  vercelTitle_exists: Boolean
+  vercelTitle_in: [String]
+  vercelTitle_not: String
+  vercelTitle_not_contains: String
+  vercelTitle_not_in: [String]
 }
 
 input cfLabelNestedFilter {

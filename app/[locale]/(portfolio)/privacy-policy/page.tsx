@@ -100,38 +100,33 @@ export default async function Page({ params }: Props) {
         <article className="mb-12">
           <h4 className="mb-8">{content?.hosting?.title}</h4>
 
-          <TitledSection title={content?.hosting?.netlifyTitle}>
+          <TitledSection title={content?.hosting?.vercelTitle}>
             <p className="mb-2 text-(--secondary)">
-              {content?.hosting?.netlifyHostingInfo}
+              {content?.hosting?.vercelHostingInfo}
             </p>
             <p className="mb-2 text-(--secondary)">
-              {content?.hosting?.netlifyDataProcessing}{' '}
+              {content?.hosting?.vercelDataProcessing}
+            </p>
+            <p className="mb-2 text-(--secondary)">
+              {content?.hosting?.vercelContractualClauses}{' '}
               <ExternalLink
-                href={content?.hosting?.netlifyDataProcessingLink}
+                href={content?.hosting?.vercelContractualClausesLink}
                 highlight
               />
               .
             </p>
             <p className="mb-2 text-(--secondary)">
-              {content?.hosting?.netlifyContractualClauses}{' '}
+              {content?.hosting?.vercelDataProcessingAgreement}{' '}
               <ExternalLink
-                href={content?.hosting?.netlifyContractualClausesLink}
+                href={content?.hosting?.vercelDataProcessingAgreementLink}
                 highlight
               />
               .
             </p>
             <p className="mb-2 text-(--secondary)">
-              {content?.hosting?.netlifyDataProcessingAgreement}{' '}
+              {content?.hosting?.vercelPrivacyPolicy}{' '}
               <ExternalLink
-                href={content?.hosting?.netlifyDataProcessingAgreementLink}
-                highlight
-              />
-              .
-            </p>
-            <p className="mb-2 text-(--secondary)">
-              {content?.hosting?.netlifyPrivacyPolicy}{' '}
-              <ExternalLink
-                href={content?.hosting?.netlifyPrivacyPolicyLink}
+                href={content?.hosting?.vercelPrivacyPolicyLink}
                 highlight
               />
               .
