@@ -459,7 +459,7 @@ export const handlers = [
                 title: '2. Hosting',
                 vercelTitle: 'Vercel',
                 vercelHostingInfo:
-                  'Our website is hosted by Netlify. The provider is Netlify Inc., 2325 3rd Street, Suite 29, San Francisco, CA 94104, UOur website is hosted on Vercel, a cloud deployment platform. The service provider is Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA.',
+                  'Our website is hosted by Netlify. The provider is Netlify Inc., 2325 3rd Street, Suite 29, San Francisco, CA 94104, UOur website is hosted on Vercel, a cloud deployment platform. The service provider is Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, USA.',
                 vercelDataProcessing:
                   'Vercel processes your data in the USA as well. We would like to point out that the European Court of Justice currently does not consider the level of data protection in the USA to be adequate. This may involve risks regarding the security and legality of data processing.',
                 vercelContractualClauses:
