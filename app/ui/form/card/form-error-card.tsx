@@ -18,7 +18,7 @@ export default function FormErrorCard({
 }: Props) {
   return (
     <StatusCard
-      icon={<CancelCircleIcon size={52} />}
+      icon={<CancelCircleIcon className="size-12 md:size-14" />}
       title={content?.errorTitle}
       button={{
         label: content?.errorButtonLabel,
@@ -29,7 +29,7 @@ export default function FormErrorCard({
       attemptsLabel={content?.attemptsLabel}
       attemptLabel={content?.attemptLabel}
     >
-      <p className="text-center">
+      <p className="text-center text-sm md:text-base">
         {content?.errorIntro}{' '}
         <button
           type="button"

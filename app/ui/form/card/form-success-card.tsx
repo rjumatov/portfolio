@@ -21,7 +21,7 @@ export default function SubmittedStatusCard({
 }: Props) {
   return (
     <StatusCard
-      icon={<MailOpenIcon size={52} />}
+      icon={<MailOpenIcon className="size-12 md:size-14" />}
       title={content?.emailVerificationTitle}
       button={{
         label: content?.emailResendButtonLabel,
@@ -33,7 +33,9 @@ export default function SubmittedStatusCard({
       attemptsLabel={content?.attemptsLabel}
       attemptLabel={content?.attemptLabel}
     >
-      <p className="text-center">{content?.emailVerificationDescription}</p>
+      <p className="text-center text-sm md:text-base">
+        {content?.emailVerificationDescription}
+      </p>
       {email && (
         <button
           type="button"

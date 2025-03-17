@@ -26,10 +26,10 @@ export default function StatusCard({
   attemptLabel,
 }: Props) {
   return (
-    <div className="subtle-border rounded-3xl bg-(--overlay-color) px-8 pt-6 pb-4 shadow-effect sm:px-10 sm:pt-8 sm:pb-6">
+    <div className="subtle-border rounded-2xl bg-(--overlay-color) px-8 pt-6 pb-4 shadow-effect sm:px-10 sm:pt-8 sm:pb-6">
       <div className="flex flex-col items-center text-(--highlight)">
         {icon}
-        <h5 className="mt-4 mb-2">{title}</h5>
+        <h5 className="my-2 md:mb-4">{title}</h5>
       </div>
       {children}
       <div className="mt-5 flex justify-center">
