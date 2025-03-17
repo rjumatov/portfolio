@@ -251,17 +251,17 @@ export default async function Page({ params }: Props) {
         <article>
           <h4 className="mb-8">{content?.dataCollection?.title}</h4>
 
-          <TitledSection title={content?.dataCollection?.cloudflareTitle}>
+          <TitledSection title={content?.dataCollection?.vercelTitle}>
             <p className="mb-2 text-(--secondary)">
-              {content?.dataCollection?.cloudflareIntro}
+              {content?.dataCollection?.vercelIntro}
             </p>
             <p className="mb-2 text-(--secondary)">
-              {content?.dataCollection?.cloudflareDetails}
+              {content?.dataCollection?.vercelDetails}
             </p>
             <p className="mb-2 text-(--secondary)">
-              {content?.dataCollection?.cloudflarePrivacyPolicy}{' '}
+              {content?.dataCollection?.vercelPrivacyPolicy}{' '}
               <ExternalLink
-                href={content?.dataCollection?.cloudflarePrivacyPolicyLink}
+                href={content?.dataCollection?.vercelPrivacyPolicyLink}
                 highlight
               />
               .

@@ -529,14 +529,14 @@ export const handlers = [
               },
               dataCollection: {
                 title: '4. Data Collection on This Website',
-                cloudflareTitle: 'Cloudflare Web Analytics',
-                cloudflareIntro:
-                  'We use the Cloudflare Web Analytics tool for our website. The service provider is Cloudflare Inc., 101 Townsend St., San Francisco, CA 94107, USA.',
-                cloudflareDetails:
-                  'Cloudflare processes data, including in the USA, and is a participant in the EU-US Data Privacy Framework, which regulates the secure and privacy-compliant transfer of personal data. Additionally, Standard Contractual Clauses in accordance with Art. 46 of the GDPR are used to ensure European data protection standards when processing data in third countries.',
-                cloudflarePrivacyPolicy:
-                  'For more information, please refer to Cloudflare’s Privacy Policy:',
-                cloudflarePrivacyPolicyLink: MOCK_URL,
+                vercelTitle: 'Vercel Web Analytics\n',
+                vercelIntro:
+                  'We use Vercel Web Analytics on our website to analyze usage data. The service provider is Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, USA.',
+                vercelDetails:
+                  'Vercel processes data in the United States, among other locations. To ensure the protection of personal data, Vercel relies on Standard Contractual Clauses (SCC) in accordance with Article 46 of the GDPR, which are designed to maintain European data protection standards when processing data in third countries.',
+                vercelPrivacyPolicy:
+                  'More information on how Vercel Web Analytics processes data can be found at:',
+                vercelPrivacyPolicyLink: MOCK_URL,
                 contactFormTitle: 'Contact Form and Email Inquiries',
                 contactFormIntro:
                   'Using the contact form and sending emails require the provision of personal data (e.g., name, email address, message). This data is only stored for the purpose of processing your inquiry and will not be shared without your consent.',

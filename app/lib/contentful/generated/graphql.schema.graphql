@@ -399,11 +399,6 @@ type ContentfulTag {
 """
 type DataCollection implements Entry & _Node {
   _id: ID!
-  cloudflareDetails(locale: String): String
-  cloudflareIntro(locale: String): String
-  cloudflarePrivacyPolicy(locale: String): String
-  cloudflarePrivacyPolicyLink(locale: String): String
-  cloudflareTitle(locale: String): String
   contactFormIntro(locale: String): String
   contactFormSupabase(locale: String): String
   contactFormSupabasePrivacyPolicy(locale: String): String
@@ -417,6 +412,11 @@ type DataCollection implements Entry & _Node {
   storageDurationTitle(locale: String): String
   sys: Sys!
   title(locale: String): String
+  vercelDetails(locale: String): String
+  vercelIntro(locale: String): String
+  vercelPrivacyPolicy(locale: String): String
+  vercelPrivacyPolicyLink(locale: String): String
+  vercelTitle(locale: String): String
 }
 
 type DataCollectionCollection {
@@ -429,41 +429,6 @@ type DataCollectionCollection {
 input DataCollectionFilter {
   AND: [DataCollectionFilter]
   OR: [DataCollectionFilter]
-  cloudflareDetails: String
-  cloudflareDetails_contains: String
-  cloudflareDetails_exists: Boolean
-  cloudflareDetails_in: [String]
-  cloudflareDetails_not: String
-  cloudflareDetails_not_contains: String
-  cloudflareDetails_not_in: [String]
-  cloudflareIntro: String
-  cloudflareIntro_contains: String
-  cloudflareIntro_exists: Boolean
-  cloudflareIntro_in: [String]
-  cloudflareIntro_not: String
-  cloudflareIntro_not_contains: String
-  cloudflareIntro_not_in: [String]
-  cloudflarePrivacyPolicy: String
-  cloudflarePrivacyPolicyLink: String
-  cloudflarePrivacyPolicyLink_contains: String
-  cloudflarePrivacyPolicyLink_exists: Boolean
-  cloudflarePrivacyPolicyLink_in: [String]
-  cloudflarePrivacyPolicyLink_not: String
-  cloudflarePrivacyPolicyLink_not_contains: String
-  cloudflarePrivacyPolicyLink_not_in: [String]
-  cloudflarePrivacyPolicy_contains: String
-  cloudflarePrivacyPolicy_exists: Boolean
-  cloudflarePrivacyPolicy_in: [String]
-  cloudflarePrivacyPolicy_not: String
-  cloudflarePrivacyPolicy_not_contains: String
-  cloudflarePrivacyPolicy_not_in: [String]
-  cloudflareTitle: String
-  cloudflareTitle_contains: String
-  cloudflareTitle_exists: Boolean
-  cloudflareTitle_in: [String]
-  cloudflareTitle_not: String
-  cloudflareTitle_not_contains: String
-  cloudflareTitle_not_in: [String]
   contactFormIntro: String
   contactFormIntro_contains: String
   contactFormIntro_exists: Boolean
@@ -533,6 +498,41 @@ input DataCollectionFilter {
   title_not: String
   title_not_contains: String
   title_not_in: [String]
+  vercelDetails: String
+  vercelDetails_contains: String
+  vercelDetails_exists: Boolean
+  vercelDetails_in: [String]
+  vercelDetails_not: String
+  vercelDetails_not_contains: String
+  vercelDetails_not_in: [String]
+  vercelIntro: String
+  vercelIntro_contains: String
+  vercelIntro_exists: Boolean
+  vercelIntro_in: [String]
+  vercelIntro_not: String
+  vercelIntro_not_contains: String
+  vercelIntro_not_in: [String]
+  vercelPrivacyPolicy: String
+  vercelPrivacyPolicyLink: String
+  vercelPrivacyPolicyLink_contains: String
+  vercelPrivacyPolicyLink_exists: Boolean
+  vercelPrivacyPolicyLink_in: [String]
+  vercelPrivacyPolicyLink_not: String
+  vercelPrivacyPolicyLink_not_contains: String
+  vercelPrivacyPolicyLink_not_in: [String]
+  vercelPrivacyPolicy_contains: String
+  vercelPrivacyPolicy_exists: Boolean
+  vercelPrivacyPolicy_in: [String]
+  vercelPrivacyPolicy_not: String
+  vercelPrivacyPolicy_not_contains: String
+  vercelPrivacyPolicy_not_in: [String]
+  vercelTitle: String
+  vercelTitle_contains: String
+  vercelTitle_exists: Boolean
+  vercelTitle_in: [String]
+  vercelTitle_not: String
+  vercelTitle_not_contains: String
+  vercelTitle_not_in: [String]
 }
 
 type DataCollectionLinkingCollections {
@@ -556,14 +556,6 @@ enum DataCollectionLinkingCollectionsPrivacyPolicyCollectionOrder {
 }
 
 enum DataCollectionOrder {
-  cloudflareIntro_ASC
-  cloudflareIntro_DESC
-  cloudflarePrivacyPolicyLink_ASC
-  cloudflarePrivacyPolicyLink_DESC
-  cloudflarePrivacyPolicy_ASC
-  cloudflarePrivacyPolicy_DESC
-  cloudflareTitle_ASC
-  cloudflareTitle_DESC
   contactFormSupabasePrivacyPolicyLink_ASC
   contactFormSupabasePrivacyPolicyLink_DESC
   contactFormSupabasePrivacyPolicy_ASC
@@ -586,6 +578,14 @@ enum DataCollectionOrder {
   sys_publishedVersion_DESC
   title_ASC
   title_DESC
+  vercelIntro_ASC
+  vercelIntro_DESC
+  vercelPrivacyPolicyLink_ASC
+  vercelPrivacyPolicyLink_DESC
+  vercelPrivacyPolicy_ASC
+  vercelPrivacyPolicy_DESC
+  vercelTitle_ASC
+  vercelTitle_DESC
 }
 
 """
@@ -3808,41 +3808,6 @@ interface _Node {
 input cfDataCollectionNestedFilter {
   AND: [cfDataCollectionNestedFilter]
   OR: [cfDataCollectionNestedFilter]
-  cloudflareDetails: String
-  cloudflareDetails_contains: String
-  cloudflareDetails_exists: Boolean
-  cloudflareDetails_in: [String]
-  cloudflareDetails_not: String
-  cloudflareDetails_not_contains: String
-  cloudflareDetails_not_in: [String]
-  cloudflareIntro: String
-  cloudflareIntro_contains: String
-  cloudflareIntro_exists: Boolean
-  cloudflareIntro_in: [String]
-  cloudflareIntro_not: String
-  cloudflareIntro_not_contains: String
-  cloudflareIntro_not_in: [String]
-  cloudflarePrivacyPolicy: String
-  cloudflarePrivacyPolicyLink: String
-  cloudflarePrivacyPolicyLink_contains: String
-  cloudflarePrivacyPolicyLink_exists: Boolean
-  cloudflarePrivacyPolicyLink_in: [String]
-  cloudflarePrivacyPolicyLink_not: String
-  cloudflarePrivacyPolicyLink_not_contains: String
-  cloudflarePrivacyPolicyLink_not_in: [String]
-  cloudflarePrivacyPolicy_contains: String
-  cloudflarePrivacyPolicy_exists: Boolean
-  cloudflarePrivacyPolicy_in: [String]
-  cloudflarePrivacyPolicy_not: String
-  cloudflarePrivacyPolicy_not_contains: String
-  cloudflarePrivacyPolicy_not_in: [String]
-  cloudflareTitle: String
-  cloudflareTitle_contains: String
-  cloudflareTitle_exists: Boolean
-  cloudflareTitle_in: [String]
-  cloudflareTitle_not: String
-  cloudflareTitle_not_contains: String
-  cloudflareTitle_not_in: [String]
   contactFormIntro: String
   contactFormIntro_contains: String
   contactFormIntro_exists: Boolean
@@ -3912,6 +3877,41 @@ input cfDataCollectionNestedFilter {
   title_not: String
   title_not_contains: String
   title_not_in: [String]
+  vercelDetails: String
+  vercelDetails_contains: String
+  vercelDetails_exists: Boolean
+  vercelDetails_in: [String]
+  vercelDetails_not: String
+  vercelDetails_not_contains: String
+  vercelDetails_not_in: [String]
+  vercelIntro: String
+  vercelIntro_contains: String
+  vercelIntro_exists: Boolean
+  vercelIntro_in: [String]
+  vercelIntro_not: String
+  vercelIntro_not_contains: String
+  vercelIntro_not_in: [String]
+  vercelPrivacyPolicy: String
+  vercelPrivacyPolicyLink: String
+  vercelPrivacyPolicyLink_contains: String
+  vercelPrivacyPolicyLink_exists: Boolean
+  vercelPrivacyPolicyLink_in: [String]
+  vercelPrivacyPolicyLink_not: String
+  vercelPrivacyPolicyLink_not_contains: String
+  vercelPrivacyPolicyLink_not_in: [String]
+  vercelPrivacyPolicy_contains: String
+  vercelPrivacyPolicy_exists: Boolean
+  vercelPrivacyPolicy_in: [String]
+  vercelPrivacyPolicy_not: String
+  vercelPrivacyPolicy_not_contains: String
+  vercelPrivacyPolicy_not_in: [String]
+  vercelTitle: String
+  vercelTitle_contains: String
+  vercelTitle_exists: Boolean
+  vercelTitle_in: [String]
+  vercelTitle_not: String
+  vercelTitle_not_contains: String
+  vercelTitle_not_in: [String]
 }
 
 input cfHostingNestedFilter {

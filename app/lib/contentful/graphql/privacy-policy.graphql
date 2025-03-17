@@ -68,11 +68,11 @@ query privacyPolicyContent($locale: String) {
       }
       dataCollection {
         title
-        cloudflareTitle
-        cloudflareIntro
-        cloudflareDetails
-        cloudflarePrivacyPolicy
-        cloudflarePrivacyPolicyLink
+        vercelTitle
+        vercelIntro
+        vercelDetails
+        vercelPrivacyPolicy
+        vercelPrivacyPolicyLink
         contactFormTitle
         contactFormIntro
         contactFormSupabase
