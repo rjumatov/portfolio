@@ -1,4 +1,5 @@
 import type { Form } from '@/app/lib/contentful/generated/sdk';
+import ImplicitButton from '@/app/ui/button/implicit-button';
 import StatusCard from '@/app/ui/card/status-card';
 import { MailOpenIcon } from 'hugeicons-react';
 
@@ -37,14 +38,14 @@ export default function SubmittedStatusCard({
         {content?.emailVerificationDescription}
       </p>
       {email && (
-        <button
-          type="button"
-          onClick={handleReturn}
-          className="flex w-full cursor-pointer justify-center font-medium text-(--secondary) underline hover:text-(--primary)"
-          aria-label={content?.emailEditAriaLabel || ''}
-        >
-          {email} {content?.emailEditPrompt}
-        </button>
+        <div className="flex justify-center">
+          <ImplicitButton
+            onClick={handleReturn}
+            label={content?.emailEditAriaLabel}
+          >
+            {email} {content?.emailEditPrompt}
+          </ImplicitButton>
+        </div>
       )}
     </StatusCard>
   );

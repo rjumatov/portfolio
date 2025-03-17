@@ -1,4 +1,4 @@
-import Button from '@/app/ui/button/button';
+import CompactButton from '@/app/ui/button/compact-button';
 import type { MouseEventHandler, ReactNode } from 'react';
 
 type Props = {
@@ -26,25 +26,24 @@ export default function StatusCard({
   attemptLabel,
 }: Props) {
   return (
-    <div className="subtle-border rounded-2xl bg-(--overlay-color) px-8 pt-6 pb-4 shadow-effect sm:px-10 sm:pt-8 sm:pb-6">
+    <div className="subtle-border rounded-2xl bg-(--overlay-color) px-8 py-6 shadow-effect sm:px-10 sm:py-8">
       <div className="flex flex-col items-center text-(--highlight)">
         {icon}
         <h5 className="my-2 md:mb-4">{title}</h5>
       </div>
       {children}
-      <div className="mt-5 flex justify-center">
-        <Button
-          fullWidth
+      <div className="mt-4 flex justify-center">
+        <CompactButton
           onClick={button.onClick}
           disabled={button.disabled}
           isLoading={button.isLoading}
         >
           {button.label}
-        </Button>
+          <span className="font-medium text-xs">
+            ({attemptsLeft} {attemptsLeft === 1 ? attemptLabel : attemptsLabel})
+          </span>
+        </CompactButton>
       </div>
-      <span className="mt-2 flex justify-center text-(--text-secondary) text-sm">
-        {attemptsLeft} {attemptsLeft === 1 ? attemptLabel : attemptsLabel}
-      </span>
     </div>
   );
 }

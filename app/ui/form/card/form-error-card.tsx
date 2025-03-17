@@ -1,4 +1,5 @@
 import type { Form } from '@/app/lib/contentful/generated/sdk';
+import ImplicitButton from '@/app/ui/button/implicit-button';
 import StatusCard from '@/app/ui/card/status-card';
 import MailLink from '@/app/ui/link/mail-link';
 import { CancelCircleIcon } from 'hugeicons-react';
@@ -31,14 +32,12 @@ export default function FormErrorCard({
     >
       <p className="text-center text-sm md:text-base">
         {content?.errorIntro}{' '}
-        <button
-          type="button"
+        <ImplicitButton
           onClick={handleReturn}
-          className="cursor-pointer font-medium text-(--secondary) underline hover:text-(--primary)"
-          aria-label={content?.errorEditAriaLabel || ''}
+          label={content?.errorEditAriaLabel}
         >
           {content?.errorEditPrompt}
-        </button>{' '}
+        </ImplicitButton>{' '}
         {content?.errorDescription}{' '}
         <MailLink mail={content?.errorContactEmail} />.
       </p>

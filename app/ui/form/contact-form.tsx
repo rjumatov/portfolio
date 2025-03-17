@@ -67,7 +67,7 @@ export default function ContactForm({ content }: Props) {
   };
 
   const handleRetry = () => {
-    setResendAttempts((prev) => prev - 1);
+    setRetryAttempts((prev) => prev - 1);
     const formData = new FormData();
     formData.set('baseUrl', window.origin);
     formData.set('locale', locale);
