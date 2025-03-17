@@ -1,8 +1,6 @@
 import contentfulClient from '@/app/lib/contentful/client';
-import HeroAnimation from '@/app/ui/animation/hero/hero-animation';
 import RadialAnimation from '@/app/ui/animation/radial-animation';
 import RevealAnimation from '@/app/ui/animation/reveal-animation';
-import ViewAnimation from '@/app/ui/animation/view-animation';
 import ShiningButton from '@/app/ui/button/shining-button';
 import { Link } from '@/i18n/navigation';
 import { ArrowDown01Icon } from 'hugeicons-react';
@@ -23,15 +21,6 @@ export default async function HomeSection({ locale }: Props) {
       className="relative flex min-h-[calc(100vh-80px)] flex-col justify-center py-24 md:py-36"
     >
       <RadialAnimation top={0} left={0} radius={50} />
-      <ViewAnimation
-        direction="fromBottom"
-        delay={0.4}
-        className="pointer-events-none absolute inset-0"
-      >
-        <div className="-bottom-2/12 pointer-events-none absolute left-2/12 max-h-3/4 opacity-50 sm:pointer-events-auto sm:left-1/3 sm:opacity-100 md:left-1/2 dark:opacity-40 dark:sm:opacity-100">
-          <HeroAnimation floatingLabel={content?.floatingLabel} />
-        </div>
-      </ViewAnimation>
       <RevealAnimation>
         <div className="mx-auto max-w-(--breakpoint-xl) px-6">
           <h6 className="mb-5">
