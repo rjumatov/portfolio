@@ -32,7 +32,6 @@ export default async function ServicesSection({ locale }: Props) {
           direction="fromBottom"
           translation={50}
           amount={0.1}
-          delay={0.2}
         >
           {content?.serviceEntriesCollection?.items
             .filter((item) => item !== null)

@@ -26,7 +26,7 @@ export default function ProcessSteps({ content }: Props) {
           initial={{ height: 0 }}
           whileInView={{ height: '100%' }}
           viewport={{ once: true }}
-          transition={{ duration: 1.4, ease: 'easeInOut' }}
+          transition={{ duration: 1.2, delay: 0.2 }}
         />
         <ul className="space-y-2 sm:space-y-4 md:space-y-6">
           {steps.map(({ title, description }, index) => (
@@ -35,7 +35,7 @@ export default function ProcessSteps({ content }: Props) {
               index={index}
               title={title}
               description={description}
-              delay={index * 0.3}
+              delay={index * 0.2 + 0.2}
               isInView={isInView}
             />
           ))}
@@ -47,7 +47,7 @@ export default function ProcessSteps({ content }: Props) {
             index={steps.length}
             title={lastStep.title}
             description={lastStep.description}
-            delay={steps.length * 0.3}
+            delay={steps.length * 0.2 + 0.2}
             isInView={isInView}
           />
         </ul>

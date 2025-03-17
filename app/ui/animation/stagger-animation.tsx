@@ -10,7 +10,6 @@ type Props = {
   direction: 'fromRight' | 'fromLeft' | 'fromTop' | 'fromBottom';
   translation?: number;
   amount?: number;
-  delay?: number;
 };
 
 export default function StaggerAnimation({
@@ -20,7 +19,6 @@ export default function StaggerAnimation({
   direction,
   translation = 20,
   amount = 0.4,
-  delay = 0,
 }: Props) {
   const initialValues = {
     fromRight: { opacity: 0, x: translation },
@@ -34,7 +32,6 @@ export default function StaggerAnimation({
     show: {
       transition: {
         staggerChildren: 0.15,
-        delayChildren: delay,
       },
     },
   };

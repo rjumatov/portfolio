@@ -26,7 +26,6 @@ export default function ProcessStepItem({
         transition={{
           duration: 0.4,
           delay,
-          ease: 'easeOut',
         }}
       >
         {index + 1}
@@ -37,7 +36,6 @@ export default function ProcessStepItem({
         transition={{
           duration: 0.5,
           delay,
-          ease: 'easeOut',
         }}
       >
         <p className="font-semibold sm:text-lg">{title}</p>
