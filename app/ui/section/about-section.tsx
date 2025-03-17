@@ -27,7 +27,7 @@ export default async function AboutSection({ locale }: Props) {
                 className="flex items-center justify-center brightness-110 md:w-1/3 lg:w-5/12 dark:brightness-100"
               >
                 <Image
-                  className="w-2/3 rounded-2xl duration-500 hover:scale-[1.02] sm:w-1/2 md:w-full lg:w-10/12"
+                  className="w-2/3 select-none rounded-2xl duration-500 hover:scale-[1.02] sm:w-1/2 md:w-full lg:w-10/12"
                   src={content.image.url}
                   width={content.image.width}
                   height={content.image.height}
@@ -58,19 +58,18 @@ export default async function AboutSection({ locale }: Props) {
               <ViewAnimation delay={0.3} direction="fromBottom">
                 <p className="text-(--secondary)">{content?.description}</p>
               </ViewAnimation>
-              <ViewAnimation
-                className="flex flex-col justify-between space-y-4 sm:flex-row sm:space-x-16 sm:space-y-0 lg:space-x-32"
-                delay={0.3}
-              >
+              <div className="flex flex-col justify-between space-y-4 sm:flex-row sm:space-x-16 sm:space-y-0 lg:space-x-32">
                 {content?.experienceMetricsCollection?.items
                   .filter((item) => item !== null)
                   .map((item) => (
-                    <ExperienceCounter
+                    <ViewAnimation
                       key={`${item.labelPrefix}${item.labelSuffix}`}
-                      content={item as Metric}
-                    />
+                      delay={0.2}
+                    >
+                      <ExperienceCounter content={item as Metric} />
+                    </ViewAnimation>
                   ))}
-              </ViewAnimation>
+              </div>
             </div>
           </div>
         </div>
