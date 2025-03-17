@@ -52,7 +52,7 @@ export default async function HomeSection({ locale }: Props) {
             </span>
           </h1>
           <h3>{content?.introSubheading}</h3>
-          <p className="relative z-10 mt-6 sm:w-2/3 lg:w-5/12">
+          <p className="relative mt-6 sm:w-2/3 lg:w-5/12">
             {content?.introDescription}
           </p>
           <div className="flex items-center space-x-4 pt-16">
@@ -61,7 +61,7 @@ export default async function HomeSection({ locale }: Props) {
             </Link>
             <Link
               href="#about"
-              className="z-0 rounded-full bg-(--highlight) p-2"
+              className="relative rounded-full bg-(--highlight) p-2"
               aria-label={content?.scrollDownLabel || ''}
             >
               <ArrowDown01Icon
