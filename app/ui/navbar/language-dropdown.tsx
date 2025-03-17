@@ -140,6 +140,7 @@ export default function LanguageDropdown({
               alt={usFlagDescription || ''}
               width={30}
               height={30}
+              loading="eager"
             />
             <span className="block px-3 py-2">{englishLabel}</span>
           </div>
@@ -159,6 +160,7 @@ export default function LanguageDropdown({
               alt={deFlagDescription || ''}
               width={30}
               height={30}
+              loading="eager"
             />
             <span className="block px-3 py-2">{germanLabel}</span>
           </div>
