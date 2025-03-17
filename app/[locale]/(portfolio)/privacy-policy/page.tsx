@@ -251,17 +251,28 @@ export default async function Page({ params }: Props) {
         <article>
           <h4 className="mb-8">{content?.dataCollection?.title}</h4>
 
-          <TitledSection title={content?.dataCollection?.vercelTitle}>
+          <TitledSection title={content?.dataCollection?.vercelAnalyticsTitle}>
             <p className="mb-2 text-(--secondary)">
-              {content?.dataCollection?.vercelIntro}
+              {content?.dataCollection?.vercelAnalyticsDetails}
             </p>
             <p className="mb-2 text-(--secondary)">
-              {content?.dataCollection?.vercelDetails}
-            </p>
-            <p className="mb-2 text-(--secondary)">
-              {content?.dataCollection?.vercelPrivacyPolicy}{' '}
+              {content?.dataCollection?.vercelAnalyticsPrivacyPolicy}{' '}
               <ExternalLink
-                href={content?.dataCollection?.vercelPrivacyPolicyLink}
+                href={content?.dataCollection?.vercelAnalyticsPrivacyPolicyLink}
+                highlight
+              />
+              .
+            </p>
+          </TitledSection>
+
+          <TitledSection title={content?.dataCollection?.vercelInsightsTitle}>
+            <p className="mb-2 text-(--secondary)">
+              {content?.dataCollection?.vercelInsightsDetails}
+            </p>
+            <p className="mb-2 text-(--secondary)">
+              {content?.dataCollection?.vercelInsightsPrivacyPolicy}{' '}
+              <ExternalLink
+                href={content?.dataCollection?.vercelInsightsPrivacyPolicyLink}
                 highlight
               />
               .

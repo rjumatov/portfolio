@@ -412,11 +412,14 @@ type DataCollection implements Entry & _Node {
   storageDurationTitle(locale: String): String
   sys: Sys!
   title(locale: String): String
-  vercelDetails(locale: String): String
-  vercelIntro(locale: String): String
-  vercelPrivacyPolicy(locale: String): String
-  vercelPrivacyPolicyLink(locale: String): String
-  vercelTitle(locale: String): String
+  vercelAnalyticsDetails(locale: String): String
+  vercelAnalyticsPrivacyPolicy(locale: String): String
+  vercelAnalyticsPrivacyPolicyLink(locale: String): String
+  vercelAnalyticsTitle(locale: String): String
+  vercelInsightsDetails(locale: String): String
+  vercelInsightsPrivacyPolicy(locale: String): String
+  vercelInsightsPrivacyPolicyLink(locale: String): String
+  vercelInsightsTitle(locale: String): String
 }
 
 type DataCollectionCollection {
@@ -498,41 +501,62 @@ input DataCollectionFilter {
   title_not: String
   title_not_contains: String
   title_not_in: [String]
-  vercelDetails: String
-  vercelDetails_contains: String
-  vercelDetails_exists: Boolean
-  vercelDetails_in: [String]
-  vercelDetails_not: String
-  vercelDetails_not_contains: String
-  vercelDetails_not_in: [String]
-  vercelIntro: String
-  vercelIntro_contains: String
-  vercelIntro_exists: Boolean
-  vercelIntro_in: [String]
-  vercelIntro_not: String
-  vercelIntro_not_contains: String
-  vercelIntro_not_in: [String]
-  vercelPrivacyPolicy: String
-  vercelPrivacyPolicyLink: String
-  vercelPrivacyPolicyLink_contains: String
-  vercelPrivacyPolicyLink_exists: Boolean
-  vercelPrivacyPolicyLink_in: [String]
-  vercelPrivacyPolicyLink_not: String
-  vercelPrivacyPolicyLink_not_contains: String
-  vercelPrivacyPolicyLink_not_in: [String]
-  vercelPrivacyPolicy_contains: String
-  vercelPrivacyPolicy_exists: Boolean
-  vercelPrivacyPolicy_in: [String]
-  vercelPrivacyPolicy_not: String
-  vercelPrivacyPolicy_not_contains: String
-  vercelPrivacyPolicy_not_in: [String]
-  vercelTitle: String
-  vercelTitle_contains: String
-  vercelTitle_exists: Boolean
-  vercelTitle_in: [String]
-  vercelTitle_not: String
-  vercelTitle_not_contains: String
-  vercelTitle_not_in: [String]
+  vercelAnalyticsDetails: String
+  vercelAnalyticsDetails_contains: String
+  vercelAnalyticsDetails_exists: Boolean
+  vercelAnalyticsDetails_in: [String]
+  vercelAnalyticsDetails_not: String
+  vercelAnalyticsDetails_not_contains: String
+  vercelAnalyticsDetails_not_in: [String]
+  vercelAnalyticsPrivacyPolicy: String
+  vercelAnalyticsPrivacyPolicyLink: String
+  vercelAnalyticsPrivacyPolicyLink_contains: String
+  vercelAnalyticsPrivacyPolicyLink_exists: Boolean
+  vercelAnalyticsPrivacyPolicyLink_in: [String]
+  vercelAnalyticsPrivacyPolicyLink_not: String
+  vercelAnalyticsPrivacyPolicyLink_not_contains: String
+  vercelAnalyticsPrivacyPolicyLink_not_in: [String]
+  vercelAnalyticsPrivacyPolicy_contains: String
+  vercelAnalyticsPrivacyPolicy_exists: Boolean
+  vercelAnalyticsPrivacyPolicy_in: [String]
+  vercelAnalyticsPrivacyPolicy_not: String
+  vercelAnalyticsPrivacyPolicy_not_contains: String
+  vercelAnalyticsPrivacyPolicy_not_in: [String]
+  vercelAnalyticsTitle: String
+  vercelAnalyticsTitle_contains: String
+  vercelAnalyticsTitle_exists: Boolean
+  vercelAnalyticsTitle_in: [String]
+  vercelAnalyticsTitle_not: String
+  vercelAnalyticsTitle_not_contains: String
+  vercelAnalyticsTitle_not_in: [String]
+  vercelInsightsDetails: String
+  vercelInsightsDetails_contains: String
+  vercelInsightsDetails_exists: Boolean
+  vercelInsightsDetails_in: [String]
+  vercelInsightsDetails_not: String
+  vercelInsightsDetails_not_contains: String
+  vercelInsightsDetails_not_in: [String]
+  vercelInsightsPrivacyPolicy: String
+  vercelInsightsPrivacyPolicyLink: String
+  vercelInsightsPrivacyPolicyLink_contains: String
+  vercelInsightsPrivacyPolicyLink_exists: Boolean
+  vercelInsightsPrivacyPolicyLink_in: [String]
+  vercelInsightsPrivacyPolicyLink_not: String
+  vercelInsightsPrivacyPolicyLink_not_contains: String
+  vercelInsightsPrivacyPolicyLink_not_in: [String]
+  vercelInsightsPrivacyPolicy_contains: String
+  vercelInsightsPrivacyPolicy_exists: Boolean
+  vercelInsightsPrivacyPolicy_in: [String]
+  vercelInsightsPrivacyPolicy_not: String
+  vercelInsightsPrivacyPolicy_not_contains: String
+  vercelInsightsPrivacyPolicy_not_in: [String]
+  vercelInsightsTitle: String
+  vercelInsightsTitle_contains: String
+  vercelInsightsTitle_exists: Boolean
+  vercelInsightsTitle_in: [String]
+  vercelInsightsTitle_not: String
+  vercelInsightsTitle_not_contains: String
+  vercelInsightsTitle_not_in: [String]
 }
 
 type DataCollectionLinkingCollections {
@@ -578,14 +602,18 @@ enum DataCollectionOrder {
   sys_publishedVersion_DESC
   title_ASC
   title_DESC
-  vercelIntro_ASC
-  vercelIntro_DESC
-  vercelPrivacyPolicyLink_ASC
-  vercelPrivacyPolicyLink_DESC
-  vercelPrivacyPolicy_ASC
-  vercelPrivacyPolicy_DESC
-  vercelTitle_ASC
-  vercelTitle_DESC
+  vercelAnalyticsPrivacyPolicyLink_ASC
+  vercelAnalyticsPrivacyPolicyLink_DESC
+  vercelAnalyticsPrivacyPolicy_ASC
+  vercelAnalyticsPrivacyPolicy_DESC
+  vercelAnalyticsTitle_ASC
+  vercelAnalyticsTitle_DESC
+  vercelInsightsPrivacyPolicyLink_ASC
+  vercelInsightsPrivacyPolicyLink_DESC
+  vercelInsightsPrivacyPolicy_ASC
+  vercelInsightsPrivacyPolicy_DESC
+  vercelInsightsTitle_ASC
+  vercelInsightsTitle_DESC
 }
 
 """
@@ -3877,41 +3905,62 @@ input cfDataCollectionNestedFilter {
   title_not: String
   title_not_contains: String
   title_not_in: [String]
-  vercelDetails: String
-  vercelDetails_contains: String
-  vercelDetails_exists: Boolean
-  vercelDetails_in: [String]
-  vercelDetails_not: String
-  vercelDetails_not_contains: String
-  vercelDetails_not_in: [String]
-  vercelIntro: String
-  vercelIntro_contains: String
-  vercelIntro_exists: Boolean
-  vercelIntro_in: [String]
-  vercelIntro_not: String
-  vercelIntro_not_contains: String
-  vercelIntro_not_in: [String]
-  vercelPrivacyPolicy: String
-  vercelPrivacyPolicyLink: String
-  vercelPrivacyPolicyLink_contains: String
-  vercelPrivacyPolicyLink_exists: Boolean
-  vercelPrivacyPolicyLink_in: [String]
-  vercelPrivacyPolicyLink_not: String
-  vercelPrivacyPolicyLink_not_contains: String
-  vercelPrivacyPolicyLink_not_in: [String]
-  vercelPrivacyPolicy_contains: String
-  vercelPrivacyPolicy_exists: Boolean
-  vercelPrivacyPolicy_in: [String]
-  vercelPrivacyPolicy_not: String
-  vercelPrivacyPolicy_not_contains: String
-  vercelPrivacyPolicy_not_in: [String]
-  vercelTitle: String
-  vercelTitle_contains: String
-  vercelTitle_exists: Boolean
-  vercelTitle_in: [String]
-  vercelTitle_not: String
-  vercelTitle_not_contains: String
-  vercelTitle_not_in: [String]
+  vercelAnalyticsDetails: String
+  vercelAnalyticsDetails_contains: String
+  vercelAnalyticsDetails_exists: Boolean
+  vercelAnalyticsDetails_in: [String]
+  vercelAnalyticsDetails_not: String
+  vercelAnalyticsDetails_not_contains: String
+  vercelAnalyticsDetails_not_in: [String]
+  vercelAnalyticsPrivacyPolicy: String
+  vercelAnalyticsPrivacyPolicyLink: String
+  vercelAnalyticsPrivacyPolicyLink_contains: String
+  vercelAnalyticsPrivacyPolicyLink_exists: Boolean
+  vercelAnalyticsPrivacyPolicyLink_in: [String]
+  vercelAnalyticsPrivacyPolicyLink_not: String
+  vercelAnalyticsPrivacyPolicyLink_not_contains: String
+  vercelAnalyticsPrivacyPolicyLink_not_in: [String]
+  vercelAnalyticsPrivacyPolicy_contains: String
+  vercelAnalyticsPrivacyPolicy_exists: Boolean
+  vercelAnalyticsPrivacyPolicy_in: [String]
+  vercelAnalyticsPrivacyPolicy_not: String
+  vercelAnalyticsPrivacyPolicy_not_contains: String
+  vercelAnalyticsPrivacyPolicy_not_in: [String]
+  vercelAnalyticsTitle: String
+  vercelAnalyticsTitle_contains: String
+  vercelAnalyticsTitle_exists: Boolean
+  vercelAnalyticsTitle_in: [String]
+  vercelAnalyticsTitle_not: String
+  vercelAnalyticsTitle_not_contains: String
+  vercelAnalyticsTitle_not_in: [String]
+  vercelInsightsDetails: String
+  vercelInsightsDetails_contains: String
+  vercelInsightsDetails_exists: Boolean
+  vercelInsightsDetails_in: [String]
+  vercelInsightsDetails_not: String
+  vercelInsightsDetails_not_contains: String
+  vercelInsightsDetails_not_in: [String]
+  vercelInsightsPrivacyPolicy: String
+  vercelInsightsPrivacyPolicyLink: String
+  vercelInsightsPrivacyPolicyLink_contains: String
+  vercelInsightsPrivacyPolicyLink_exists: Boolean
+  vercelInsightsPrivacyPolicyLink_in: [String]
+  vercelInsightsPrivacyPolicyLink_not: String
+  vercelInsightsPrivacyPolicyLink_not_contains: String
+  vercelInsightsPrivacyPolicyLink_not_in: [String]
+  vercelInsightsPrivacyPolicy_contains: String
+  vercelInsightsPrivacyPolicy_exists: Boolean
+  vercelInsightsPrivacyPolicy_in: [String]
+  vercelInsightsPrivacyPolicy_not: String
+  vercelInsightsPrivacyPolicy_not_contains: String
+  vercelInsightsPrivacyPolicy_not_in: [String]
+  vercelInsightsTitle: String
+  vercelInsightsTitle_contains: String
+  vercelInsightsTitle_exists: Boolean
+  vercelInsightsTitle_in: [String]
+  vercelInsightsTitle_not: String
+  vercelInsightsTitle_not_contains: String
+  vercelInsightsTitle_not_in: [String]
 }
 
 input cfHostingNestedFilter {

@@ -5065,7 +5065,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelDetails",
+            "name": "vercelAnalyticsDetails",
             "description": null,
             "args": [
               {
@@ -5090,7 +5090,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelIntro",
+            "name": "vercelAnalyticsPrivacyPolicy",
             "description": null,
             "args": [
               {
@@ -5115,7 +5115,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicy",
+            "name": "vercelAnalyticsPrivacyPolicyLink",
             "description": null,
             "args": [
               {
@@ -5140,7 +5140,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicyLink",
+            "name": "vercelAnalyticsTitle",
             "description": null,
             "args": [
               {
@@ -5165,7 +5165,82 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelTitle",
+            "name": "vercelInsightsDetails",
+            "description": null,
+            "args": [
+              {
+                "name": "locale",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicy",
+            "description": null,
+            "args": [
+              {
+                "name": "locale",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicyLink",
+            "description": null,
+            "args": [
+              {
+                "name": "locale",
+                "description": null,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsTitle",
             "description": null,
             "args": [
               {
@@ -6238,7 +6313,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelDetails",
+            "name": "vercelAnalyticsDetails",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6250,7 +6325,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelDetails_contains",
+            "name": "vercelAnalyticsDetails_contains",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6262,7 +6337,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelDetails_exists",
+            "name": "vercelAnalyticsDetails_exists",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6274,7 +6349,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelDetails_in",
+            "name": "vercelAnalyticsDetails_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -6290,7 +6365,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelDetails_not",
+            "name": "vercelAnalyticsDetails_not",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6302,7 +6377,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelDetails_not_contains",
+            "name": "vercelAnalyticsDetails_not_contains",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6314,7 +6389,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelDetails_not_in",
+            "name": "vercelAnalyticsDetails_not_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -6330,7 +6405,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelIntro",
+            "name": "vercelAnalyticsPrivacyPolicy",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6342,7 +6417,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelIntro_contains",
+            "name": "vercelAnalyticsPrivacyPolicyLink",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6354,7 +6429,19 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelIntro_exists",
+            "name": "vercelAnalyticsPrivacyPolicyLink_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelAnalyticsPrivacyPolicyLink_exists",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6366,7 +6453,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelIntro_in",
+            "name": "vercelAnalyticsPrivacyPolicyLink_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -6382,7 +6469,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelIntro_not",
+            "name": "vercelAnalyticsPrivacyPolicyLink_not",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6394,7 +6481,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelIntro_not_contains",
+            "name": "vercelAnalyticsPrivacyPolicyLink_not_contains",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6406,7 +6493,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelIntro_not_in",
+            "name": "vercelAnalyticsPrivacyPolicyLink_not_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -6422,7 +6509,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicy",
+            "name": "vercelAnalyticsPrivacyPolicy_contains",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6434,31 +6521,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicyLink",
-            "description": null,
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "vercelPrivacyPolicyLink_contains",
-            "description": null,
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "vercelPrivacyPolicyLink_exists",
+            "name": "vercelAnalyticsPrivacyPolicy_exists",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6470,7 +6533,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicyLink_in",
+            "name": "vercelAnalyticsPrivacyPolicy_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -6486,7 +6549,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicyLink_not",
+            "name": "vercelAnalyticsPrivacyPolicy_not",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6498,7 +6561,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicyLink_not_contains",
+            "name": "vercelAnalyticsPrivacyPolicy_not_contains",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6510,7 +6573,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicyLink_not_in",
+            "name": "vercelAnalyticsPrivacyPolicy_not_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -6526,7 +6589,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicy_contains",
+            "name": "vercelAnalyticsTitle",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6538,7 +6601,19 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicy_exists",
+            "name": "vercelAnalyticsTitle_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelAnalyticsTitle_exists",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6550,7 +6625,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicy_in",
+            "name": "vercelAnalyticsTitle_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -6566,7 +6641,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicy_not",
+            "name": "vercelAnalyticsTitle_not",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6578,7 +6653,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicy_not_contains",
+            "name": "vercelAnalyticsTitle_not_contains",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6590,7 +6665,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicy_not_in",
+            "name": "vercelAnalyticsTitle_not_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -6606,7 +6681,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelTitle",
+            "name": "vercelInsightsDetails",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6618,7 +6693,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelTitle_contains",
+            "name": "vercelInsightsDetails_contains",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6630,7 +6705,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelTitle_exists",
+            "name": "vercelInsightsDetails_exists",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6642,7 +6717,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelTitle_in",
+            "name": "vercelInsightsDetails_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -6658,7 +6733,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelTitle_not",
+            "name": "vercelInsightsDetails_not",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6670,7 +6745,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelTitle_not_contains",
+            "name": "vercelInsightsDetails_not_contains",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -6682,7 +6757,283 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelTitle_not_in",
+            "name": "vercelInsightsDetails_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicy",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicyLink",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicyLink_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicyLink_exists",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicyLink_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicyLink_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicyLink_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicyLink_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicy_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicy_exists",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicy_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicy_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicy_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicy_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsTitle",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsTitle_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsTitle_exists",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsTitle_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsTitle_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsTitle_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsTitle_not_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -7078,49 +7429,73 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelIntro_ASC",
+            "name": "vercelAnalyticsPrivacyPolicyLink_ASC",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "vercelIntro_DESC",
+            "name": "vercelAnalyticsPrivacyPolicyLink_DESC",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicyLink_ASC",
+            "name": "vercelAnalyticsPrivacyPolicy_ASC",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicyLink_DESC",
+            "name": "vercelAnalyticsPrivacyPolicy_DESC",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicy_ASC",
+            "name": "vercelAnalyticsTitle_ASC",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicy_DESC",
+            "name": "vercelAnalyticsTitle_DESC",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "vercelTitle_ASC",
+            "name": "vercelInsightsPrivacyPolicyLink_ASC",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "vercelTitle_DESC",
+            "name": "vercelInsightsPrivacyPolicyLink_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicy_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicy_DESC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsTitle_ASC",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsTitle_DESC",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -48781,7 +49156,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelDetails",
+            "name": "vercelAnalyticsDetails",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -48793,7 +49168,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelDetails_contains",
+            "name": "vercelAnalyticsDetails_contains",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -48805,7 +49180,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelDetails_exists",
+            "name": "vercelAnalyticsDetails_exists",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -48817,7 +49192,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelDetails_in",
+            "name": "vercelAnalyticsDetails_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -48833,7 +49208,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelDetails_not",
+            "name": "vercelAnalyticsDetails_not",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -48845,7 +49220,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelDetails_not_contains",
+            "name": "vercelAnalyticsDetails_not_contains",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -48857,7 +49232,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelDetails_not_in",
+            "name": "vercelAnalyticsDetails_not_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -48873,7 +49248,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelIntro",
+            "name": "vercelAnalyticsPrivacyPolicy",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -48885,7 +49260,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelIntro_contains",
+            "name": "vercelAnalyticsPrivacyPolicyLink",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -48897,7 +49272,19 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelIntro_exists",
+            "name": "vercelAnalyticsPrivacyPolicyLink_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelAnalyticsPrivacyPolicyLink_exists",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -48909,7 +49296,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelIntro_in",
+            "name": "vercelAnalyticsPrivacyPolicyLink_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -48925,7 +49312,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelIntro_not",
+            "name": "vercelAnalyticsPrivacyPolicyLink_not",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -48937,7 +49324,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelIntro_not_contains",
+            "name": "vercelAnalyticsPrivacyPolicyLink_not_contains",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -48949,7 +49336,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelIntro_not_in",
+            "name": "vercelAnalyticsPrivacyPolicyLink_not_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -48965,7 +49352,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicy",
+            "name": "vercelAnalyticsPrivacyPolicy_contains",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -48977,31 +49364,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicyLink",
-            "description": null,
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "vercelPrivacyPolicyLink_contains",
-            "description": null,
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "defaultValue": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "vercelPrivacyPolicyLink_exists",
+            "name": "vercelAnalyticsPrivacyPolicy_exists",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -49013,7 +49376,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicyLink_in",
+            "name": "vercelAnalyticsPrivacyPolicy_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -49029,7 +49392,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicyLink_not",
+            "name": "vercelAnalyticsPrivacyPolicy_not",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -49041,7 +49404,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicyLink_not_contains",
+            "name": "vercelAnalyticsPrivacyPolicy_not_contains",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -49053,7 +49416,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicyLink_not_in",
+            "name": "vercelAnalyticsPrivacyPolicy_not_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -49069,7 +49432,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicy_contains",
+            "name": "vercelAnalyticsTitle",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -49081,7 +49444,19 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicy_exists",
+            "name": "vercelAnalyticsTitle_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelAnalyticsTitle_exists",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -49093,7 +49468,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicy_in",
+            "name": "vercelAnalyticsTitle_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -49109,7 +49484,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicy_not",
+            "name": "vercelAnalyticsTitle_not",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -49121,7 +49496,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicy_not_contains",
+            "name": "vercelAnalyticsTitle_not_contains",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -49133,7 +49508,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelPrivacyPolicy_not_in",
+            "name": "vercelAnalyticsTitle_not_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -49149,7 +49524,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelTitle",
+            "name": "vercelInsightsDetails",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -49161,7 +49536,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelTitle_contains",
+            "name": "vercelInsightsDetails_contains",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -49173,7 +49548,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelTitle_exists",
+            "name": "vercelInsightsDetails_exists",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -49185,7 +49560,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelTitle_in",
+            "name": "vercelInsightsDetails_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -49201,7 +49576,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelTitle_not",
+            "name": "vercelInsightsDetails_not",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -49213,7 +49588,7 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelTitle_not_contains",
+            "name": "vercelInsightsDetails_not_contains",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -49225,7 +49600,283 @@
             "deprecationReason": null
           },
           {
-            "name": "vercelTitle_not_in",
+            "name": "vercelInsightsDetails_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicy",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicyLink",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicyLink_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicyLink_exists",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicyLink_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicyLink_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicyLink_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicyLink_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicy_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicy_exists",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicy_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicy_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicy_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsPrivacyPolicy_not_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsTitle",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsTitle_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsTitle_exists",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsTitle_in",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsTitle_not",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsTitle_not_contains",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "vercelInsightsTitle_not_in",
             "description": null,
             "type": {
               "kind": "LIST",

@@ -68,11 +68,14 @@ query privacyPolicyContent($locale: String) {
       }
       dataCollection {
         title
-        vercelTitle
-        vercelIntro
-        vercelDetails
-        vercelPrivacyPolicy
-        vercelPrivacyPolicyLink
+        vercelAnalyticsTitle
+        vercelAnalyticsDetails
+        vercelAnalyticsPrivacyPolicy
+        vercelAnalyticsPrivacyPolicyLink
+        vercelInsightsTitle
+        vercelInsightsDetails
+        vercelInsightsPrivacyPolicy
+        vercelInsightsPrivacyPolicyLink
         contactFormTitle
         contactFormIntro
         contactFormSupabase

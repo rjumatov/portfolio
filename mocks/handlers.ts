@@ -529,14 +529,18 @@ export const handlers = [
               },
               dataCollection: {
                 title: '4. Data Collection on This Website',
-                vercelTitle: 'Vercel Web Analytics\n',
-                vercelIntro:
-                  'We use Vercel Web Analytics on our website to analyze usage data. The service provider is Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, USA.',
-                vercelDetails:
-                  'Vercel processes data in the United States, among other locations. To ensure the protection of personal data, Vercel relies on Standard Contractual Clauses (SCC) in accordance with Article 46 of the GDPR, which are designed to maintain European data protection standards when processing data in third countries.',
-                vercelPrivacyPolicy:
+                vercelAnalyticsTitle: 'Vercel Web Analytics',
+                vercelAnalyticsDetails:
+                  'We use the Vercel Web Analytics tool on our website, provided by Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, USA. Vercel processes data, including in the USA, and implements Standard Contractual Clauses in accordance with Article 46 of the GDPR to ensure the protection of personal data and to uphold European data protection standards when processing data in third countries.',
+                vercelAnalyticsPrivacyPolicy:
                   'More information on how Vercel Web Analytics processes data can be found at:',
-                vercelPrivacyPolicyLink: MOCK_URL,
+                vercelAnalyticsPrivacyPolicyLink: MOCK_URL,
+                vercelInsightsTitle: 'Vercel Speed Insights',
+                vercelInsightsDetails:
+                  'To analyze page load speed, we use the Vercel Speed Insights tool, also provided by Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, USA. Data is processed, including in the USA, and Vercel uses Standard Contractual Clauses in accordance with Article 46 of the GDPR to ensure the protection of personal data.',
+                vercelInsightsPrivacyPolicy:
+                  'For more information on data processing by Vercel Speed Insights, please visit:',
+                vercelInsightsPrivacyPolicyLink: MOCK_URL,
                 contactFormTitle: 'Contact Form and Email Inquiries',
                 contactFormIntro:
                   'Using the contact form and sending emails require the provision of personal data (e.g., name, email address, message). This data is only stored for the purpose of processing your inquiry and will not be shared without your consent.',
