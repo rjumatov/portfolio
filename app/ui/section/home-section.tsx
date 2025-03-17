@@ -26,7 +26,7 @@ export default async function HomeSection({ locale }: Props) {
       <ViewAnimation
         direction="fromBottom"
         delay={0.4}
-        className="absolute inset-0"
+        className="pointer-events-none absolute inset-0"
       >
         <div className="-bottom-2/12 pointer-events-none absolute left-2/12 max-h-3/4 opacity-50 sm:pointer-events-auto sm:left-1/3 sm:opacity-100 md:left-1/2 dark:opacity-40 dark:sm:opacity-100">
           <HeroAnimation floatingLabel={content?.floatingLabel} />
@@ -52,7 +52,7 @@ export default async function HomeSection({ locale }: Props) {
             </span>
           </h1>
           <h3>{content?.introSubheading}</h3>
-          <p className="mt-6 drop-shadow-[0_0_6px_white] sm:w-2/3 lg:w-5/12 dark:drop-shadow-[0_0_6px_black]">
+          <p className="relative z-10 mt-6 sm:w-2/3 lg:w-5/12">
             {content?.introDescription}
           </p>
           <div className="flex items-center space-x-4 pt-16">
