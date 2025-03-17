@@ -6,6 +6,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import type { ReactNode } from 'react';
 import '@/app/ui/globals.css';
+import { Analytics } from '@vercel/analytics/react';
 
 type Props = {
   children: ReactNode;
@@ -54,6 +55,7 @@ export default async function RootLayout({ children, params }: Props) {
             {children}
           </NextIntlClientProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
