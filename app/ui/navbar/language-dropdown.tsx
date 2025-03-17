@@ -52,6 +52,9 @@ export default function LanguageDropdown({
   };
 
   const handleMouseEnter = () => {
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+      return;
+    }
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
@@ -59,6 +62,9 @@ export default function LanguageDropdown({
   };
 
   const handleMouseLeave = () => {
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+      return;
+    }
     timeoutRef.current = setTimeout(() => {
       setOpen(false);
     }, 200);
