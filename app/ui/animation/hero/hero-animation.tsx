@@ -8,20 +8,8 @@ type Props = {
 
 export default function HeroAnimation({ floatingLabel }: Props) {
   return (
-    <div
-      className="relative rotate-x-45 rotate-z-45 space-y-6 p-10 pr-80"
-      style={{
-        maskImage:
-          'radial-gradient(circle at 0% 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0))',
-      }}
-    >
-      <div
-        className="absolute inset-0 h-full w-full bg-[size:1.5rem_1.5rem] bg-linear-to-r from-(--grid-color) from-[1px] to-[1px] to-transparent after:absolute after:inset-0 after:bg-[size:1.5rem_1.5rem] after:bg-linear-to-b after:from-(--grid-color) after:from-[1px] after:to-[1px] after:to-transparent"
-        style={{
-          maskImage:
-            'radial-gradient(circle at 0% 0%, rgba(0,0,0,1), rgba(0,0,0,0))',
-        }}
-      />
+    <div className="relative rotate-x-45 rotate-z-45 space-y-6 p-10 pr-80 sm:[mask-image:radial-gradient(circle_at_top_left,rgba(0,0,0,1)_50%,rgba(0,0,0,0))]">
+      <div className="absolute inset-0 h-full w-full bg-[size:1.5rem_1.5rem] bg-linear-to-r from-(--grid-color) from-[1px] to-[1px] to-transparent after:absolute after:inset-0 after:bg-[size:1.5rem_1.5rem] after:bg-linear-to-b after:from-(--grid-color) after:from-[1px] after:to-[1px] after:to-transparent sm:[mask-image:radial-gradient(circle_at_top_left,rgba(0,0,0,1),rgba(0,0,0,0))]" />
       <WormholeAnimation />
       <div className="flex gap-6">
         <DiagramAnimation floatingLabel={floatingLabel} />
