@@ -207,9 +207,10 @@ export default function DiagramAnimation({ floatingLabel }: Props) {
           </g>
         </svg>
         <div
-          className="glass-effect top-14 left-20 animate-float rounded-2xl px-5 py-1"
+          className="glass-effect top-14 left-18 flex animate-float items-center gap-2 rounded-2xl py-1 pr-5 pl-4"
           aria-hidden
         >
+          <span className="h-2 w-2 rounded-full bg-(--highlight) opacity-70" />
           {floatingLabel}
         </div>
         <div className="absolute inset-0">

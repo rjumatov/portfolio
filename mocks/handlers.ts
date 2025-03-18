@@ -285,7 +285,7 @@ export const handlers = [
                 'I’ll guide your project from the first idea to the finished product – with full-stack expertise, tailored web solutions, and a clear focus on quality and scalability.',
               ctaButtonLabel: 'Contact Me',
               scrollDownLabel: 'Scroll down',
-              floatingLabel: 'System ready',
+              floatingLabel: 'Available',
             },
           ],
         },
