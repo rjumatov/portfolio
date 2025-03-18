@@ -42,7 +42,7 @@ export default async function ContactSection({ locale }: Props) {
             />
           </div>
         </div>
-        <div className="pt-32">
+        <div className="pt-32 lg:pt-44">
           <TestimonialSlider
             content={query.testimonialsCollection?.items[0] as Testimonials}
           />
