@@ -179,9 +179,9 @@ export default function DiagramAnimation({ floatingLabel }: Props) {
             />
             <path
               className="stroke-(--highlight) transition-[stroke-dashoffset] duration-800 group-hover:delay-200 group-hover:[stroke-dashoffset:0]"
-              d="M84.5 167H208C210.5 167.167 215.5 167 220 164C224.5 161 226 155.5 226 149.5C226 145.9 226 105.667 226 86"
-              strokeDasharray="300"
-              strokeDashoffset="-220"
+              d="M226 86C226 105.667 226 145.9 226 149.5C226 155.5 224.5 161 220 164C215.5 167 210.5 167.167 208 167H84.5"
+              strokeDasharray="220"
+              strokeDashoffset="220"
               strokeOpacity="0.8"
             />
             <g className="opacity-0 transition duration-500 group-hover:opacity-100 group-hover:delay-700">
