@@ -45,8 +45,8 @@ export default async function VerifyTemplate({
         <Head>
           <meta name="color-scheme" content="dark light" />
         </Head>
-        <Preview>{content?.preview || ''}</Preview>
         <Body>
+          <Preview>{content?.preview || ''}</Preview>
           <Container className="rounded-t-[8px] bg-neutral-900 px-[32px]">
             <Link href={content?.websiteUrl || ''}>
               <Img
