@@ -1,9 +1,9 @@
 'use client';
 
 import { useScrolled } from '@/app/lib/hooks/use-scroll';
-import PresenceAnimation from '@/app/ui/animation/presence-animation';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { LanguageSkillIcon } from 'hugeicons-react';
+import { motion } from 'motion/react';
 import { type Locale, useLocale } from 'next-intl';
 import Image from 'next/image';
 import { type KeyboardEvent, useEffect, useRef, useState } from 'react';
@@ -112,13 +112,17 @@ export default function LanguageDropdown({
           <LanguageSkillIcon size={22} />
         </button>
       </div>
-      <PresenceAnimation
+      <motion.div
         id="dropdown"
-        show={open}
-        className={`base-border absolute z-10 mt-2 w-32 rounded-2xl p-0 font-medium backdrop-blur duration-1000 ${
+        className={`base-border absolute z-10 mt-2 w-32 rounded-2xl p-0 font-medium backdrop-blur transition-colors duration-1000 ${
           scrolled ? 'bg-(--overlay-color)' : ''
         }`}
-        duration={0.2}
+        initial={{ opacity: 0, visibility: 'hidden' }}
+        animate={
+          open
+            ? { opacity: 1, visibility: 'initial' }
+            : { opacity: 0, visibility: 'hidden' }
+        }
       >
         <div
           className="space-y-1 p-1 text-sm"
@@ -140,7 +144,6 @@ export default function LanguageDropdown({
               alt={usFlagDescription || ''}
               width={30}
               height={30}
-              loading="eager"
             />
             <span className="block px-3 py-2">{englishLabel}</span>
           </div>
@@ -160,12 +163,11 @@ export default function LanguageDropdown({
               alt={deFlagDescription || ''}
               width={30}
               height={30}
-              loading="eager"
             />
             <span className="block px-3 py-2">{germanLabel}</span>
           </div>
         </div>
-      </PresenceAnimation>
+      </motion.div>
     </div>
   );
 }
