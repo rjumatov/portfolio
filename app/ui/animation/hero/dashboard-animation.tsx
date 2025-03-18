@@ -136,7 +136,7 @@ export default function DashboardAnimation() {
           </g>
         </svg>
         <div className="absolute inset-0">
-          <div className="glass-effect top-[55.2%] left-[59.2%] size-12 scale-50 rounded-2xl border-(--highlight) opacity-0 duration-300 group-hover:scale-100 group-hover:opacity-90 group-hover:delay-600" />
+          <div className="glass-effect top-[55.2%] left-[59.2%] size-12 scale-50 rounded-2xl border-(--highlight) opacity-0 duration-300 group-hover:scale-100 group-hover:opacity-100 group-hover:delay-600" />
         </div>
       </div>
     </div>
