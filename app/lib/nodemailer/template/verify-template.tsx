@@ -57,7 +57,7 @@ export default async function VerifyTemplate({
             </Link>
             <Hr className="border-neutral-700" />
           </Container>
-          <Container className="rounded-b-[8px] bg-neutral-900 px-[32px] pb-[8px]">
+          <Container className="rounded-b-[8px] bg-neutral-900 px-[32px] pb-[16px]">
             <Section className="text-neutral-300">
               <Text>
                 {content?.greeting} {name},
