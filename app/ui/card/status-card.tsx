@@ -26,7 +26,7 @@ export default function StatusCard({
   attemptLabel,
 }: Props) {
   return (
-    <div className="subtle-border rounded-2xl bg-(--overlay-color) px-8 py-6 shadow-effect sm:px-10 sm:py-8">
+    <div className="subtle-border rounded-2xl bg-(--surface-color) px-8 py-6 shadow-effect sm:px-10 sm:py-8">
       <div className="flex flex-col items-center text-(--highlight)">
         {icon}
         <h5 className="my-2 md:mb-4">{title}</h5>
