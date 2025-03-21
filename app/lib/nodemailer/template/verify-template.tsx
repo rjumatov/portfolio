@@ -50,12 +50,12 @@ export default async function VerifyTemplate({
           <Container className="rounded-t-[8px] bg-neutral-900 px-[32px]">
             <Link href={content?.websiteUrl || ''}>
               <Img
-                className="my-[32px] h-[48px] w-auto"
+                className="my-[32px] h-[44px] w-auto"
                 src={content?.logo?.url || undefined}
                 alt={content?.logo?.description || undefined}
               />
             </Link>
-            <Hr className="border-neutral-700" />
+            <Hr />
           </Container>
           <Container className="rounded-b-[8px] bg-neutral-900 px-[32px] pb-[16px]">
             <Section className="text-neutral-300">
