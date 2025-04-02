@@ -3,7 +3,7 @@ import nodemailerClient from '@/app/lib/nodemailer/client';
 import { type ContactFormData, ValidationMessages } from '@/app/lib/schemas';
 import supabaseClient from '@/app/lib/supabase/client';
 import ContactForm from '@/app/ui/form/contact-form';
-import { cleanup, render, screen } from '@testing-library/react';
+import { cleanup, render, screen, waitFor } from '@testing-library/react';
 import userEvent, { type UserEvent } from '@testing-library/user-event';
 import { NextIntlClientProvider } from 'next-intl';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
@@ -104,7 +104,7 @@ describe('ContactForm', () => {
   it('shows server validation errors on empty submit', async () => {
     await user.click(screen.getByRole('button'));
 
-    screen.getByText(ValidationMessages.nameRequired);
+    await waitFor(() => screen.getByText(ValidationMessages.nameRequired));
     screen.getByText(ValidationMessages.emailInvalid);
     screen.getByText(ValidationMessages.projectDetailsRequired);
     screen.getByText(ValidationMessages.consentRequired);
@@ -150,7 +150,7 @@ describe('ContactForm', () => {
     await fillForm(validFormData);
     await user.click(screen.getByRole('button'));
 
-    screen.getByText(content.emailVerificationTitle);
+    await waitFor(() => screen.getByText(content.emailVerificationTitle));
   });
 
   it('sends another email on email resend', async () => {
@@ -161,7 +161,10 @@ describe('ContactForm', () => {
     const mockSend = mockClient.sendMail;
     expect(mockSend).toHaveBeenCalledOnce();
 
-    await user.click(screen.getByText(content.emailResendButtonLabel));
+    await waitFor(async () => {
+      const resendButton = screen.getByText(content.emailResendButtonLabel);
+      await user.click(resendButton);
+    });
     expect(mockSend).toHaveBeenCalledTimes(2);
   });
 
