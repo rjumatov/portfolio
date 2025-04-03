@@ -4697,6 +4697,7 @@ export enum ProcessStepOrder {
 export type Query = {
   __typename?: 'Query';
   _node?: Maybe<_Node>;
+  _nodes: Array<Maybe<_Node>>;
   about?: Maybe<About>;
   aboutCollection?: Maybe<AboutCollection>;
   asset?: Maybe<Asset>;
@@ -4753,6 +4754,13 @@ export type Query = {
 
 export type Query_NodeArgs = {
   id: Scalars['ID']['input'];
+  locale?: InputMaybe<Scalars['String']['input']>;
+  preview?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+
+export type Query_NodesArgs = {
+  ids: Array<Scalars['ID']['input']>;
   locale?: InputMaybe<Scalars['String']['input']>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
 };

@@ -3086,6 +3086,7 @@ scalar Quality
 
 type Query {
   _node(id: ID!, locale: String, preview: Boolean): _Node
+  _nodes(ids: [ID!]!, locale: String, preview: Boolean): [_Node]!
   about(id: String!, locale: String, preview: Boolean): About
   aboutCollection(limit: Int = 100, locale: String, order: [AboutOrder], preview: Boolean, skip: Int = 0, where: AboutFilter): AboutCollection
   asset(id: String!, locale: String, preview: Boolean): Asset
