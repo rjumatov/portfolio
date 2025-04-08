@@ -64,7 +64,7 @@ export default async function Page({ params }: Props) {
         {content?.vatId && (
           <TitledSection title={content?.subTitleVat}>
             <p className="text-(--secondary)">{content?.vatLabel}</p>
-            <p className="font-medium text-(--highlight)">{content?.vatId}</p>
+            <p className="font-medium">{content?.vatId}</p>
           </TitledSection>
         )}
 
