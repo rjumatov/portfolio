@@ -24,7 +24,7 @@
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "embla-carousel-react": "^8.6.0",
-    "graphql": "^16.10.0",
+    "graphql": "^16.11.0",
     "hugeicons-react": "^0.3.0",
     "motion": "^12.9.2",
     "next": "^15.3.1",
