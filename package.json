@@ -58,7 +58,7 @@
     "dotenv-cli": "^8.0.0",
     "happy-dom": "^17.4.7",
     "husky": "^9.1.7",
-    "msw": "^2.8.2",
+    "msw": "^2.8.4",
     "supabase": "^2.22.12",
     "tailwindcss": "^4.1.7",
     "typescript": "^5",
