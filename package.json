@@ -18,7 +18,7 @@
     "types:generate": "dotenv -e .env.local -- sh -c 'npm run _contentful:generate && npm run _supabase:generate'"
   },
   "dependencies": {
-    "@hookform/resolvers": "^5.0.1",
+    "@hookform/resolvers": "^5.1.1",
     "@react-email/components": "^0.0.41",
     "@supabase/ssr": "^0.6.1",
     "@vercel/analytics": "^1.5.0",
