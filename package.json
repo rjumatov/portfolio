@@ -34,7 +34,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.57.0",
-    "zod": "^3.25.51"
+    "zod": "^3.25.62"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",
