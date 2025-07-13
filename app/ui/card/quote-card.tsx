@@ -1,6 +1,6 @@
-import type { Testimonial } from '@/app/lib/contentful/generated/sdk';
 import { QuoteDownIcon } from 'hugeicons-react';
 import Image from 'next/image';
+import type { Testimonial } from '@/app/lib/contentful/generated/sdk';
 
 type Props = {
   content?: Testimonial;

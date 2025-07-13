@@ -1,3 +1,4 @@
+import type { FieldErrors, UseFormRegister } from 'react-hook-form';
 import type { SaveMessageStatus } from '@/app/lib/actions';
 import type { Form } from '@/app/lib/contentful/generated/sdk';
 import type { ContactFormData } from '@/app/lib/schemas';
@@ -5,7 +6,6 @@ import SubmitButton from '@/app/ui/button/submit-button';
 import FormGdprCheckbox from '@/app/ui/form/input/form-gdpr-checkbox';
 import FormText from '@/app/ui/form/input/form-text';
 import FormTextarea from '@/app/ui/form/input/form-textarea';
-import type { FieldErrors, UseFormRegister } from 'react-hook-form';
 
 type Props = {
   content?: Form;

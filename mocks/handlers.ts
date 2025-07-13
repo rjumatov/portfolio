@@ -1,3 +1,4 @@
+import { graphql, HttpResponse, http } from 'msw';
 import {
   AboutContentDocument,
   ContactContentDocument,
@@ -14,7 +15,6 @@ import {
   ServicesContentDocument,
   VerifyContentDocument,
 } from '@/app/lib/contentful/generated/sdk';
-import { http, HttpResponse, graphql } from 'msw';
 
 const MOCK_IMAGE_URL = 'https://images.ctfassets.net/mock.png';
 const MOCK_URL = 'https://example.com';

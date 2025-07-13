@@ -1,4 +1,3 @@
-import type { Service } from '@/app/lib/contentful/generated/sdk';
 import {
   IdeaIcon,
   MentoringIcon,
@@ -6,6 +5,7 @@ import {
   SystemUpdate01Icon,
   WebDesign01Icon,
 } from 'hugeicons-react';
+import type { Service } from '@/app/lib/contentful/generated/sdk';
 
 type Props = {
   content?: Service;

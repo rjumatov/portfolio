@@ -1,8 +1,8 @@
+import { StartUp01Icon } from 'hugeicons-react';
+import type { Locale } from 'next-intl';
 import contentfulClient from '@/app/lib/contentful/client';
 import Button from '@/app/ui/button/button';
 import { Link } from '@/i18n/navigation';
-import { StartUp01Icon } from 'hugeicons-react';
-import type { Locale } from 'next-intl';
 
 type Props = {
   locale: Locale;

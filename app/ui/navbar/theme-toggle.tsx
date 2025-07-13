@@ -1,9 +1,9 @@
 'use client';
 
-import { useScrolled } from '@/app/lib/hooks/use-scroll';
 import { Loading03Icon, Moon02Icon, Sun03Icon } from 'hugeicons-react';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+import { useScrolled } from '@/app/lib/hooks/use-scroll';
 
 type Props = {
   switchThemeLabel?: string | null;

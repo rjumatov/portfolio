@@ -1,8 +1,8 @@
+import { CancelCircleIcon } from 'hugeicons-react';
 import type { Form } from '@/app/lib/contentful/generated/sdk';
 import ImplicitButton from '@/app/ui/button/implicit-button';
 import StatusCard from '@/app/ui/card/status-card';
 import MailLink from '@/app/ui/link/mail-link';
-import { CancelCircleIcon } from 'hugeicons-react';
 
 type Props = {
   content?: Form;

@@ -1,8 +1,8 @@
+import { useLocale } from 'next-intl';
 import RevealAnimation from '@/app/ui/animation/reveal-animation';
 import Astronaut from '@/app/ui/not-found/astronaut';
 import NotFoundContent from '@/app/ui/not-found/not-found-content';
 import Stars from '@/app/ui/not-found/stars';
-import { useLocale } from 'next-intl';
 
 export default function NotFound() {
   const locale = useLocale();

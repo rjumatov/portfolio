@@ -1,7 +1,5 @@
 'use client';
 
-import type { Metric } from '@/app/lib/contentful/generated/sdk';
-import { getYearsSince } from '@/app/lib/date-utils';
 import {
   animate,
   motion,
@@ -10,6 +8,8 @@ import {
   useTransform,
 } from 'motion/react';
 import { useEffect, useRef } from 'react';
+import type { Metric } from '@/app/lib/contentful/generated/sdk';
+import { getYearsSince } from '@/app/lib/date-utils';
 
 type Props = {
   content?: Metric;

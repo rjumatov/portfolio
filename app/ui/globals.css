@@ -34,7 +34,7 @@
       transform: translateX(0) translateY(0);
     }
     50% {
-      transform: translateX(.75rem) translateY(.75rem);
+      transform: translateX(0.75rem) translateY(0.75rem);
     }
   }
 }

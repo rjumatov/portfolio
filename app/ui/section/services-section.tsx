@@ -1,10 +1,10 @@
+import type { Locale } from 'next-intl';
 import contentfulClient from '@/app/lib/contentful/client';
 import type { Service } from '@/app/lib/contentful/generated/sdk';
 import RadialAnimation from '@/app/ui/animation/radial-animation';
 import StaggerAnimation from '@/app/ui/animation/stagger-animation';
 import ViewAnimation from '@/app/ui/animation/view-animation';
 import ServiceCard from '@/app/ui/card/service-card';
-import type { Locale } from 'next-intl';
 
 type Props = {
   locale: Locale;

@@ -1,12 +1,12 @@
-import { routing } from '@/i18n/routing';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { type Locale, NextIntlClientProvider, hasLocale } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
-import { ThemeProvider } from 'next-themes';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { notFound } from 'next/navigation';
+import { hasLocale, type Locale, NextIntlClientProvider } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
+import { ThemeProvider } from 'next-themes';
 import type { ReactNode } from 'react';
+import { routing } from '@/i18n/routing';
 import '@/app/ui/globals.css';
 
 type Props = {

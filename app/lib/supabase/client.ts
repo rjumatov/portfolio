@@ -1,7 +1,7 @@
 'use server';
 
-import type { Database } from '@/app/lib/supabase/generated/database.types';
 import { createBrowserClient } from '@supabase/ssr';
+import type { Database } from '@/app/lib/supabase/generated/database.types';
 
 const supabaseClient = () => {
   if (!process.env.SUPABASE_URL || !process.env.SUPABASE_ANON_KEY) {

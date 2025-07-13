@@ -1,5 +1,5 @@
-import LoadingSpinner from '@/app/ui/loading/loading-spinner';
 import type { MouseEventHandler, ReactNode } from 'react';
+import LoadingSpinner from '@/app/ui/loading/loading-spinner';
 
 type Props = {
   children: ReactNode;

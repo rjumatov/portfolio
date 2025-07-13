@@ -1,8 +1,8 @@
+import type { Locale } from 'next-intl';
 import contentfulClient from '@/app/lib/contentful/client';
 import LanguageDropdown from '@/app/ui/navbar/language-dropdown';
 import NavMenu from '@/app/ui/navbar/nav-menu';
 import ThemeToggle from '@/app/ui/navbar/theme-toggle';
-import type { Locale } from 'next-intl';
 
 type Props = {
   locale: Locale;

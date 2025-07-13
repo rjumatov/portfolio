@@ -1,14 +1,14 @@
 'use client';
 
+import useEmblaCarousel from 'embla-carousel-react';
+import { ArrowLeft01Icon, ArrowRight01Icon } from 'hugeicons-react';
+import { useCallback } from 'react';
 import type {
   Testimonial,
   Testimonials,
 } from '@/app/lib/contentful/generated/sdk';
 import StaggerAnimation from '@/app/ui/animation/stagger-animation';
 import QuoteCard from '@/app/ui/card/quote-card';
-import useEmblaCarousel from 'embla-carousel-react';
-import { ArrowLeft01Icon, ArrowRight01Icon } from 'hugeicons-react';
-import { useCallback } from 'react';
 
 type Props = {
   content: Testimonials;

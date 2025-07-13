@@ -1,8 +1,5 @@
 'use client';
 
-import { useActiveSection, useScrolled } from '@/app/lib/hooks/use-scroll';
-import Tooltip from '@/app/ui/tooltip/tooltip';
-import { Link, usePathname } from '@/i18n/navigation';
 import {
   ContractsIcon,
   GridViewIcon,
@@ -10,6 +7,9 @@ import {
   UserCircleIcon,
 } from 'hugeicons-react';
 import { useEffect, useState } from 'react';
+import { useActiveSection, useScrolled } from '@/app/lib/hooks/use-scroll';
+import Tooltip from '@/app/ui/tooltip/tooltip';
+import { Link, usePathname } from '@/i18n/navigation';
 
 type Props = {
   homeLabel?: string | null;

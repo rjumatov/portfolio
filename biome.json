@@ -1,21 +1,20 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.1.1/schema.json",
   "files": {
     "ignoreUnknown": false,
-    "ignore": [
-      ".next/**",
-      "app/lib/contentful/generated/**",
-      "app/lib/supabase/generated/**",
-      "test-results/**"
+    "includes": [
+      "**",
+      "!**/.next/**",
+      "!**/app/lib/contentful/generated/**",
+      "!**/app/lib/supabase/generated/**",
+      "!**/test-results/**"
     ]
   },
   "formatter": {
     "enabled": true,
     "indentStyle": "space"
   },
-  "organizeImports": {
-    "enabled": true
-  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
     "rules": {
@@ -31,21 +30,27 @@
           "options": {
             "filenameCases": ["kebab-case"]
           }
-        }
-      },
-      "nursery": {
-        "noDocumentImportInPage": "error",
+        },
         "noHeadElement": "error",
-        "noHeadImportInDocument": "error",
-        "noImgElement": "error",
         "noRestrictedImports": {
           "level": "error",
           "options": {
             "paths": {
+              "next/navigation": {
+                "importNames": [
+                  "redirect",
+                  "permanentRedirect",
+                  "useRouter",
+                  "usePathname"
+                ],
+                "message": "Please import from `@/i18n/navigation` instead."
+              },
               "next/link": "Please import from `@/i18n/navigation` instead."
             }
           }
-        },
+        }
+      },
+      "nursery": {
         "useSortedClasses": {
           "level": "error",
           "fix": "safe",
@@ -54,6 +59,13 @@
             "functions": ["cn"]
           }
         }
+      },
+      "suspicious": {
+        "noDocumentImportInPage": "error",
+        "noHeadImportInDocument": "error"
+      },
+      "performance": {
+        "noImgElement": "error"
       }
     }
   },

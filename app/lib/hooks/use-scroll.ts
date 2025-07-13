@@ -48,7 +48,7 @@ export const useActiveSection = (elements: HTMLElement[]) =>
   useSyncExternalStore(
     subscribe,
     () => {
-      let activeSection: string | undefined = undefined;
+      let activeSection: string | undefined;
 
       for (const element of elements) {
         if (element.offsetTop <= window.scrollY + window.innerHeight / 2) {

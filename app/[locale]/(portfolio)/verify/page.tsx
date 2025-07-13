@@ -1,8 +1,8 @@
+import type { Locale } from 'next-intl';
+import { Suspense } from 'react';
 import contentfulClient from '@/app/lib/contentful/client';
 import type { Verify } from '@/app/lib/contentful/generated/sdk';
 import VerifyContent from '@/app/ui/verify/verify-content';
-import type { Locale } from 'next-intl';
-import { Suspense } from 'react';
 
 type Props = {
   params: Promise<{ locale: Locale }>;

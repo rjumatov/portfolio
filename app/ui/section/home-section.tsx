@@ -1,3 +1,6 @@
+import { ArrowDown01Icon } from 'hugeicons-react';
+import Image from 'next/image';
+import type { Locale } from 'next-intl';
 import contentfulClient from '@/app/lib/contentful/client';
 import HeroAnimation from '@/app/ui/animation/hero/hero-animation';
 import RadialAnimation from '@/app/ui/animation/radial-animation';
@@ -5,9 +8,6 @@ import RevealAnimation from '@/app/ui/animation/reveal-animation';
 import ViewAnimation from '@/app/ui/animation/view-animation';
 import ShiningButton from '@/app/ui/button/shining-button';
 import { Link } from '@/i18n/navigation';
-import { ArrowDown01Icon } from 'hugeicons-react';
-import type { Locale } from 'next-intl';
-import Image from 'next/image';
 
 type Props = {
   locale: Locale;

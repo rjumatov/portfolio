@@ -1,12 +1,12 @@
 'use client';
 
-import { useScrolled } from '@/app/lib/hooks/use-scroll';
-import { usePathname, useRouter } from '@/i18n/navigation';
 import { LanguageSkillIcon } from 'hugeicons-react';
 import { motion } from 'motion/react';
-import { type Locale, useLocale } from 'next-intl';
 import Image from 'next/image';
+import { type Locale, useLocale } from 'next-intl';
 import { type KeyboardEvent, useEffect, useRef, useState } from 'react';
+import { useScrolled } from '@/app/lib/hooks/use-scroll';
+import { usePathname, useRouter } from '@/i18n/navigation';
 
 type Props = {
   usFlagDescription?: string | null;
@@ -87,6 +87,7 @@ export default function LanguageDropdown({
   }, []);
 
   return (
+    // biome-ignore lint/a11y/noStaticElementInteractions: Container is only used for hover events and does not require keyboard accessibility
     <div
       className="relative"
       ref={dropdownRef}

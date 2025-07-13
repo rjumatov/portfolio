@@ -1,11 +1,11 @@
 'use server';
 
+import { render } from '@react-email/components';
+import type { Locale } from 'next-intl';
 import nodemailerClient from '@/app/lib/nodemailer/client';
 import VerifyTemplate from '@/app/lib/nodemailer/template/verify-template';
 import { type ContactFormData, contactFormSchema } from '@/app/lib/schemas';
 import supabaseClient from '@/app/lib/supabase/client';
-import { render } from '@react-email/components';
-import type { Locale } from 'next-intl';
 
 export type SaveMessageStatus =
   | {

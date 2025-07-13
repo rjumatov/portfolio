@@ -1,5 +1,5 @@
-import CompactButton from '@/app/ui/button/compact-button';
 import type { MouseEventHandler, ReactNode } from 'react';
+import CompactButton from '@/app/ui/button/compact-button';
 
 type Props = {
   children: ReactNode;

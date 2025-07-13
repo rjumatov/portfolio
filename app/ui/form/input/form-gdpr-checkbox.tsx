@@ -1,6 +1,3 @@
-import type { ValidationMessages } from '@/app/lib/contentful/generated/sdk';
-import type { ValidationMessageKey } from '@/app/lib/schemas';
-import { Link } from '@/i18n/navigation';
 import { Tick02Icon } from 'hugeicons-react';
 import type {
   FieldErrors,
@@ -8,6 +5,9 @@ import type {
   Path,
   UseFormRegister,
 } from 'react-hook-form';
+import type { ValidationMessages } from '@/app/lib/contentful/generated/sdk';
+import type { ValidationMessageKey } from '@/app/lib/schemas';
+import { Link } from '@/i18n/navigation';
 
 type Props<T extends FieldValues> = {
   content: {

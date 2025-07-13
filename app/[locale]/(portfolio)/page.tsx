@@ -1,10 +1,10 @@
+import type { Metadata } from 'next';
+import type { Locale } from 'next-intl';
 import contentfulClient from '@/app/lib/contentful/client';
 import AboutSection from '@/app/ui/section/about-section';
 import ContactSection from '@/app/ui/section/contact-section';
 import HomeSection from '@/app/ui/section/home-section';
 import ServicesSection from '@/app/ui/section/services-section';
-import type { Metadata } from 'next';
-import type { Locale } from 'next-intl';
 
 type Props = {
   params: Promise<{ locale: Locale }>;

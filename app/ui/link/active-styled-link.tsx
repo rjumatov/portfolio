@@ -1,7 +1,7 @@
 'use client';
 
-import { Link, usePathname } from '@/i18n/navigation';
 import type { ReactNode } from 'react';
+import { Link, usePathname } from '@/i18n/navigation';
 
 type Props = {
   children: ReactNode;
