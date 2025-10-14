@@ -18,6 +18,7 @@ export type Scalars = {
   DateTime: { input: any; output: any; }
   Dimension: { input: any; output: any; }
   HexColor: { input: any; output: any; }
+  JSON: { input: any; output: any; }
   Quality: { input: any; output: any; }
 };
 
@@ -2302,6 +2303,7 @@ export enum HostingOrder {
 }
 
 export enum ImageFormat {
+  /** AVIF image format. */
   Avif = 'AVIF',
   /** JPG image format. */
   Jpg = 'JPG',
@@ -5828,6 +5830,13 @@ export enum TestimonialsTestimonialEntriesCollectionOrder {
   SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
 }
 
+export type TimelineFilterInput = {
+  /** Preview content starting from a given release date */
+  release_lte?: InputMaybe<Scalars['String']['input']>;
+  /** Preview content starting from a given timestamp */
+  timestamp_lte?: InputMaybe<Scalars['DateTime']['input']>;
+};
+
 /** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/validationMessages) */
 export type ValidationMessages = Entry & _Node & {
   __typename?: 'ValidationMessages';
@@ -7456,47 +7465,47 @@ const defaultWrapper: SdkFunctionWrapper = (action, _operationName, _operationTy
 
 export function getSdk(client: GraphQLClient, withWrapper: SdkFunctionWrapper = defaultWrapper) {
   return {
-    aboutContent(variables?: AboutContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<AboutContentQuery> {
-      return withWrapper((wrappedRequestHeaders) => client.request<AboutContentQuery>(AboutContentDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'aboutContent', 'query', variables);
+    aboutContent(variables?: AboutContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders, signal?: RequestInit['signal']): Promise<AboutContentQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<AboutContentQuery>({ document: AboutContentDocument, variables, requestHeaders: { ...requestHeaders, ...wrappedRequestHeaders }, signal }), 'aboutContent', 'query', variables);
     },
-    contactContent(variables?: ContactContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<ContactContentQuery> {
-      return withWrapper((wrappedRequestHeaders) => client.request<ContactContentQuery>(ContactContentDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'contactContent', 'query', variables);
+    contactContent(variables?: ContactContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders, signal?: RequestInit['signal']): Promise<ContactContentQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<ContactContentQuery>({ document: ContactContentDocument, variables, requestHeaders: { ...requestHeaders, ...wrappedRequestHeaders }, signal }), 'contactContent', 'query', variables);
     },
-    emailContent(variables?: EmailContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<EmailContentQuery> {
-      return withWrapper((wrappedRequestHeaders) => client.request<EmailContentQuery>(EmailContentDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'emailContent', 'query', variables);
+    emailContent(variables?: EmailContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders, signal?: RequestInit['signal']): Promise<EmailContentQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<EmailContentQuery>({ document: EmailContentDocument, variables, requestHeaders: { ...requestHeaders, ...wrappedRequestHeaders }, signal }), 'emailContent', 'query', variables);
     },
-    footerContent(variables?: FooterContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<FooterContentQuery> {
-      return withWrapper((wrappedRequestHeaders) => client.request<FooterContentQuery>(FooterContentDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'footerContent', 'query', variables);
+    footerContent(variables?: FooterContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders, signal?: RequestInit['signal']): Promise<FooterContentQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<FooterContentQuery>({ document: FooterContentDocument, variables, requestHeaders: { ...requestHeaders, ...wrappedRequestHeaders }, signal }), 'footerContent', 'query', variables);
     },
-    homeContent(variables?: HomeContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<HomeContentQuery> {
-      return withWrapper((wrappedRequestHeaders) => client.request<HomeContentQuery>(HomeContentDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'homeContent', 'query', variables);
+    homeContent(variables?: HomeContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders, signal?: RequestInit['signal']): Promise<HomeContentQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<HomeContentQuery>({ document: HomeContentDocument, variables, requestHeaders: { ...requestHeaders, ...wrappedRequestHeaders }, signal }), 'homeContent', 'query', variables);
     },
-    legalNoticeContent(variables?: LegalNoticeContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<LegalNoticeContentQuery> {
-      return withWrapper((wrappedRequestHeaders) => client.request<LegalNoticeContentQuery>(LegalNoticeContentDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'legalNoticeContent', 'query', variables);
+    legalNoticeContent(variables?: LegalNoticeContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders, signal?: RequestInit['signal']): Promise<LegalNoticeContentQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<LegalNoticeContentQuery>({ document: LegalNoticeContentDocument, variables, requestHeaders: { ...requestHeaders, ...wrappedRequestHeaders }, signal }), 'legalNoticeContent', 'query', variables);
     },
-    mainMetadataContent(variables?: MainMetadataContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<MainMetadataContentQuery> {
-      return withWrapper((wrappedRequestHeaders) => client.request<MainMetadataContentQuery>(MainMetadataContentDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'mainMetadataContent', 'query', variables);
+    mainMetadataContent(variables?: MainMetadataContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders, signal?: RequestInit['signal']): Promise<MainMetadataContentQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<MainMetadataContentQuery>({ document: MainMetadataContentDocument, variables, requestHeaders: { ...requestHeaders, ...wrappedRequestHeaders }, signal }), 'mainMetadataContent', 'query', variables);
     },
-    legalMetadataContent(variables?: LegalMetadataContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<LegalMetadataContentQuery> {
-      return withWrapper((wrappedRequestHeaders) => client.request<LegalMetadataContentQuery>(LegalMetadataContentDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'legalMetadataContent', 'query', variables);
+    legalMetadataContent(variables?: LegalMetadataContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders, signal?: RequestInit['signal']): Promise<LegalMetadataContentQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<LegalMetadataContentQuery>({ document: LegalMetadataContentDocument, variables, requestHeaders: { ...requestHeaders, ...wrappedRequestHeaders }, signal }), 'legalMetadataContent', 'query', variables);
     },
-    privacyMetadataContent(variables?: PrivacyMetadataContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<PrivacyMetadataContentQuery> {
-      return withWrapper((wrappedRequestHeaders) => client.request<PrivacyMetadataContentQuery>(PrivacyMetadataContentDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'privacyMetadataContent', 'query', variables);
+    privacyMetadataContent(variables?: PrivacyMetadataContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders, signal?: RequestInit['signal']): Promise<PrivacyMetadataContentQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<PrivacyMetadataContentQuery>({ document: PrivacyMetadataContentDocument, variables, requestHeaders: { ...requestHeaders, ...wrappedRequestHeaders }, signal }), 'privacyMetadataContent', 'query', variables);
     },
-    navbarContent(variables?: NavbarContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<NavbarContentQuery> {
-      return withWrapper((wrappedRequestHeaders) => client.request<NavbarContentQuery>(NavbarContentDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'navbarContent', 'query', variables);
+    navbarContent(variables?: NavbarContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders, signal?: RequestInit['signal']): Promise<NavbarContentQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<NavbarContentQuery>({ document: NavbarContentDocument, variables, requestHeaders: { ...requestHeaders, ...wrappedRequestHeaders }, signal }), 'navbarContent', 'query', variables);
     },
-    notFoundContent(variables?: NotFoundContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<NotFoundContentQuery> {
-      return withWrapper((wrappedRequestHeaders) => client.request<NotFoundContentQuery>(NotFoundContentDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'notFoundContent', 'query', variables);
+    notFoundContent(variables?: NotFoundContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders, signal?: RequestInit['signal']): Promise<NotFoundContentQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<NotFoundContentQuery>({ document: NotFoundContentDocument, variables, requestHeaders: { ...requestHeaders, ...wrappedRequestHeaders }, signal }), 'notFoundContent', 'query', variables);
     },
-    privacyPolicyContent(variables?: PrivacyPolicyContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<PrivacyPolicyContentQuery> {
-      return withWrapper((wrappedRequestHeaders) => client.request<PrivacyPolicyContentQuery>(PrivacyPolicyContentDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'privacyPolicyContent', 'query', variables);
+    privacyPolicyContent(variables?: PrivacyPolicyContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders, signal?: RequestInit['signal']): Promise<PrivacyPolicyContentQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<PrivacyPolicyContentQuery>({ document: PrivacyPolicyContentDocument, variables, requestHeaders: { ...requestHeaders, ...wrappedRequestHeaders }, signal }), 'privacyPolicyContent', 'query', variables);
     },
-    servicesContent(variables?: ServicesContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<ServicesContentQuery> {
-      return withWrapper((wrappedRequestHeaders) => client.request<ServicesContentQuery>(ServicesContentDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'servicesContent', 'query', variables);
+    servicesContent(variables?: ServicesContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders, signal?: RequestInit['signal']): Promise<ServicesContentQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<ServicesContentQuery>({ document: ServicesContentDocument, variables, requestHeaders: { ...requestHeaders, ...wrappedRequestHeaders }, signal }), 'servicesContent', 'query', variables);
     },
-    verifyContent(variables?: VerifyContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders): Promise<VerifyContentQuery> {
-      return withWrapper((wrappedRequestHeaders) => client.request<VerifyContentQuery>(VerifyContentDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'verifyContent', 'query', variables);
+    verifyContent(variables?: VerifyContentQueryVariables, requestHeaders?: GraphQLClientRequestHeaders, signal?: RequestInit['signal']): Promise<VerifyContentQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<VerifyContentQuery>({ document: VerifyContentDocument, variables, requestHeaders: { ...requestHeaders, ...wrappedRequestHeaders }, signal }), 'verifyContent', 'query', variables);
     }
   };
 }

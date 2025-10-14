@@ -1,5 +1,17 @@
 directive @contentSourceMaps on QUERY
 
+directive @delegatedResourceLink(contentTypeId: String, field: JSON) on FIELD_DEFINITION | OBJECT
+
+directive @enumMapper(value: JSON) on ENUM_VALUE
+
+directive @featureFlag(featureName: String) on FIELD
+
+directive @fieldResolver(data: JSON, kind: String) on FIELD_DEFINITION
+
+directive @timeline(where: TimelineFilterInput!) on QUERY
+
+directive @typeIdentifier(contentTypeId: String) on OBJECT
+
 """
 [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/about)
 """
@@ -1476,6 +1488,7 @@ enum HostingOrder {
 }
 
 enum ImageFormat {
+  """AVIF image format."""
   AVIF
 
   """JPG image format."""
@@ -1602,6 +1615,11 @@ input ImageTransformOptions {
   """Desired width in pixels. Defaults to the original image width."""
   width: Dimension
 }
+
+"""
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSON
 
 """
 [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/label)
@@ -3572,6 +3590,14 @@ enum TestimonialsTestimonialEntriesCollectionOrder {
   sys_publishedAt_DESC
   sys_publishedVersion_ASC
   sys_publishedVersion_DESC
+}
+
+input TimelineFilterInput {
+  """Preview content starting from a given release date"""
+  release_lte: String
+
+  """Preview content starting from a given timestamp"""
+  timestamp_lte: DateTime
 }
 
 """
