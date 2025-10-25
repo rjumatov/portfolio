@@ -19,7 +19,6 @@ export const contactFormSchema = z.object({
     .min(1, ValidationMessages.nameRequired)
     .max(100, ValidationMessages.nameMaxLength),
   email: z
-    .string()
     .email(ValidationMessages.emailInvalid)
     .max(100, ValidationMessages.emailMaxLength),
   role: z.string().max(150, ValidationMessages.roleMaxLength).optional(),

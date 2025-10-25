@@ -2,6 +2,7 @@
 
 import { render } from '@react-email/components';
 import type { Locale } from 'next-intl';
+import { z } from 'zod';
 import nodemailerClient from '@/app/lib/nodemailer/client';
 import VerifyTemplate from '@/app/lib/nodemailer/template/verify-template';
 import { type ContactFormData, contactFormSchema } from '@/app/lib/schemas';
@@ -41,7 +42,7 @@ export const saveMessage = async (
     return {
       success: false,
       rawData,
-      fieldErrors: validatedFields.error.flatten().fieldErrors,
+      fieldErrors: z.flattenError(validatedFields.error).fieldErrors,
     };
   }
 
