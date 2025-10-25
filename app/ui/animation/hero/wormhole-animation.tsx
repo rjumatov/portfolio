@@ -73,7 +73,7 @@ export default function WormholeAnimation() {
               id="radial-hole-gradient-highlight"
               r="1"
             >
-              <stop offset="0.3" className="[stop-color:var(--highlight)] " />
+              <stop offset="0.3" className="[stop-color:var(--highlight)]" />
               <stop
                 offset="0.7"
                 className="[stop-color:var(--background-color)]"
