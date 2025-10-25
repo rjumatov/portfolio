@@ -2,17 +2,11 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { notFound } from 'next/navigation';
-import { hasLocale, type Locale, NextIntlClientProvider } from 'next-intl';
+import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { ThemeProvider } from 'next-themes';
-import type { ReactNode } from 'react';
 import { routing } from '@/i18n/routing';
 import '@/app/ui/globals.css';
-
-type Props = {
-  children: ReactNode;
-  params: Promise<{ locale: Locale }>;
-};
 
 if (process.env.NEXT_RUNTIME === 'nodejs' && process.env.MOCKS_ENABLED) {
   import('@/mocks/node').then(({ server }) =>
@@ -34,7 +28,10 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-export default async function RootLayout({ children, params }: Props) {
+export default async function RootLayout({
+  children,
+  params,
+}: LayoutProps<'/[locale]'>) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();

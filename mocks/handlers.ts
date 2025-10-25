@@ -20,9 +20,16 @@ const MOCK_IMAGE_URL = 'https://images.ctfassets.net/mock.png';
 const MOCK_URL = 'https://example.com';
 const MOCK_EMAIL = 'example@domain.com';
 
+const transparentPng = Uint8Array.from(
+  atob(
+    'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBg6fGbFgAAAAASUVORK5CYII=',
+  ),
+  (c) => c.charCodeAt(0),
+);
+
 export const handlers = [
   http.get(MOCK_IMAGE_URL, () =>
-    HttpResponse.arrayBuffer(new ArrayBuffer(0), {
+    HttpResponse.arrayBuffer(transparentPng.buffer, {
       headers: { 'Content-Type': 'image/png' },
     }),
   ),
