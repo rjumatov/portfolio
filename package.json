@@ -18,7 +18,7 @@
     "types:generate": "dotenv -e .env.local -- sh -c 'npm run _contentful:generate && npm run _supabase:generate'"
   },
   "dependencies": {
-    "@hookform/resolvers": "^5.1.1",
+    "@hookform/resolvers": "^5.2.2",
     "@react-email/components": "^0.5.7",
     "@supabase/ssr": "^0.7.0",
     "@vercel/analytics": "^1.5.0",
@@ -33,8 +33,8 @@
     "nodemailer": "^7.0.10",
     "react": "^19.1.0",
     "react-dom": "^19.2.0",
-    "react-hook-form": "^7.60.0",
-    "zod": "^4.0.5"
+    "react-hook-form": "^7.65.0",
+    "zod": "^4.1.12"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.0",
