@@ -148,6 +148,7 @@ export const handlers = [
                 roleMaxLength:
                   'Job title and company name cannot exceed 150 characters',
                 projectDetailsRequired: 'Please enter your project details',
+                projectDetailsInvalid: 'Entered project details seem invalid',
                 projectDetailsMaxLength:
                   'Project details cannot exceed 1000 characters',
                 consentRequired: 'You must agree to proceed',

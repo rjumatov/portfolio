@@ -29,6 +29,7 @@ query contactContent($locale: String) {
         emailMaxLength
         roleMaxLength
         projectDetailsRequired
+        projectDetailsInvalid
         projectDetailsMaxLength
         consentRequired
       }

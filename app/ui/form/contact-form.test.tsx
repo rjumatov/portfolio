@@ -137,6 +137,21 @@ describe('ContactForm', () => {
     screen.getByText(ValidationMessages.projectDetailsMaxLength);
   });
 
+  it('shows validation error for gibberish project details', async () => {
+    const formData = {
+      ...validFormData,
+      projectDetails: 'MhqqQyxbCp',
+    };
+    await fillForm(formData);
+    await user.tab();
+
+    await waitFor(() =>
+      expect(
+        screen.getByText(ValidationMessages.projectDetailsInvalid),
+      ).toBeInTheDocument(),
+    );
+  });
+
   it('calls supabase client insert with form data when valid', async () => {
     await fillForm(validFormData);
     await user.click(screen.getByRole('button'));

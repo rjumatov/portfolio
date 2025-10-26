@@ -5848,6 +5848,7 @@ export type ValidationMessages = Entry & _Node & {
   linkedFrom?: Maybe<ValidationMessagesLinkingCollections>;
   nameMaxLength?: Maybe<Scalars['String']['output']>;
   nameRequired?: Maybe<Scalars['String']['output']>;
+  projectDetailsInvalid?: Maybe<Scalars['String']['output']>;
   projectDetailsMaxLength?: Maybe<Scalars['String']['output']>;
   projectDetailsRequired?: Maybe<Scalars['String']['output']>;
   roleMaxLength?: Maybe<Scalars['String']['output']>;
@@ -5887,6 +5888,12 @@ export type ValidationMessagesNameMaxLengthArgs = {
 
 /** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/validationMessages) */
 export type ValidationMessagesNameRequiredArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/validationMessages) */
+export type ValidationMessagesProjectDetailsInvalidArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -5955,6 +5962,13 @@ export type ValidationMessagesFilter = {
   nameRequired_not?: InputMaybe<Scalars['String']['input']>;
   nameRequired_not_contains?: InputMaybe<Scalars['String']['input']>;
   nameRequired_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  projectDetailsInvalid?: InputMaybe<Scalars['String']['input']>;
+  projectDetailsInvalid_contains?: InputMaybe<Scalars['String']['input']>;
+  projectDetailsInvalid_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  projectDetailsInvalid_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  projectDetailsInvalid_not?: InputMaybe<Scalars['String']['input']>;
+  projectDetailsInvalid_not_contains?: InputMaybe<Scalars['String']['input']>;
+  projectDetailsInvalid_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   projectDetailsMaxLength?: InputMaybe<Scalars['String']['input']>;
   projectDetailsMaxLength_contains?: InputMaybe<Scalars['String']['input']>;
   projectDetailsMaxLength_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -6060,6 +6074,8 @@ export enum ValidationMessagesOrder {
   NameMaxLengthDesc = 'nameMaxLength_DESC',
   NameRequiredAsc = 'nameRequired_ASC',
   NameRequiredDesc = 'nameRequired_DESC',
+  ProjectDetailsInvalidAsc = 'projectDetailsInvalid_ASC',
+  ProjectDetailsInvalidDesc = 'projectDetailsInvalid_DESC',
   ProjectDetailsMaxLengthAsc = 'projectDetailsMaxLength_ASC',
   ProjectDetailsMaxLengthDesc = 'projectDetailsMaxLength_DESC',
   ProjectDetailsRequiredAsc = 'projectDetailsRequired_ASC',
@@ -6944,6 +6960,13 @@ export type CfValidationMessagesNestedFilter = {
   nameRequired_not?: InputMaybe<Scalars['String']['input']>;
   nameRequired_not_contains?: InputMaybe<Scalars['String']['input']>;
   nameRequired_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  projectDetailsInvalid?: InputMaybe<Scalars['String']['input']>;
+  projectDetailsInvalid_contains?: InputMaybe<Scalars['String']['input']>;
+  projectDetailsInvalid_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  projectDetailsInvalid_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  projectDetailsInvalid_not?: InputMaybe<Scalars['String']['input']>;
+  projectDetailsInvalid_not_contains?: InputMaybe<Scalars['String']['input']>;
+  projectDetailsInvalid_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   projectDetailsMaxLength?: InputMaybe<Scalars['String']['input']>;
   projectDetailsMaxLength_contains?: InputMaybe<Scalars['String']['input']>;
   projectDetailsMaxLength_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -6980,7 +7003,7 @@ export type ContactContentQueryVariables = Exact<{
 }>;
 
 
-export type ContactContentQuery = { __typename?: 'Query', contactCollection?: { __typename?: 'ContactCollection', items: Array<{ __typename?: 'Contact', title?: string | null, subTitleMain?: string | null, subTitleHighlight?: string | null, processStepsCollection?: { __typename?: 'ContactProcessStepsCollection', items: Array<{ __typename?: 'ProcessStep', title?: string | null, description?: string | null } | null> } | null } | null> } | null, formCollection?: { __typename?: 'FormCollection', items: Array<{ __typename?: 'Form', gdprNoticeIntro?: string | null, gdprNoticeLinkText?: string | null, gdprNoticeDetails?: string | null, sendButtonLabel?: string | null, errorTitle?: string | null, errorIntro?: string | null, errorEditPrompt?: string | null, errorEditAriaLabel?: string | null, errorDescription?: string | null, errorContactEmail?: string | null, errorButtonLabel?: string | null, emailVerificationTitle?: string | null, emailVerificationDescription?: string | null, emailResendButtonLabel?: string | null, emailEditPrompt?: string | null, emailEditAriaLabel?: string | null, attemptsLabel?: string | null, attemptLabel?: string | null, labels?: { __typename?: 'Label', name?: string | null, email?: string | null, role?: string | null, projectDetails?: string | null } | null, validationMessages?: { __typename?: 'ValidationMessages', nameRequired?: string | null, nameMaxLength?: string | null, emailInvalid?: string | null, emailMaxLength?: string | null, roleMaxLength?: string | null, projectDetailsRequired?: string | null, projectDetailsMaxLength?: string | null, consentRequired?: string | null } | null } | null> } | null, testimonialsCollection?: { __typename?: 'TestimonialsCollection', items: Array<{ __typename?: 'Testimonials', title?: string | null, prevSlideLabel?: string | null, nextSlideLabel?: string | null, testimonialEntriesCollection?: { __typename?: 'TestimonialsTestimonialEntriesCollection', items: Array<{ __typename?: 'Testimonial', quote?: string | null, author?: string | null, jobTitle?: string | null, logoInvert?: boolean | null, logo?: { __typename?: 'Asset', url?: string | null, width?: number | null, height?: number | null, description?: string | null } | null } | null> } | null } | null> } | null };
+export type ContactContentQuery = { __typename?: 'Query', contactCollection?: { __typename?: 'ContactCollection', items: Array<{ __typename?: 'Contact', title?: string | null, subTitleMain?: string | null, subTitleHighlight?: string | null, processStepsCollection?: { __typename?: 'ContactProcessStepsCollection', items: Array<{ __typename?: 'ProcessStep', title?: string | null, description?: string | null } | null> } | null } | null> } | null, formCollection?: { __typename?: 'FormCollection', items: Array<{ __typename?: 'Form', gdprNoticeIntro?: string | null, gdprNoticeLinkText?: string | null, gdprNoticeDetails?: string | null, sendButtonLabel?: string | null, errorTitle?: string | null, errorIntro?: string | null, errorEditPrompt?: string | null, errorEditAriaLabel?: string | null, errorDescription?: string | null, errorContactEmail?: string | null, errorButtonLabel?: string | null, emailVerificationTitle?: string | null, emailVerificationDescription?: string | null, emailResendButtonLabel?: string | null, emailEditPrompt?: string | null, emailEditAriaLabel?: string | null, attemptsLabel?: string | null, attemptLabel?: string | null, labels?: { __typename?: 'Label', name?: string | null, email?: string | null, role?: string | null, projectDetails?: string | null } | null, validationMessages?: { __typename?: 'ValidationMessages', nameRequired?: string | null, nameMaxLength?: string | null, emailInvalid?: string | null, emailMaxLength?: string | null, roleMaxLength?: string | null, projectDetailsRequired?: string | null, projectDetailsInvalid?: string | null, projectDetailsMaxLength?: string | null, consentRequired?: string | null } | null } | null> } | null, testimonialsCollection?: { __typename?: 'TestimonialsCollection', items: Array<{ __typename?: 'Testimonials', title?: string | null, prevSlideLabel?: string | null, nextSlideLabel?: string | null, testimonialEntriesCollection?: { __typename?: 'TestimonialsTestimonialEntriesCollection', items: Array<{ __typename?: 'Testimonial', quote?: string | null, author?: string | null, jobTitle?: string | null, logoInvert?: boolean | null, logo?: { __typename?: 'Asset', url?: string | null, width?: number | null, height?: number | null, description?: string | null } | null } | null> } | null } | null> } | null };
 
 export type EmailContentQueryVariables = Exact<{
   locale?: InputMaybe<Scalars['String']['input']>;
@@ -7129,6 +7152,7 @@ export const ContactContentDocument = gql`
         emailMaxLength
         roleMaxLength
         projectDetailsRequired
+        projectDetailsInvalid
         projectDetailsMaxLength
         consentRequired
       }

@@ -1,5 +1,7 @@
 directive @contentSourceMaps on QUERY
 
+directive @contentfulSchemaMetadata(contentTypePublishedCounters: JSON) on SCHEMA
+
 directive @delegatedResourceLink(contentTypeId: String, field: JSON) on FIELD_DEFINITION | OBJECT
 
 directive @enumMapper(value: JSON) on ENUM_VALUE
@@ -3612,6 +3614,7 @@ type ValidationMessages implements Entry & _Node {
   linkedFrom(allowedLocales: [String]): ValidationMessagesLinkingCollections
   nameMaxLength(locale: String): String
   nameRequired(locale: String): String
+  projectDetailsInvalid(locale: String): String
   projectDetailsMaxLength(locale: String): String
   projectDetailsRequired(locale: String): String
   roleMaxLength(locale: String): String
@@ -3664,6 +3667,13 @@ input ValidationMessagesFilter {
   nameRequired_not: String
   nameRequired_not_contains: String
   nameRequired_not_in: [String]
+  projectDetailsInvalid: String
+  projectDetailsInvalid_contains: String
+  projectDetailsInvalid_exists: Boolean
+  projectDetailsInvalid_in: [String]
+  projectDetailsInvalid_not: String
+  projectDetailsInvalid_not_contains: String
+  projectDetailsInvalid_not_in: [String]
   projectDetailsMaxLength: String
   projectDetailsMaxLength_contains: String
   projectDetailsMaxLength_exists: Boolean
@@ -3751,6 +3761,8 @@ enum ValidationMessagesOrder {
   nameMaxLength_DESC
   nameRequired_ASC
   nameRequired_DESC
+  projectDetailsInvalid_ASC
+  projectDetailsInvalid_DESC
   projectDetailsMaxLength_ASC
   projectDetailsMaxLength_DESC
   projectDetailsRequired_ASC
@@ -4590,6 +4602,13 @@ input cfValidationMessagesNestedFilter {
   nameRequired_not: String
   nameRequired_not_contains: String
   nameRequired_not_in: [String]
+  projectDetailsInvalid: String
+  projectDetailsInvalid_contains: String
+  projectDetailsInvalid_exists: Boolean
+  projectDetailsInvalid_in: [String]
+  projectDetailsInvalid_not: String
+  projectDetailsInvalid_not_contains: String
+  projectDetailsInvalid_not_in: [String]
   projectDetailsMaxLength: String
   projectDetailsMaxLength_contains: String
   projectDetailsMaxLength_exists: Boolean
