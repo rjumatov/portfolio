@@ -50,7 +50,7 @@ export default function ContactForm({ content }: Props) {
         if (errorMessages) {
           setError(key as keyof ContactFormData, {
             type: 'server',
-            message: errorMessages.join(', '),
+            message: errorMessages[0],
           });
         }
       }
