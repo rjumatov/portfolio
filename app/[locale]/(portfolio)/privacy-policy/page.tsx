@@ -161,7 +161,6 @@ export default async function Page({ params }: Props) {
               <p className="font-extrabold">
                 {content?.notesAndLegalInformation?.responsiblePartyName}
               </p>
-              <p>{content?.notesAndLegalInformation?.responsiblePartyRole}</p>
               <p>{content?.notesAndLegalInformation?.responsiblePartyStreet}</p>
               <p>
                 {content?.notesAndLegalInformation?.responsiblePartyPostalCode}{' '}

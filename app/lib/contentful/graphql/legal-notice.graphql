@@ -4,7 +4,6 @@ query legalNoticeContent($locale: String) {
       title
       subTitleInformation
       addressName
-      addressJobTitle
       addressStreet
       addressPostalCode
       addressCity

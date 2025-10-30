@@ -44,7 +44,6 @@ query privacyPolicyContent($locale: String) {
         responsiblePartyTitle
         responsiblePartyIntro
         responsiblePartyName
-        responsiblePartyRole
         responsiblePartyStreet
         responsiblePartyPostalCode
         responsiblePartyCity

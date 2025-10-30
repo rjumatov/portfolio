@@ -310,7 +310,6 @@ export const handlers = [
               subTitleInformation:
                 'Information in accordance with § 5 Digital Services Act (DSA)',
               addressName: 'Roman Jumatov',
-              addressJobTitle: 'Freelance Software Developer',
               addressStreet: 'Main Street 25',
               addressPostalCode: '12345',
               addressCity: 'Rivertown',
@@ -494,7 +493,6 @@ export const handlers = [
                 responsiblePartyIntro:
                   'The responsible party for data processing on this website is:',
                 responsiblePartyName: 'Roman Jumatov',
-                responsiblePartyRole: 'Freelance Software Developer',
                 responsiblePartyStreet: 'Main Street 25',
                 responsiblePartyPostalCode: '12345',
                 responsiblePartyCity: 'River Town',

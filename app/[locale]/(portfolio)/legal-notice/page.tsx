@@ -36,7 +36,6 @@ export default async function Page({ params }: Props) {
         <TitledSection title={content?.subTitleInformation}>
           <address className="text-(--secondary) not-italic">
             <p className="font-extrabold">{content?.addressName}</p>
-            <p>{content?.addressJobTitle}</p>
             <p>{content?.addressStreet}</p>
             <p>
               {content?.addressPostalCode} {content?.addressCity}

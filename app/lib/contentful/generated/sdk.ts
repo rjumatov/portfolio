@@ -2578,7 +2578,6 @@ export type LegalNotice = Entry & _Node & {
   __typename?: 'LegalNotice';
   _id: Scalars['ID']['output'];
   addressCity?: Maybe<Scalars['String']['output']>;
-  addressJobTitle?: Maybe<Scalars['String']['output']>;
   addressName?: Maybe<Scalars['String']['output']>;
   addressPostalCode?: Maybe<Scalars['String']['output']>;
   addressStreet?: Maybe<Scalars['String']['output']>;
@@ -2602,12 +2601,6 @@ export type LegalNotice = Entry & _Node & {
 
 /** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/legalNotice) */
 export type LegalNoticeAddressCityArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/legalNotice) */
-export type LegalNoticeAddressJobTitleArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -2725,13 +2718,6 @@ export type LegalNoticeFilter = {
   addressCity_not?: InputMaybe<Scalars['String']['input']>;
   addressCity_not_contains?: InputMaybe<Scalars['String']['input']>;
   addressCity_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  addressJobTitle?: InputMaybe<Scalars['String']['input']>;
-  addressJobTitle_contains?: InputMaybe<Scalars['String']['input']>;
-  addressJobTitle_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  addressJobTitle_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  addressJobTitle_not?: InputMaybe<Scalars['String']['input']>;
-  addressJobTitle_not_contains?: InputMaybe<Scalars['String']['input']>;
-  addressJobTitle_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   addressName?: InputMaybe<Scalars['String']['input']>;
   addressName_contains?: InputMaybe<Scalars['String']['input']>;
   addressName_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -2857,8 +2843,6 @@ export type LegalNoticeLinkingCollectionsEntryCollectionArgs = {
 export enum LegalNoticeOrder {
   AddressCityAsc = 'addressCity_ASC',
   AddressCityDesc = 'addressCity_DESC',
-  AddressJobTitleAsc = 'addressJobTitle_ASC',
-  AddressJobTitleDesc = 'addressJobTitle_DESC',
   AddressNameAsc = 'addressName_ASC',
   AddressNameDesc = 'addressName_DESC',
   AddressPostalCodeAsc = 'addressPostalCode_ASC',
@@ -3595,7 +3579,6 @@ export type NotesAndLegalInformation = Entry & _Node & {
   responsiblePartyIntro?: Maybe<Scalars['String']['output']>;
   responsiblePartyName?: Maybe<Scalars['String']['output']>;
   responsiblePartyPostalCode?: Maybe<Scalars['String']['output']>;
-  responsiblePartyRole?: Maybe<Scalars['String']['output']>;
   responsiblePartyStreet?: Maybe<Scalars['String']['output']>;
   responsiblePartyTitle?: Maybe<Scalars['String']['output']>;
   sslTlsEncryptionDetails?: Maybe<Scalars['String']['output']>;
@@ -3725,12 +3708,6 @@ export type NotesAndLegalInformationResponsiblePartyNameArgs = {
 
 /** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/notesAndLegalInformation) */
 export type NotesAndLegalInformationResponsiblePartyPostalCodeArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-/** [See type definition](https://app.contentful.com/spaces/zb28mfcpbphv/content_types/notesAndLegalInformation) */
-export type NotesAndLegalInformationResponsiblePartyRoleArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -3930,13 +3907,6 @@ export type NotesAndLegalInformationFilter = {
   responsiblePartyPostalCode_not?: InputMaybe<Scalars['String']['input']>;
   responsiblePartyPostalCode_not_contains?: InputMaybe<Scalars['String']['input']>;
   responsiblePartyPostalCode_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  responsiblePartyRole?: InputMaybe<Scalars['String']['input']>;
-  responsiblePartyRole_contains?: InputMaybe<Scalars['String']['input']>;
-  responsiblePartyRole_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  responsiblePartyRole_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  responsiblePartyRole_not?: InputMaybe<Scalars['String']['input']>;
-  responsiblePartyRole_not_contains?: InputMaybe<Scalars['String']['input']>;
-  responsiblePartyRole_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   responsiblePartyStreet?: InputMaybe<Scalars['String']['input']>;
   responsiblePartyStreet_contains?: InputMaybe<Scalars['String']['input']>;
   responsiblePartyStreet_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -4067,8 +4037,6 @@ export enum NotesAndLegalInformationOrder {
   ResponsiblePartyNameDesc = 'responsiblePartyName_DESC',
   ResponsiblePartyPostalCodeAsc = 'responsiblePartyPostalCode_ASC',
   ResponsiblePartyPostalCodeDesc = 'responsiblePartyPostalCode_DESC',
-  ResponsiblePartyRoleAsc = 'responsiblePartyRole_ASC',
-  ResponsiblePartyRoleDesc = 'responsiblePartyRole_DESC',
   ResponsiblePartyStreetAsc = 'responsiblePartyStreet_ASC',
   ResponsiblePartyStreetDesc = 'responsiblePartyStreet_DESC',
   ResponsiblePartyTitleAsc = 'responsiblePartyTitle_ASC',
@@ -6636,13 +6604,6 @@ export type CfNotesAndLegalInformationNestedFilter = {
   responsiblePartyPostalCode_not?: InputMaybe<Scalars['String']['input']>;
   responsiblePartyPostalCode_not_contains?: InputMaybe<Scalars['String']['input']>;
   responsiblePartyPostalCode_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  responsiblePartyRole?: InputMaybe<Scalars['String']['input']>;
-  responsiblePartyRole_contains?: InputMaybe<Scalars['String']['input']>;
-  responsiblePartyRole_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  responsiblePartyRole_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  responsiblePartyRole_not?: InputMaybe<Scalars['String']['input']>;
-  responsiblePartyRole_not_contains?: InputMaybe<Scalars['String']['input']>;
-  responsiblePartyRole_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   responsiblePartyStreet?: InputMaybe<Scalars['String']['input']>;
   responsiblePartyStreet_contains?: InputMaybe<Scalars['String']['input']>;
   responsiblePartyStreet_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -7031,7 +6992,7 @@ export type LegalNoticeContentQueryVariables = Exact<{
 }>;
 
 
-export type LegalNoticeContentQuery = { __typename?: 'Query', legalNoticeCollection?: { __typename?: 'LegalNoticeCollection', items: Array<{ __typename?: 'LegalNotice', title?: string | null, subTitleInformation?: string | null, addressName?: string | null, addressJobTitle?: string | null, addressStreet?: string | null, addressPostalCode?: string | null, addressCity?: string | null, subTitleContact?: string | null, contactEmailLabel?: string | null, contactEmail?: string | null, contactFormLabel?: string | null, subTitleVat?: string | null, vatLabel?: string | null, vatId?: string | null, subTitleDispute?: string | null, disputeLabel?: string | null, disputeStatement?: string | null } | null> } | null };
+export type LegalNoticeContentQuery = { __typename?: 'Query', legalNoticeCollection?: { __typename?: 'LegalNoticeCollection', items: Array<{ __typename?: 'LegalNotice', title?: string | null, subTitleInformation?: string | null, addressName?: string | null, addressStreet?: string | null, addressPostalCode?: string | null, addressCity?: string | null, subTitleContact?: string | null, contactEmailLabel?: string | null, contactEmail?: string | null, contactFormLabel?: string | null, subTitleVat?: string | null, vatLabel?: string | null, vatId?: string | null, subTitleDispute?: string | null, disputeLabel?: string | null, disputeStatement?: string | null } | null> } | null };
 
 export type MainMetadataContentQueryVariables = Exact<{
   locale?: InputMaybe<Scalars['String']['input']>;
@@ -7073,7 +7034,7 @@ export type PrivacyPolicyContentQueryVariables = Exact<{
 }>;
 
 
-export type PrivacyPolicyContentQuery = { __typename?: 'Query', privacyPolicyCollection?: { __typename?: 'PrivacyPolicyCollection', items: Array<{ __typename?: 'PrivacyPolicy', title?: string | null, lastModified?: string | null, privacyOverview?: { __typename?: 'PrivacyOverview', title?: string | null, generalInfoTitle?: string | null, generalInfoDescription?: string | null, dataCollectionTitle?: string | null, responsiblePartyTitle?: string | null, responsiblePartyDescription?: string | null, dataCaptureTitle?: string | null, dataDirectCaptureText?: string | null, dataAutomaticCaptureText?: string | null, dataPurposeTitle?: string | null, dataPurposeDescription?: string | null, userRightsTitle?: string | null, userRightsIntroText?: string | null, userRightsList?: Array<string | null> | null, userRightsContactText?: string | null, analysisToolsTitle?: string | null, analysisToolsIntroText?: string | null, analysisToolsDetailsText?: string | null } | null, hosting?: { __typename?: 'Hosting', title?: string | null, vercelTitle?: string | null, vercelHostingInfo?: string | null, vercelDataProcessing?: string | null, vercelContractualClauses?: string | null, vercelContractualClausesLink?: string | null, vercelDataProcessingAgreement?: string | null, vercelDataProcessingAgreementLink?: string | null, vercelPrivacyPolicy?: string | null, vercelPrivacyPolicyLink?: string | null } | null, notesAndLegalInformation?: { __typename?: 'NotesAndLegalInformation', title?: string | null, dataProtectionTitle?: string | null, dataProtectionIntro?: string | null, dataProtectionDetails?: string | null, dataProtectionNotice?: string | null, responsiblePartyTitle?: string | null, responsiblePartyIntro?: string | null, responsiblePartyName?: string | null, responsiblePartyRole?: string | null, responsiblePartyStreet?: string | null, responsiblePartyPostalCode?: string | null, responsiblePartyCity?: string | null, responsiblePartyEmailLabel?: string | null, responsiblePartyEmail?: string | null, responsiblePartyInfo?: string | null, dataStorageDurationTitle?: string | null, dataStorageDurationDetails?: string | null, legalBasisTitle?: string | null, legalBasisIntro?: string | null, legalBasisList?: Array<string | null> | null, legalBasisDetails?: string | null, userRightsTitle?: string | null, userRightsIntro?: string | null, userRightsList?: Array<string | null> | null, complaintRightTitle?: string | null, complaintRightDetails?: string | null, sslTlsEncryptionTitle?: string | null, sslTlsEncryptionIntro?: string | null, sslTlsEncryptionDetails?: string | null } | null, dataCollection?: { __typename?: 'DataCollection', title?: string | null, vercelAnalyticsTitle?: string | null, vercelAnalyticsDetails?: string | null, vercelAnalyticsPrivacyPolicy?: string | null, vercelAnalyticsPrivacyPolicyLink?: string | null, vercelInsightsTitle?: string | null, vercelInsightsDetails?: string | null, vercelInsightsPrivacyPolicy?: string | null, vercelInsightsPrivacyPolicyLink?: string | null, contactFormTitle?: string | null, contactFormIntro?: string | null, contactFormSupabase?: string | null, contactFormSupabasePrivacyPolicy?: string | null, contactFormSupabasePrivacyPolicyLink?: string | null, legalBasisTitle?: string | null, legalBasisList?: Array<string | null> | null, storageDurationTitle?: string | null, storageDurationDetails?: string | null } | null } | null> } | null };
+export type PrivacyPolicyContentQuery = { __typename?: 'Query', privacyPolicyCollection?: { __typename?: 'PrivacyPolicyCollection', items: Array<{ __typename?: 'PrivacyPolicy', title?: string | null, lastModified?: string | null, privacyOverview?: { __typename?: 'PrivacyOverview', title?: string | null, generalInfoTitle?: string | null, generalInfoDescription?: string | null, dataCollectionTitle?: string | null, responsiblePartyTitle?: string | null, responsiblePartyDescription?: string | null, dataCaptureTitle?: string | null, dataDirectCaptureText?: string | null, dataAutomaticCaptureText?: string | null, dataPurposeTitle?: string | null, dataPurposeDescription?: string | null, userRightsTitle?: string | null, userRightsIntroText?: string | null, userRightsList?: Array<string | null> | null, userRightsContactText?: string | null, analysisToolsTitle?: string | null, analysisToolsIntroText?: string | null, analysisToolsDetailsText?: string | null } | null, hosting?: { __typename?: 'Hosting', title?: string | null, vercelTitle?: string | null, vercelHostingInfo?: string | null, vercelDataProcessing?: string | null, vercelContractualClauses?: string | null, vercelContractualClausesLink?: string | null, vercelDataProcessingAgreement?: string | null, vercelDataProcessingAgreementLink?: string | null, vercelPrivacyPolicy?: string | null, vercelPrivacyPolicyLink?: string | null } | null, notesAndLegalInformation?: { __typename?: 'NotesAndLegalInformation', title?: string | null, dataProtectionTitle?: string | null, dataProtectionIntro?: string | null, dataProtectionDetails?: string | null, dataProtectionNotice?: string | null, responsiblePartyTitle?: string | null, responsiblePartyIntro?: string | null, responsiblePartyName?: string | null, responsiblePartyStreet?: string | null, responsiblePartyPostalCode?: string | null, responsiblePartyCity?: string | null, responsiblePartyEmailLabel?: string | null, responsiblePartyEmail?: string | null, responsiblePartyInfo?: string | null, dataStorageDurationTitle?: string | null, dataStorageDurationDetails?: string | null, legalBasisTitle?: string | null, legalBasisIntro?: string | null, legalBasisList?: Array<string | null> | null, legalBasisDetails?: string | null, userRightsTitle?: string | null, userRightsIntro?: string | null, userRightsList?: Array<string | null> | null, complaintRightTitle?: string | null, complaintRightDetails?: string | null, sslTlsEncryptionTitle?: string | null, sslTlsEncryptionIntro?: string | null, sslTlsEncryptionDetails?: string | null } | null, dataCollection?: { __typename?: 'DataCollection', title?: string | null, vercelAnalyticsTitle?: string | null, vercelAnalyticsDetails?: string | null, vercelAnalyticsPrivacyPolicy?: string | null, vercelAnalyticsPrivacyPolicyLink?: string | null, vercelInsightsTitle?: string | null, vercelInsightsDetails?: string | null, vercelInsightsPrivacyPolicy?: string | null, vercelInsightsPrivacyPolicyLink?: string | null, contactFormTitle?: string | null, contactFormIntro?: string | null, contactFormSupabase?: string | null, contactFormSupabasePrivacyPolicy?: string | null, contactFormSupabasePrivacyPolicyLink?: string | null, legalBasisTitle?: string | null, legalBasisList?: Array<string | null> | null, storageDurationTitle?: string | null, storageDurationDetails?: string | null } | null } | null> } | null };
 
 export type ServicesContentQueryVariables = Exact<{
   locale?: InputMaybe<Scalars['String']['input']>;
@@ -7268,7 +7229,6 @@ export const LegalNoticeContentDocument = gql`
       title
       subTitleInformation
       addressName
-      addressJobTitle
       addressStreet
       addressPostalCode
       addressCity
@@ -7401,7 +7361,6 @@ export const PrivacyPolicyContentDocument = gql`
         responsiblePartyTitle
         responsiblePartyIntro
         responsiblePartyName
-        responsiblePartyRole
         responsiblePartyStreet
         responsiblePartyPostalCode
         responsiblePartyCity

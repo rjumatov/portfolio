@@ -1756,7 +1756,6 @@ enum LabelOrder {
 type LegalNotice implements Entry & _Node {
   _id: ID!
   addressCity(locale: String): String
-  addressJobTitle(locale: String): String
   addressName(locale: String): String
   addressPostalCode(locale: String): String
   addressStreet(locale: String): String
@@ -1794,13 +1793,6 @@ input LegalNoticeFilter {
   addressCity_not: String
   addressCity_not_contains: String
   addressCity_not_in: [String]
-  addressJobTitle: String
-  addressJobTitle_contains: String
-  addressJobTitle_exists: Boolean
-  addressJobTitle_in: [String]
-  addressJobTitle_not: String
-  addressJobTitle_not_contains: String
-  addressJobTitle_not_in: [String]
   addressName: String
   addressName_contains: String
   addressName_exists: Boolean
@@ -1917,8 +1909,6 @@ type LegalNoticeLinkingCollections {
 enum LegalNoticeOrder {
   addressCity_ASC
   addressCity_DESC
-  addressJobTitle_ASC
-  addressJobTitle_DESC
   addressName_ASC
   addressName_DESC
   addressPostalCode_ASC
@@ -2424,7 +2414,6 @@ type NotesAndLegalInformation implements Entry & _Node {
   responsiblePartyIntro(locale: String): String
   responsiblePartyName(locale: String): String
   responsiblePartyPostalCode(locale: String): String
-  responsiblePartyRole(locale: String): String
   responsiblePartyStreet(locale: String): String
   responsiblePartyTitle(locale: String): String
   sslTlsEncryptionDetails(locale: String): String
@@ -2578,13 +2567,6 @@ input NotesAndLegalInformationFilter {
   responsiblePartyPostalCode_not: String
   responsiblePartyPostalCode_not_contains: String
   responsiblePartyPostalCode_not_in: [String]
-  responsiblePartyRole: String
-  responsiblePartyRole_contains: String
-  responsiblePartyRole_exists: Boolean
-  responsiblePartyRole_in: [String]
-  responsiblePartyRole_not: String
-  responsiblePartyRole_not_contains: String
-  responsiblePartyRole_not_in: [String]
   responsiblePartyStreet: String
   responsiblePartyStreet_contains: String
   responsiblePartyStreet_exists: Boolean
@@ -2697,8 +2679,6 @@ enum NotesAndLegalInformationOrder {
   responsiblePartyName_DESC
   responsiblePartyPostalCode_ASC
   responsiblePartyPostalCode_DESC
-  responsiblePartyRole_ASC
-  responsiblePartyRole_DESC
   responsiblePartyStreet_ASC
   responsiblePartyStreet_DESC
   responsiblePartyTitle_ASC
@@ -4278,13 +4258,6 @@ input cfNotesAndLegalInformationNestedFilter {
   responsiblePartyPostalCode_not: String
   responsiblePartyPostalCode_not_contains: String
   responsiblePartyPostalCode_not_in: [String]
-  responsiblePartyRole: String
-  responsiblePartyRole_contains: String
-  responsiblePartyRole_exists: Boolean
-  responsiblePartyRole_in: [String]
-  responsiblePartyRole_not: String
-  responsiblePartyRole_not_contains: String
-  responsiblePartyRole_not_in: [String]
   responsiblePartyStreet: String
   responsiblePartyStreet_contains: String
   responsiblePartyStreet_exists: Boolean
