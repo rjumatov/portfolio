@@ -4,6 +4,7 @@
     "ignoreUnknown": false,
     "includes": [
       "**",
+      "!next-env.d.ts",
       "!**/.next",
       "!**/app/lib/contentful/generated",
       "!**/app/lib/supabase/generated",
