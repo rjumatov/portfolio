@@ -59,7 +59,7 @@
     "happy-dom": "^20.0.8",
     "husky": "^9.1.7",
     "msw": "^2.11.6",
-    "supabase": "^2.54.11",
+    "supabase": "^2.58.5",
     "tailwindcss": "^4.1.16",
     "typescript": "^5.9.3",
     "vite-tsconfig-paths": "^5.1.4",
