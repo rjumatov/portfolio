@@ -5,14 +5,8 @@ updates:
     schedule:
       interval: 'daily'
 
-    automerge: true
-    allow:
-      - dependency-type: "all"
-    update-types:
-      - "patch"
-
     groups:
-      minor-dependencies:
-        applies-to: version-updates
+      not-breaking-changes:
         update-types:
+          - "patch"
           - "minor"
