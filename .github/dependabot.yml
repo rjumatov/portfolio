@@ -4,3 +4,15 @@ updates:
     directory: '/'
     schedule:
       interval: 'daily'
+
+    automerge: true
+    allow:
+      - dependency-type: "all"
+    update-types:
+      - "patch"
+
+    groups:
+      minor-dependencies:
+        applies-to: version-updates
+        update-types:
+          - "minor"
