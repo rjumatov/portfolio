@@ -1,4 +1,5 @@
-import { StartUp01Icon } from 'hugeicons-react'
+import { StartUp01Icon } from '@hugeicons/core-free-icons'
+import { HugeiconsIcon } from '@hugeicons/react'
 import type { Locale } from 'next-intl'
 import contentfulClient from '@/app/lib/contentful/client'
 import Button from '@/app/ui/button/button'
@@ -27,7 +28,10 @@ export default async function NotFoundContent({ locale }: Props) {
           <span className="transition-transform duration-500 group-hover:translate-x-4">
             {content?.buttonLabel}
           </span>
-          <StartUp01Icon className="ml-2 transition-transform duration-500 group-hover:-translate-y-9" />
+          <HugeiconsIcon
+            icon={StartUp01Icon}
+            className="ml-2 transition-transform duration-500 group-hover:-translate-y-9"
+          />
         </Button>
       </Link>
     </>

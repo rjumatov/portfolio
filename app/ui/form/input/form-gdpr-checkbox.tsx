@@ -1,4 +1,5 @@
-import { Tick02Icon } from 'hugeicons-react'
+import { Tick02Icon } from '@hugeicons/core-free-icons'
+import { HugeiconsIcon } from '@hugeicons/react'
 import { useId } from 'react'
 import type {
   FieldErrors,
@@ -57,7 +58,7 @@ export default function FormGdprCheckbox<T extends FieldValues>({
             aria-describedby={`${String(name)}-error`}
           />
           <span className="-translate-1/2 absolute top-1/2 left-1/2 opacity-0 peer-checked:opacity-100">
-            <Tick02Icon size={16} strokeWidth={3} />
+            <HugeiconsIcon icon={Tick02Icon} size={16} strokeWidth={3} />
           </span>
         </label>
         <label

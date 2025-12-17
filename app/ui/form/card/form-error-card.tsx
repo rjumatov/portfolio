@@ -1,4 +1,5 @@
-import { CancelCircleIcon } from 'hugeicons-react'
+import { CancelCircleIcon } from '@hugeicons/core-free-icons'
+import { HugeiconsIcon } from '@hugeicons/react'
 import type { Form } from '@/app/lib/contentful/generated/sdk'
 import ImplicitButton from '@/app/ui/button/implicit-button'
 import StatusCard from '@/app/ui/card/status-card'
@@ -19,7 +20,9 @@ export default function FormErrorCard({
 }: Props) {
   return (
     <StatusCard
-      icon={<CancelCircleIcon className="size-12 md:size-14" />}
+      icon={
+        <HugeiconsIcon icon={CancelCircleIcon} className="size-12 md:size-14" />
+      }
       title={content?.errorTitle}
       button={{
         label: content?.errorButtonLabel,

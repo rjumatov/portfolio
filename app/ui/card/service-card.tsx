@@ -4,7 +4,8 @@ import {
   SoftwareLicenseIcon,
   SystemUpdate01Icon,
   WebDesign01Icon,
-} from 'hugeicons-react'
+} from '@hugeicons/core-free-icons'
+import { HugeiconsIcon } from '@hugeicons/react'
 import type { Service } from '@/app/lib/contentful/generated/sdk'
 
 type Props = {
@@ -12,11 +13,11 @@ type Props = {
 }
 
 const iconMapping = {
-  WebDesign01Icon: <WebDesign01Icon size={36} />,
-  IdeaIcon: <IdeaIcon size={36} />,
-  MentoringIcon: <MentoringIcon size={36} />,
-  SoftwareLicenseIcon: <SoftwareLicenseIcon size={36} />,
-  SystemUpdate01Icon: <SystemUpdate01Icon size={36} />,
+  WebDesign01Icon: <HugeiconsIcon icon={WebDesign01Icon} size={36} />,
+  IdeaIcon: <HugeiconsIcon icon={IdeaIcon} size={36} />,
+  MentoringIcon: <HugeiconsIcon icon={MentoringIcon} size={36} />,
+  SoftwareLicenseIcon: <HugeiconsIcon icon={SoftwareLicenseIcon} size={36} />,
+  SystemUpdate01Icon: <HugeiconsIcon icon={SystemUpdate01Icon} size={36} />,
 }
 
 export default function ServiceCard({ content }: Props) {

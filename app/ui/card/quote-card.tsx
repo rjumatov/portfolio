@@ -1,4 +1,5 @@
-import { QuoteDownIcon } from 'hugeicons-react'
+import { QuoteDownIcon } from '@hugeicons/core-free-icons'
+import { HugeiconsIcon } from '@hugeicons/react'
 import Image from 'next/image'
 import type { Testimonial } from '@/app/lib/contentful/generated/sdk'
 
@@ -12,7 +13,10 @@ export default function QuoteCard({ content }: Props) {
     <div className="group subtle-border flex h-full flex-col justify-between rounded-3xl bg-(--overlay-color) px-8 py-6 duration-300 hover:-translate-y-1 hover:shadow-effect">
       <div>
         <div className="flex justify-center">
-          <QuoteDownIcon className="mb-4 h-10 w-10 text-(--highlight) duration-200 group-hover:scale-110 sm:h-12 sm:w-12" />
+          <HugeiconsIcon
+            icon={QuoteDownIcon}
+            className="mb-4 h-10 w-10 text-(--highlight) duration-200 group-hover:scale-110 sm:h-12 sm:w-12"
+          />
         </div>
         <blockquote className="text-center text-(--secondary) text-sm leading-relaxed duration-200 group-hover:text-(--primary) sm:text-base">
           {content?.quote}

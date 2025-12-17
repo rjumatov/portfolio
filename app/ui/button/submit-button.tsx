@@ -1,4 +1,5 @@
-import { SentIcon } from 'hugeicons-react'
+import { SentIcon } from '@hugeicons/core-free-icons'
+import { HugeiconsIcon } from '@hugeicons/react'
 import type { ReactNode } from 'react'
 
 type Props = {
@@ -17,7 +18,10 @@ export default function SubmitButton({ children }: Props) {
         <span className="duration-400 group-hover:translate-x-4">
           {children}
         </span>
-        <SentIcon className="rotate-45 duration-400 ease-in group-hover:translate-x-70" />
+        <HugeiconsIcon
+          icon={SentIcon}
+          className="rotate-45 duration-400 ease-in group-hover:translate-x-70"
+        />
       </span>
     </button>
   )

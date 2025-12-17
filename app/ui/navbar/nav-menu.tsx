@@ -5,7 +5,8 @@ import {
   GridViewIcon,
   Home09Icon,
   UserCircleIcon,
-} from 'hugeicons-react'
+} from '@hugeicons/core-free-icons'
+import { HugeiconsIcon } from '@hugeicons/react'
 import { useEffect, useState } from 'react'
 import { useActiveSection, useScrolled } from '@/app/lib/hooks/use-scroll'
 import Tooltip from '@/app/ui/tooltip/tooltip'
@@ -41,22 +42,22 @@ export default function NavMenu({
   const navbarItems = [
     {
       id: 'home',
-      icon: <Home09Icon size={20} />,
+      icon: <HugeiconsIcon icon={Home09Icon} size={20} />,
       label: homeLabel,
     },
     {
       id: 'about',
-      icon: <UserCircleIcon size={20} />,
+      icon: <HugeiconsIcon icon={UserCircleIcon} size={20} />,
       label: aboutLabel,
     },
     {
       id: 'services',
-      icon: <GridViewIcon size={20} />,
+      icon: <HugeiconsIcon icon={GridViewIcon} size={20} />,
       label: servicesLabel,
     },
     {
       id: 'contact',
-      icon: <ContractsIcon size={20} />,
+      icon: <HugeiconsIcon icon={ContractsIcon} size={20} />,
       label: contactLabel,
     },
   ]

@@ -1,4 +1,5 @@
-import { MailOpenIcon } from 'hugeicons-react'
+import { MailOpenIcon } from '@hugeicons/core-free-icons'
+import { HugeiconsIcon } from '@hugeicons/react'
 import type { Form } from '@/app/lib/contentful/generated/sdk'
 import ImplicitButton from '@/app/ui/button/implicit-button'
 import StatusCard from '@/app/ui/card/status-card'
@@ -22,7 +23,9 @@ export default function SubmittedStatusCard({
 }: Props) {
   return (
     <StatusCard
-      icon={<MailOpenIcon className="size-12 md:size-14" />}
+      icon={
+        <HugeiconsIcon icon={MailOpenIcon} className="size-12 md:size-14" />
+      }
       title={content?.emailVerificationTitle}
       button={{
         label: content?.emailResendButtonLabel,

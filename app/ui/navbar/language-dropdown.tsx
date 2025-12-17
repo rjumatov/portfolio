@@ -1,6 +1,7 @@
 'use client'
 
-import { LanguageSkillIcon } from 'hugeicons-react'
+import { LanguageSkillIcon } from '@hugeicons/core-free-icons'
+import { HugeiconsIcon } from '@hugeicons/react'
 import { motion } from 'motion/react'
 import Image from 'next/image'
 import { type Locale, useLocale } from 'next-intl'
@@ -113,7 +114,7 @@ export default function LanguageDropdown({
           aria-controls={menuId}
           aria-label={switchLanguageLabel || ''}
         >
-          <LanguageSkillIcon size={22} />
+          <HugeiconsIcon icon={LanguageSkillIcon} size={22} />
         </button>
       </div>
       <motion.div

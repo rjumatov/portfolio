@@ -1,6 +1,10 @@
 'use client'
 
-import { CancelCircleIcon, CheckmarkCircle01Icon } from 'hugeicons-react'
+import {
+  CancelCircleIcon,
+  CheckmarkCircle01Icon,
+} from '@hugeicons/core-free-icons'
+import { HugeiconsIcon } from '@hugeicons/react'
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import type { Verify } from '@/app/lib/contentful/generated/sdk'
@@ -49,7 +53,10 @@ export default function VerifyContent({ content }: Props) {
         {status === 'success' && (
           <div className="space-y-4">
             <SpringAnimation>
-              <CheckmarkCircle01Icon className="mx-auto h-14 w-14 text-(--highlight) sm:h-16 sm:w-16" />
+              <HugeiconsIcon
+                icon={CheckmarkCircle01Icon}
+                className="mx-auto h-14 w-14 text-(--highlight) sm:h-16 sm:w-16"
+              />
             </SpringAnimation>
             <ViewAnimation direction="fromRight" duration={0.5} delay={0.2}>
               <h1 className="font-bold text-xl sm:text-3xl">
@@ -64,7 +71,10 @@ export default function VerifyContent({ content }: Props) {
         {status === 'error' && (
           <div className="space-y-4">
             <SpringAnimation>
-              <CancelCircleIcon className="mx-auto h-14 w-14 text-(--highlight) sm:h-16 sm:w-16" />
+              <HugeiconsIcon
+                icon={CancelCircleIcon}
+                className="mx-auto h-14 w-14 text-(--highlight) sm:h-16 sm:w-16"
+              />
             </SpringAnimation>
             <ViewAnimation direction="fromRight" duration={0.5} delay={0.2}>
               <h1 className="font-bold text-xl sm:text-3xl">

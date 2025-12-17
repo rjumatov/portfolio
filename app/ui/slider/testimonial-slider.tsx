@@ -1,7 +1,8 @@
 'use client'
 
+import { ArrowLeft01Icon, ArrowRight01Icon } from '@hugeicons/core-free-icons'
+import { HugeiconsIcon } from '@hugeicons/react'
 import useEmblaCarousel from 'embla-carousel-react'
-import { ArrowLeft01Icon, ArrowRight01Icon } from 'hugeicons-react'
 import { useCallback } from 'react'
 import type {
   Testimonial,
@@ -42,7 +43,8 @@ export default function TestimonialSlider({ content }: Props) {
             className="hover-effect base-border rounded-full p-1.5 backdrop-blur-sm"
             aria-label={content?.prevSlideLabel || undefined}
           >
-            <ArrowLeft01Icon
+            <HugeiconsIcon
+              icon={ArrowLeft01Icon}
               className="relative right-0.5 text-(--secondary)"
               size={34}
             />
@@ -53,7 +55,8 @@ export default function TestimonialSlider({ content }: Props) {
             className="hover-effect base-border rounded-full p-1.5 backdrop-blur-sm"
             aria-label={content?.nextSlideLabel || undefined}
           >
-            <ArrowRight01Icon
+            <HugeiconsIcon
+              icon={ArrowRight01Icon}
               className="relative left-0.5 text-(--secondary)"
               size={34}
             />

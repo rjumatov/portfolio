@@ -1,6 +1,11 @@
 'use client'
 
-import { Loading03Icon, Moon02Icon, Sun03Icon } from 'hugeicons-react'
+import {
+  Loading03Icon,
+  Moon02Icon,
+  Sun03Icon,
+} from '@hugeicons/core-free-icons'
+import { HugeiconsIcon } from '@hugeicons/react'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 import { useScrolled } from '@/app/lib/hooks/use-scroll'
@@ -26,7 +31,7 @@ export default function ThemeToggle({ switchThemeLabel }: Props) {
 
   return !mounted ? (
     <button type="button" className="base-border rounded-2xl p-2 backdrop-blur">
-      <Loading03Icon size={22} />
+      <HugeiconsIcon icon={Loading03Icon} size={22} />
     </button>
   ) : (
     <div
@@ -40,7 +45,11 @@ export default function ThemeToggle({ switchThemeLabel }: Props) {
         className="hover-effect base-border rounded-2xl p-2"
         aria-label={switchThemeLabel || undefined}
       >
-        {isDark ? <Sun03Icon size={22} /> : <Moon02Icon size={22} />}
+        {isDark ? (
+          <HugeiconsIcon icon={Sun03Icon} size={22} />
+        ) : (
+          <HugeiconsIcon icon={Moon02Icon} size={22} />
+        )}
       </button>
     </div>
   )

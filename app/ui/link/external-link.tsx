@@ -1,4 +1,5 @@
-import { LinkSquare02Icon } from 'hugeicons-react'
+import { LinkSquare02Icon } from '@hugeicons/core-free-icons'
+import { HugeiconsIcon } from '@hugeicons/react'
 import type { ReactNode } from 'react'
 
 type Props = {
@@ -22,7 +23,7 @@ export default function ExternalLink({
       className={`${children ? 'underline-effect inline-flex items-center gap-1' : 'underline underline-offset-4'} hyphens-auto break-words ${highlight ? 'text-(--highlight-link)' : ''}`}
     >
       {children || href}
-      {icon && <LinkSquare02Icon size={16} />}
+      {icon && <HugeiconsIcon icon={LinkSquare02Icon} size={16} />}
     </a>
   )
 }

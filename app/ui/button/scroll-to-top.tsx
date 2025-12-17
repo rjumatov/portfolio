@@ -1,6 +1,7 @@
 'use client'
 
-import { ArrowUp01Icon } from 'hugeicons-react'
+import { ArrowUp01Icon } from '@hugeicons/core-free-icons'
+import { HugeiconsIcon } from '@hugeicons/react'
 import { motion } from 'motion/react'
 import { useLocale } from 'next-intl'
 import type { CSSProperties } from 'react'
@@ -39,7 +40,11 @@ export default function ScrollToTop() {
           className="absolute inset-0 cursor-pointer rounded-full p-[1.5px]"
           style={progressStyle}
         />
-        <ArrowUp01Icon strokeWidth={2} className="pb-0.5 text-(--secondary)" />
+        <HugeiconsIcon
+          icon={ArrowUp01Icon}
+          strokeWidth={2}
+          className="pb-0.5 text-(--secondary)"
+        />
       </button>
     </motion.div>
   )

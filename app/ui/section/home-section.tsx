@@ -1,4 +1,5 @@
-import { ArrowDown01Icon } from 'hugeicons-react'
+import { ArrowDown01Icon } from '@hugeicons/core-free-icons'
+import { HugeiconsIcon } from '@hugeicons/react'
 import Image from 'next/image'
 import type { Locale } from 'next-intl'
 import contentfulClient from '@/app/lib/contentful/client'
@@ -65,7 +66,8 @@ export default async function HomeSection({ locale }: Props) {
               className="relative rounded-full bg-(--highlight) p-2"
               aria-label={content?.scrollDownLabel || ''}
             >
-              <ArrowDown01Icon
+              <HugeiconsIcon
+                icon={ArrowDown01Icon}
                 className="relative top-1.5 animate-bounce text-white"
                 size={34}
               />
