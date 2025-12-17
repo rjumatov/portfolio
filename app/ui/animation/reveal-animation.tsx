@@ -1,12 +1,12 @@
-'use client';
+'use client'
 
-import { motion } from 'motion/react';
-import type { ReactNode } from 'react';
+import { motion } from 'motion/react'
+import type { ReactNode } from 'react'
 
 type Props = {
-  children: ReactNode;
-  className?: string;
-};
+  children: ReactNode
+  className?: string
+}
 
 export default function RevealAnimation({ children, className }: Props) {
   return (
@@ -35,5 +35,5 @@ export default function RevealAnimation({ children, className }: Props) {
     >
       {children}
     </motion.div>
-  );
+  )
 }

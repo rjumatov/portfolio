@@ -3,18 +3,18 @@ import type {
   FieldValues,
   Path,
   UseFormRegister,
-} from 'react-hook-form';
-import type { ValidationMessages } from '@/app/lib/contentful/generated/sdk';
-import type { ValidationMessageKey } from '@/app/lib/schemas';
+} from 'react-hook-form'
+import type { ValidationMessages } from '@/app/lib/contentful/generated/sdk'
+import type { ValidationMessageKey } from '@/app/lib/schemas'
 
 type Props<T extends FieldValues> = {
-  register: UseFormRegister<T>;
-  name: Path<T>;
-  label: string;
-  defaultValue?: string;
-  errors: FieldErrors<T>;
-  validationMessages?: ValidationMessages | null;
-};
+  register: UseFormRegister<T>
+  name: Path<T>
+  label: string
+  defaultValue?: string
+  errors: FieldErrors<T>
+  validationMessages?: ValidationMessages | null
+}
 
 export default function FormText<T extends FieldValues>({
   register,
@@ -26,11 +26,11 @@ export default function FormText<T extends FieldValues>({
 }: Props<T>) {
   const errorMessage = errors[name]?.message
     ? (String(errors[name]?.message) as ValidationMessageKey)
-    : undefined;
+    : undefined
   const message =
     errorMessage && validationMessages
       ? validationMessages[errorMessage]
-      : errorMessage;
+      : errorMessage
 
   return (
     <div>
@@ -51,7 +51,7 @@ export default function FormText<T extends FieldValues>({
           {label}
         </label>
         <div
-          className={`base-border -z-10 absolute inset-0 rounded-xl bg-(--surface-color) duration-300 ${errorMessage ? 'border-(--error-color) border-l-[6px]' : ''}`}
+          className={`base-border absolute inset-0 -z-10 rounded-xl bg-(--surface-color) duration-300 ${errorMessage ? 'border-(--error-color) border-l-[6px]' : ''}`}
         />
       </div>
       <p
@@ -62,5 +62,5 @@ export default function FormText<T extends FieldValues>({
         {message}
       </p>
     </div>
-  );
+  )
 }

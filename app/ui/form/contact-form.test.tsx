@@ -1,14 +1,14 @@
-import { cleanup, render, screen, waitFor } from '@testing-library/react';
-import userEvent, { type UserEvent } from '@testing-library/user-event';
-import { NextIntlClientProvider } from 'next-intl';
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import type { Form } from '@/app/lib/contentful/generated/sdk';
-import nodemailerClient from '@/app/lib/nodemailer/client';
-import { type ContactFormData, ValidationMessages } from '@/app/lib/schemas';
-import supabaseClient from '@/app/lib/supabase/client';
-import ContactForm from '@/app/ui/form/contact-form';
+import { cleanup, render, screen, waitFor } from '@testing-library/react'
+import userEvent, { type UserEvent } from '@testing-library/user-event'
+import { NextIntlClientProvider } from 'next-intl'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import type { Form } from '@/app/lib/contentful/generated/sdk'
+import nodemailerClient from '@/app/lib/nodemailer/client'
+import { type ContactFormData, ValidationMessages } from '@/app/lib/schemas'
+import supabaseClient from '@/app/lib/supabase/client'
+import ContactForm from '@/app/ui/form/contact-form'
 
-const FAIL_EMAIL = 'fail@test.com';
+const FAIL_EMAIL = 'fail@test.com'
 
 const mocks = vi.hoisted(() => {
   const insert = vi.fn((data) => ({
@@ -20,41 +20,41 @@ const mocks = vi.hoisted(() => {
         }),
       ),
     })),
-  }));
+  }))
 
   const from = vi.fn(() => ({
     insert,
-  }));
+  }))
 
   const supabaseClient = vi.fn(() => ({
     from,
-  }));
+  }))
 
-  const sendMail = vi.fn();
+  const sendMail = vi.fn()
 
-  const nodemailerClient = vi.fn(() => ({ sendMail }));
+  const nodemailerClient = vi.fn(() => ({ sendMail }))
 
   return {
     supabaseClient,
     nodemailerClient,
-  };
-});
+  }
+})
 
 vi.mock('@/i18n/navigation', () => ({
   Link: vi.fn(),
-}));
+}))
 
 vi.mock('@/app/lib/supabase/client', () => ({
   default: mocks.supabaseClient,
-}));
+}))
 
 vi.mock('@/app/lib/nodemailer/client', () => ({
   default: mocks.nodemailerClient,
-}));
+}))
 
 vi.mock('@/app/lib/nodemailer/template/verify-template', () => ({
   default: vi.fn(),
-}));
+}))
 
 const content = {
   labels: {
@@ -67,7 +67,7 @@ const content = {
   emailResendButtonLabel: 'Resend Email',
   errorTitle: 'Something went wrong!',
   errorButtonLabel: 'Try again',
-};
+}
 
 const validFormData = {
   name: 'Roman Jumatov',
@@ -75,50 +75,50 @@ const validFormData = {
   role: 'Freelance Software Developer',
   projectDetails: 'Hey there, I have something in mind.',
   consent: true,
-};
+}
 
-const { projectDetails, ...rest } = validFormData;
+const { projectDetails, ...rest } = validFormData
 
 const supabaseData = {
   ...rest,
   project_details: projectDetails,
-};
+}
 
 describe('ContactForm', () => {
-  let user: UserEvent;
+  let user: UserEvent
 
   beforeEach(() => {
-    user = userEvent.setup();
+    user = userEvent.setup()
     render(
       <NextIntlClientProvider locale="en">
         <ContactForm content={content as Form} />
       </NextIntlClientProvider>,
-    );
-  });
+    )
+  })
 
   afterEach(() => {
-    cleanup();
-    vi.clearAllMocks();
-  });
+    cleanup()
+    vi.clearAllMocks()
+  })
 
   it('shows server validation errors on empty submit', async () => {
-    await user.click(screen.getByRole('button'));
+    await user.click(screen.getByRole('button'))
 
-    await waitFor(() => screen.getByText(ValidationMessages.nameRequired));
-    screen.getByText(ValidationMessages.emailInvalid);
-    screen.getByText(ValidationMessages.projectDetailsRequired);
-    screen.getByText(ValidationMessages.consentRequired);
-  });
+    await waitFor(() => screen.getByText(ValidationMessages.nameRequired))
+    screen.getByText(ValidationMessages.emailInvalid)
+    screen.getByText(ValidationMessages.projectDetailsRequired)
+    screen.getByText(ValidationMessages.consentRequired)
+  })
 
   it('shows client validation errors on empty value change', async () => {
-    await fillForm(validFormData);
-    await clearForm();
+    await fillForm(validFormData)
+    await clearForm()
 
-    screen.getByText(ValidationMessages.nameRequired);
-    screen.getByText(ValidationMessages.emailInvalid);
-    screen.getByText(ValidationMessages.projectDetailsRequired);
-    screen.getByText(ValidationMessages.consentRequired);
-  });
+    screen.getByText(ValidationMessages.nameRequired)
+    screen.getByText(ValidationMessages.emailInvalid)
+    screen.getByText(ValidationMessages.projectDetailsRequired)
+    screen.getByText(ValidationMessages.consentRequired)
+  })
 
   it('shows client validation messages when max length is reached', async () => {
     const formData = {
@@ -127,102 +127,102 @@ describe('ContactForm', () => {
       role: 'A'.repeat(151),
       projectDetails: 'A'.repeat(1001),
       consent: false,
-    };
-    await fillForm(formData);
-    await user.tab();
+    }
+    await fillForm(formData)
+    await user.tab()
 
-    screen.getByText(ValidationMessages.nameMaxLength);
-    screen.getByText(ValidationMessages.emailMaxLength);
-    screen.getByText(ValidationMessages.roleMaxLength);
-    screen.getByText(ValidationMessages.projectDetailsMaxLength);
-  });
+    screen.getByText(ValidationMessages.nameMaxLength)
+    screen.getByText(ValidationMessages.emailMaxLength)
+    screen.getByText(ValidationMessages.roleMaxLength)
+    screen.getByText(ValidationMessages.projectDetailsMaxLength)
+  })
 
   it('shows validation error for gibberish project details', async () => {
     const formData = {
       ...validFormData,
       projectDetails: 'MhqqQyxbCp',
-    };
-    await fillForm(formData);
-    await user.tab();
+    }
+    await fillForm(formData)
+    await user.tab()
 
     await waitFor(() =>
       expect(
         screen.getByText(ValidationMessages.projectDetailsInvalid),
       ).toBeInTheDocument(),
-    );
-  });
+    )
+  })
 
   it('calls supabase client insert with form data when valid', async () => {
-    await fillForm(validFormData);
-    await user.click(screen.getByRole('button'));
+    await fillForm(validFormData)
+    await user.click(screen.getByRole('button'))
 
-    const mockClient = supabaseClient();
-    const mockInsert = mockClient.from('contacts').insert;
-    expect(mockInsert).toHaveBeenNthCalledWith(1, supabaseData);
-  });
+    const mockClient = supabaseClient()
+    const mockInsert = mockClient.from('contacts').insert
+    expect(mockInsert).toHaveBeenNthCalledWith(1, supabaseData)
+  })
 
   it('shows email verification card on valid form submission', async () => {
-    await fillForm(validFormData);
-    await user.click(screen.getByRole('button'));
+    await fillForm(validFormData)
+    await user.click(screen.getByRole('button'))
 
-    await waitFor(() => screen.getByText(content.emailVerificationTitle));
-  });
+    await waitFor(() => screen.getByText(content.emailVerificationTitle))
+  })
 
   it('sends another email on email resend', async () => {
-    await fillForm(validFormData);
-    await user.click(screen.getByRole('button'));
+    await fillForm(validFormData)
+    await user.click(screen.getByRole('button'))
 
-    const mockClient = nodemailerClient();
-    const mockSend = mockClient.sendMail;
-    expect(mockSend).toHaveBeenCalledOnce();
+    const mockClient = nodemailerClient()
+    const mockSend = mockClient.sendMail
+    expect(mockSend).toHaveBeenCalledOnce()
 
     await waitFor(async () => {
-      const resendButton = screen.getByText(content.emailResendButtonLabel);
-      await user.click(resendButton);
-    });
-    expect(mockSend).toHaveBeenCalledTimes(2);
-  });
+      const resendButton = screen.getByText(content.emailResendButtonLabel)
+      await user.click(resendButton)
+    })
+    expect(mockSend).toHaveBeenCalledTimes(2)
+  })
 
   it('shows error status card on database error', async () => {
-    await fillForm({ ...validFormData, email: FAIL_EMAIL });
-    await user.click(screen.getByRole('button'));
+    await fillForm({ ...validFormData, email: FAIL_EMAIL })
+    await user.click(screen.getByRole('button'))
 
-    screen.getByText(content.errorTitle);
-  });
+    screen.getByText(content.errorTitle)
+  })
 
   it('calls supabase client again on retry', async () => {
-    await fillForm({ ...validFormData, email: FAIL_EMAIL });
-    await user.click(screen.getByRole('button'));
+    await fillForm({ ...validFormData, email: FAIL_EMAIL })
+    await user.click(screen.getByRole('button'))
 
-    const mockClient = supabaseClient();
-    const mockInsert = mockClient.from('contacts').insert;
-    expect(mockInsert).toHaveBeenCalledOnce();
+    const mockClient = supabaseClient()
+    const mockInsert = mockClient.from('contacts').insert
+    expect(mockInsert).toHaveBeenCalledOnce()
 
-    await user.click(screen.getByText(content.errorButtonLabel));
-    expect(mockInsert).toHaveBeenCalledTimes(2);
-  });
+    await user.click(screen.getByText(content.errorButtonLabel))
+    expect(mockInsert).toHaveBeenCalledTimes(2)
+  })
 
   const fillForm = async (formData: ContactFormData) => {
-    const { name, email, role, projectDetails, consent } = formData;
-    await user.type(screen.getByLabelText(content.labels.name), name);
-    await user.type(screen.getByLabelText(content.labels.email), email);
+    const { name, email, role, projectDetails, consent } = formData
+    await user.type(screen.getByLabelText(content.labels.name), name)
+    await user.type(screen.getByLabelText(content.labels.email), email)
     if (role) {
-      await user.type(screen.getByLabelText(content.labels.role), role);
+      await user.type(screen.getByLabelText(content.labels.role), role)
     }
     await user.type(
       screen.getByLabelText(content.labels.projectDetails),
       projectDetails,
-    );
+    )
     if (consent) {
-      await user.click(screen.getByRole('checkbox'));
+      await user.click(screen.getByRole('checkbox'))
     }
-  };
+  }
 
   const clearForm = async () => {
-    await user.clear(screen.getByLabelText(content.labels.name));
-    await user.clear(screen.getByLabelText(content.labels.email));
-    await user.clear(screen.getByLabelText(content.labels.role));
-    await user.clear(screen.getByLabelText(content.labels.projectDetails));
-    await user.click(screen.getByRole('checkbox', { checked: true }));
-  };
-});
+    await user.clear(screen.getByLabelText(content.labels.name))
+    await user.clear(screen.getByLabelText(content.labels.email))
+    await user.clear(screen.getByLabelText(content.labels.role))
+    await user.clear(screen.getByLabelText(content.labels.projectDetails))
+    await user.click(screen.getByRole('checkbox', { checked: true }))
+  }
+})

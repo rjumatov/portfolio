@@ -1,22 +1,22 @@
-'use client';
+'use client'
 
 import {
   ContractsIcon,
   GridViewIcon,
   Home09Icon,
   UserCircleIcon,
-} from 'hugeicons-react';
-import { useEffect, useState } from 'react';
-import { useActiveSection, useScrolled } from '@/app/lib/hooks/use-scroll';
-import Tooltip from '@/app/ui/tooltip/tooltip';
-import { Link, usePathname } from '@/i18n/navigation';
+} from 'hugeicons-react'
+import { useEffect, useState } from 'react'
+import { useActiveSection, useScrolled } from '@/app/lib/hooks/use-scroll'
+import Tooltip from '@/app/ui/tooltip/tooltip'
+import { Link, usePathname } from '@/i18n/navigation'
 
 type Props = {
-  homeLabel?: string | null;
-  aboutLabel?: string | null;
-  servicesLabel?: string | null;
-  contactLabel?: string | null;
-};
+  homeLabel?: string | null
+  aboutLabel?: string | null
+  servicesLabel?: string | null
+  contactLabel?: string | null
+}
 
 export default function NavMenu({
   homeLabel,
@@ -24,10 +24,10 @@ export default function NavMenu({
   servicesLabel,
   contactLabel,
 }: Props) {
-  const pathname = usePathname();
-  const [elements, setElements] = useState<HTMLElement[]>([]);
-  const scrolled = useScrolled();
-  const activeSection = useActiveSection(elements);
+  const pathname = usePathname()
+  const [elements, setElements] = useState<HTMLElement[]>([])
+  const scrolled = useScrolled()
+  const activeSection = useActiveSection(elements)
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: intentional dependency on pathname to reset activeSection when switching pages
   useEffect(() => {
@@ -35,8 +35,8 @@ export default function NavMenu({
       navbarItems
         .map((item) => document.getElementById(item.id))
         .filter((element) => !!element),
-    );
-  }, [pathname]);
+    )
+  }, [pathname])
 
   const navbarItems = [
     {
@@ -59,9 +59,9 @@ export default function NavMenu({
       icon: <ContractsIcon size={20} />,
       label: contactLabel,
     },
-  ];
+  ]
 
-  const basePath = pathname === '/' ? '' : '/';
+  const basePath = pathname === '/' ? '' : '/'
 
   return (
     <div
@@ -89,5 +89,5 @@ export default function NavMenu({
         </Tooltip>
       ))}
     </div>
-  );
+  )
 }

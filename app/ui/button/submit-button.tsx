@@ -1,9 +1,9 @@
-import { SentIcon } from 'hugeicons-react';
-import type { ReactNode } from 'react';
+import { SentIcon } from 'hugeicons-react'
+import type { ReactNode } from 'react'
 
 type Props = {
-  children: ReactNode;
-};
+  children: ReactNode
+}
 
 export default function SubmitButton({ children }: Props) {
   return (
@@ -20,5 +20,5 @@ export default function SubmitButton({ children }: Props) {
         <SentIcon className="rotate-45 duration-400 ease-in group-hover:translate-x-70" />
       </span>
     </button>
-  );
+  )
 }

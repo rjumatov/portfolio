@@ -1,20 +1,20 @@
-'use client';
+'use client'
 
-import { motion, useInView } from 'motion/react';
-import { useRef } from 'react';
-import type { ProcessStep } from '@/app/lib/contentful/generated/sdk';
-import ProcessStepItem from '@/app/ui/steps/process-step-item';
+import { motion, useInView } from 'motion/react'
+import { useRef } from 'react'
+import type { ProcessStep } from '@/app/lib/contentful/generated/sdk'
+import ProcessStepItem from '@/app/ui/steps/process-step-item'
 
 type Props = {
-  content: ProcessStep[];
-};
+  content: ProcessStep[]
+}
 
 export default function ProcessSteps({ content }: Props) {
-  const ref = useRef<HTMLUListElement>(null);
-  const isInView = useInView(ref, { once: true, amount: 'some' });
+  const ref = useRef<HTMLUListElement>(null)
+  const isInView = useInView(ref, { once: true, amount: 'some' })
 
-  const steps = content.slice(0, -1);
-  const lastStep = content[content.length - 1];
+  const steps = content.slice(0, -1)
+  const lastStep = content[content.length - 1]
 
   return (
     <>
@@ -50,5 +50,5 @@ export default function ProcessSteps({ content }: Props) {
         </ul>
       )}
     </>
-  );
+  )
 }

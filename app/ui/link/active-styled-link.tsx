@@ -1,15 +1,15 @@
-'use client';
+'use client'
 
-import type { ReactNode } from 'react';
-import { Link, usePathname } from '@/i18n/navigation';
+import type { ReactNode } from 'react'
+import { Link, usePathname } from '@/i18n/navigation'
 
 type Props = {
-  children: ReactNode;
-  href: string;
-};
+  children: ReactNode
+  href: string
+}
 
 export default function ActiveStyledLink({ children, href }: Props) {
-  const pathname = usePathname();
+  const pathname = usePathname()
 
   return (
     <Link
@@ -19,5 +19,5 @@ export default function ActiveStyledLink({ children, href }: Props) {
     >
       {children}
     </Link>
-  );
+  )
 }

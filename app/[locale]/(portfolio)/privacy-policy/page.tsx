@@ -1,31 +1,31 @@
-import type { Metadata } from 'next';
-import type { Locale } from 'next-intl';
-import contentfulClient from '@/app/lib/contentful/client';
-import RevealAnimation from '@/app/ui/animation/reveal-animation';
-import ArrowItem from '@/app/ui/footer/arrow-item';
-import ExternalLink from '@/app/ui/link/external-link';
-import MailLink from '@/app/ui/link/mail-link';
-import TitledSection from '@/app/ui/section/titled-section';
+import type { Metadata } from 'next'
+import type { Locale } from 'next-intl'
+import contentfulClient from '@/app/lib/contentful/client'
+import RevealAnimation from '@/app/ui/animation/reveal-animation'
+import ArrowItem from '@/app/ui/footer/arrow-item'
+import ExternalLink from '@/app/ui/link/external-link'
+import MailLink from '@/app/ui/link/mail-link'
+import TitledSection from '@/app/ui/section/titled-section'
 
 type Props = {
-  params: Promise<{ locale: Locale }>;
-};
+  params: Promise<{ locale: Locale }>
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = await params;
-  const query = await contentfulClient.privacyMetadataContent({ locale });
-  const metadata = query.metadataCollection?.items[0];
+  const { locale } = await params
+  const query = await contentfulClient.privacyMetadataContent({ locale })
+  const metadata = query.metadataCollection?.items[0]
   return {
     title: metadata?.privacyTitle,
     description: metadata?.privacyDescription,
-  };
+  }
 }
 
 export default async function Page({ params }: Props) {
-  const { locale } = await params;
+  const { locale } = await params
 
-  const query = await contentfulClient.privacyPolicyContent({ locale });
-  const content = query.privacyPolicyCollection?.items[0];
+  const query = await contentfulClient.privacyPolicyContent({ locale })
+  const content = query.privacyPolicyCollection?.items[0]
 
   return (
     <div className="py-24 md:py-32">
@@ -196,7 +196,7 @@ export default async function Page({ params }: Props) {
               {content?.notesAndLegalInformation?.legalBasisList
                 ?.filter((item) => item !== null)
                 .map((item) => {
-                  const [boldText, normalText] = item.split(':', 2);
+                  const [boldText, normalText] = item.split(':', 2)
                   return (
                     <ArrowItem key={item}>
                       <div>
@@ -204,7 +204,7 @@ export default async function Page({ params }: Props) {
                         {normalText}
                       </div>
                     </ArrowItem>
-                  );
+                  )
                 })}
             </ul>
             <p className="mb-2 text-(--secondary)">
@@ -302,7 +302,7 @@ export default async function Page({ params }: Props) {
               {content?.dataCollection?.legalBasisList
                 ?.filter((item) => item !== null)
                 .map((item) => {
-                  const [boldText, normalText] = item.split(':', 2);
+                  const [boldText, normalText] = item.split(':', 2)
                   return (
                     <ArrowItem key={item}>
                       <div>
@@ -310,7 +310,7 @@ export default async function Page({ params }: Props) {
                         {normalText}
                       </div>
                     </ArrowItem>
-                  );
+                  )
                 })}
             </ul>
 
@@ -324,5 +324,5 @@ export default async function Page({ params }: Props) {
         </article>
       </RevealAnimation>
     </div>
-  );
+  )
 }

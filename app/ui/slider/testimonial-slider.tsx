@@ -1,33 +1,33 @@
-'use client';
+'use client'
 
-import useEmblaCarousel from 'embla-carousel-react';
-import { ArrowLeft01Icon, ArrowRight01Icon } from 'hugeicons-react';
-import { useCallback } from 'react';
+import useEmblaCarousel from 'embla-carousel-react'
+import { ArrowLeft01Icon, ArrowRight01Icon } from 'hugeicons-react'
+import { useCallback } from 'react'
 import type {
   Testimonial,
   Testimonials,
-} from '@/app/lib/contentful/generated/sdk';
-import StaggerAnimation from '@/app/ui/animation/stagger-animation';
-import QuoteCard from '@/app/ui/card/quote-card';
+} from '@/app/lib/contentful/generated/sdk'
+import StaggerAnimation from '@/app/ui/animation/stagger-animation'
+import QuoteCard from '@/app/ui/card/quote-card'
 
 type Props = {
-  content: Testimonials;
-};
+  content: Testimonials
+}
 
 export default function TestimonialSlider({ content }: Props) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
     loop: true,
     skipSnaps: true,
-  });
+  })
 
   const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
+    if (emblaApi) emblaApi.scrollPrev()
+  }, [emblaApi])
 
   const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
+    if (emblaApi) emblaApi.scrollNext()
+  }, [emblaApi])
 
   return (
     <>
@@ -82,5 +82,5 @@ export default function TestimonialSlider({ content }: Props) {
         </StaggerAnimation>
       </div>
     </>
-  );
+  )
 }

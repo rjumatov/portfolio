@@ -1,6 +1,6 @@
-import type { SVGProps } from 'react';
+import type { SVGProps } from 'react'
 
-type Props = SVGProps<SVGSVGElement> & { backgroundColor: string };
+type Props = SVGProps<SVGSVGElement> & { backgroundColor: string }
 
 export default function KofiIcon({ backgroundColor, ...props }: Props) {
   return (
@@ -32,5 +32,5 @@ export default function KofiIcon({ backgroundColor, ...props }: Props) {
         d="M54.532 82.32c0 13.412 7.501 25.006 17.049 34.104 6.367 6.138 16.37 12.506 23.188 16.598 2.046 1.135 4.092 1.819 6.367 1.819 2.73 0 4.998-.684 6.823-1.819 6.823-4.092 16.82-10.46 22.96-16.598 9.775-9.092 17.276-20.686 17.276-34.104 0-14.553-10.909-27.508-26.596-27.508-9.319 0-15.687 4.776-20.463 11.365-4.321-6.595-10.91-11.366-20.236-11.366-15.915 0-26.374 12.956-26.374 27.509"
       />
     </svg>
-  );
+  )
 }

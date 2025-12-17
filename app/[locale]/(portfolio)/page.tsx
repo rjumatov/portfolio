@@ -1,19 +1,19 @@
-import type { Metadata } from 'next';
-import type { Locale } from 'next-intl';
-import contentfulClient from '@/app/lib/contentful/client';
-import AboutSection from '@/app/ui/section/about-section';
-import ContactSection from '@/app/ui/section/contact-section';
-import HomeSection from '@/app/ui/section/home-section';
-import ServicesSection from '@/app/ui/section/services-section';
+import type { Metadata } from 'next'
+import type { Locale } from 'next-intl'
+import contentfulClient from '@/app/lib/contentful/client'
+import AboutSection from '@/app/ui/section/about-section'
+import ContactSection from '@/app/ui/section/contact-section'
+import HomeSection from '@/app/ui/section/home-section'
+import ServicesSection from '@/app/ui/section/services-section'
 
 type Props = {
-  params: Promise<{ locale: Locale }>;
-};
+  params: Promise<{ locale: Locale }>
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = await params;
-  const query = await contentfulClient.mainMetadataContent({ locale });
-  const metadata = query.metadataCollection?.items[0];
+  const { locale } = await params
+  const query = await contentfulClient.mainMetadataContent({ locale })
+  const metadata = query.metadataCollection?.items[0]
   return {
     title: metadata?.mainTitle,
     description: metadata?.mainDescription,
@@ -29,11 +29,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           },
         }
       : undefined,
-  };
+  }
 }
 
 export default async function Page({ params }: Props) {
-  const { locale } = await params;
+  const { locale } = await params
 
   return (
     <div className="overflow-hidden">
@@ -42,5 +42,5 @@ export default async function Page({ params }: Props) {
       <ServicesSection locale={locale} />
       <ContactSection locale={locale} />
     </div>
-  );
+  )
 }

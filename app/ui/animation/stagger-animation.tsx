@@ -1,16 +1,16 @@
-'use client';
+'use client'
 
-import { motion, type Variants } from 'motion/react';
-import type { ReactElement } from 'react';
+import { motion, type Variants } from 'motion/react'
+import type { ReactElement } from 'react'
 
 type Props = {
-  children?: ReactElement | ReactElement[];
-  className?: string;
-  itemClassName?: string;
-  direction: 'fromRight' | 'fromLeft' | 'fromTop' | 'fromBottom';
-  translation?: number;
-  amount?: number;
-};
+  children?: ReactElement | ReactElement[]
+  className?: string
+  itemClassName?: string
+  direction: 'fromRight' | 'fromLeft' | 'fromTop' | 'fromBottom'
+  translation?: number
+  amount?: number
+}
 
 export default function StaggerAnimation({
   children,
@@ -25,7 +25,7 @@ export default function StaggerAnimation({
     fromLeft: { opacity: 0, x: -translation },
     fromTop: { opacity: 0, y: -translation },
     fromBottom: { opacity: 0, y: translation },
-  };
+  }
 
   const staggerContainer: Variants = {
     hidden: { opacity: 1 },
@@ -34,7 +34,7 @@ export default function StaggerAnimation({
         staggerChildren: 0.15,
       },
     },
-  };
+  }
 
   const staggerItem: Variants = {
     hidden: initialValues[direction],
@@ -44,7 +44,7 @@ export default function StaggerAnimation({
       y: 0,
       transition: { duration: 0.4, ease: 'easeOut' },
     },
-  };
+  }
   return (
     <motion.div
       className={className}
@@ -63,5 +63,5 @@ export default function StaggerAnimation({
         </motion.div>
       ))}
     </motion.div>
-  );
+  )
 }

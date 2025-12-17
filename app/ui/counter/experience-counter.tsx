@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import {
   animate,
@@ -6,31 +6,31 @@ import {
   useInView,
   useMotionValue,
   useTransform,
-} from 'motion/react';
-import { useEffect, useRef } from 'react';
-import type { Metric } from '@/app/lib/contentful/generated/sdk';
-import { getYearsSince } from '@/app/lib/date-utils';
+} from 'motion/react'
+import { useEffect, useRef } from 'react'
+import type { Metric } from '@/app/lib/contentful/generated/sdk'
+import { getYearsSince } from '@/app/lib/date-utils'
 
 type Props = {
-  content?: Metric;
-};
+  content?: Metric
+}
 
 export default function ExperienceCounter({ content }: Props) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
 
-  const count = useMotionValue(0);
-  const rounded = useTransform(count, (value) => `${Math.round(value)}+`);
+  const count = useMotionValue(0)
+  const rounded = useTransform(count, (value) => `${Math.round(value)}+`)
 
   useEffect(() => {
     if (isInView && content?.startYear) {
       const controls = animate(count, getYearsSince(content.startYear), {
         duration: 1,
         delay: 0.3,
-      });
-      return controls.stop;
+      })
+      return controls.stop
     }
-  }, [isInView, count, content?.startYear]);
+  }, [isInView, count, content?.startYear])
 
   return (
     <div ref={ref} className="relative w-full pt-6 pb-2 pl-0.5 md:py-7 lg:py-7">
@@ -43,5 +43,5 @@ export default function ExperienceCounter({ content }: Props) {
         <span className="whitespace-nowrap">{content?.labelSuffix}</span>
       </h6>
     </div>
-  );
+  )
 }

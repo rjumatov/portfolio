@@ -1,14 +1,14 @@
-'use client';
+'use client'
 
-import { motion } from 'motion/react';
+import { motion } from 'motion/react'
 
 type Props = {
-  index: number;
-  title?: string | null;
-  description?: string | null;
-  delay: number;
-  isInView: boolean;
-};
+  index: number
+  title?: string | null
+  description?: string | null
+  delay: number
+  isInView: boolean
+}
 
 export default function ProcessStepItem({
   index,
@@ -44,5 +44,5 @@ export default function ProcessStepItem({
         </span>
       </motion.span>
     </li>
-  );
+  )
 }

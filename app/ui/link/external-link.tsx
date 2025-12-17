@@ -1,12 +1,12 @@
-import { LinkSquare02Icon } from 'hugeicons-react';
-import type { ReactNode } from 'react';
+import { LinkSquare02Icon } from 'hugeicons-react'
+import type { ReactNode } from 'react'
 
 type Props = {
-  children?: ReactNode;
-  href?: string | null;
-  highlight?: boolean;
-  icon?: boolean;
-};
+  children?: ReactNode
+  href?: string | null
+  highlight?: boolean
+  icon?: boolean
+}
 
 export default function ExternalLink({
   children,
@@ -24,5 +24,5 @@ export default function ExternalLink({
       {children || href}
       {icon && <LinkSquare02Icon size={16} />}
     </a>
-  );
+  )
 }

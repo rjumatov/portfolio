@@ -1,16 +1,16 @@
-import { MailOpenIcon } from 'hugeicons-react';
-import type { Form } from '@/app/lib/contentful/generated/sdk';
-import ImplicitButton from '@/app/ui/button/implicit-button';
-import StatusCard from '@/app/ui/card/status-card';
+import { MailOpenIcon } from 'hugeicons-react'
+import type { Form } from '@/app/lib/contentful/generated/sdk'
+import ImplicitButton from '@/app/ui/button/implicit-button'
+import StatusCard from '@/app/ui/card/status-card'
 
 type Props = {
-  content?: Form;
-  pending: boolean;
-  email?: string;
-  handleReturn: () => void;
-  handleResend: () => void;
-  resendAttempts: number;
-};
+  content?: Form
+  pending: boolean
+  email?: string
+  handleReturn: () => void
+  handleResend: () => void
+  resendAttempts: number
+}
 
 export default function SubmittedStatusCard({
   content,
@@ -48,5 +48,5 @@ export default function SubmittedStatusCard({
         </div>
       )}
     </StatusCard>
-  );
+  )
 }

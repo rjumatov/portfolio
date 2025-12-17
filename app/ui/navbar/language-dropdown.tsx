@@ -1,20 +1,20 @@
-'use client';
+'use client'
 
-import { LanguageSkillIcon } from 'hugeicons-react';
-import { motion } from 'motion/react';
-import Image from 'next/image';
-import { type Locale, useLocale } from 'next-intl';
-import { type KeyboardEvent, useEffect, useRef, useState } from 'react';
-import { useScrolled } from '@/app/lib/hooks/use-scroll';
-import { usePathname, useRouter } from '@/i18n/navigation';
+import { LanguageSkillIcon } from 'hugeicons-react'
+import { motion } from 'motion/react'
+import Image from 'next/image'
+import { type Locale, useLocale } from 'next-intl'
+import { type KeyboardEvent, useEffect, useId, useRef, useState } from 'react'
+import { useScrolled } from '@/app/lib/hooks/use-scroll'
+import { usePathname, useRouter } from '@/i18n/navigation'
 
 type Props = {
-  usFlagDescription?: string | null;
-  deFlagDescription?: string | null;
-  englishLabel?: string | null;
-  germanLabel?: string | null;
-  switchLanguageLabel?: string | null;
-};
+  usFlagDescription?: string | null
+  deFlagDescription?: string | null
+  englishLabel?: string | null
+  germanLabel?: string | null
+  switchLanguageLabel?: string | null
+}
 
 export default function LanguageDropdown({
   usFlagDescription,
@@ -23,52 +23,55 @@ export default function LanguageDropdown({
   germanLabel,
   switchLanguageLabel,
 }: Props) {
-  const scrolled = useScrolled();
-  const router = useRouter();
-  const pathname = usePathname();
-  const locale = useLocale();
+  const scrolled = useScrolled()
+  const router = useRouter()
+  const pathname = usePathname()
+  const locale = useLocale()
+  const id = useId()
+  const buttonId = `${id}-button`
+  const menuId = `${id}-menu`
 
-  const [open, setOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-  const timeoutRef = useRef<NodeJS.Timeout>(null);
+  const [open, setOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
+  const timeoutRef = useRef<NodeJS.Timeout>(null)
 
   const handleLocaleChange = (newLocale: Locale) => {
-    router.replace({ pathname }, { locale: newLocale, scroll: false });
-    setOpen(false);
-  };
+    router.replace({ pathname }, { locale: newLocale, scroll: false })
+    setOpen(false)
+  }
 
   const handleKeyDown = (
     e: KeyboardEvent<HTMLButtonElement | HTMLDivElement>,
   ) => {
     if (e.key === 'Escape') {
-      setOpen(false);
+      setOpen(false)
     }
     if (e.key === 'Enter') {
-      const target = e.target as HTMLElement;
+      const target = e.target as HTMLElement
       if (target.dataset.language) {
-        handleLocaleChange(target.dataset.language as Locale);
+        handleLocaleChange(target.dataset.language as Locale)
       }
     }
-  };
+  }
 
   const handleMouseEnter = () => {
     if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-      return;
+      return
     }
     if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
+      clearTimeout(timeoutRef.current)
     }
-    setOpen(true);
-  };
+    setOpen(true)
+  }
 
   const handleMouseLeave = () => {
     if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-      return;
+      return
     }
     timeoutRef.current = setTimeout(() => {
-      setOpen(false);
-    }, 200);
-  };
+      setOpen(false)
+    }, 200)
+  }
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -76,18 +79,18 @@ export default function LanguageDropdown({
         dropdownRef.current &&
         !dropdownRef.current.contains(event.target as Node)
       ) {
-        setOpen(false);
+        setOpen(false)
       }
-    };
+    }
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside)
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [])
 
   return (
-    // biome-ignore lint/a11y/noStaticElementInteractions: Container is only used for hover events and does not require keyboard accessibility
+    // biome-ignore lint/a11y/noStaticElementInteractions: container is only used for hover events and does not require keyboard accessibility
     <div
       className="relative"
       ref={dropdownRef}
@@ -101,20 +104,20 @@ export default function LanguageDropdown({
       >
         <button
           type="button"
-          id="dropdownLanguageButton"
+          id={buttonId}
           onClick={() => setOpen((prevState) => !prevState)}
           onKeyDown={handleKeyDown}
           className="base-border hover-effect rounded-2xl p-2"
           aria-haspopup
           aria-expanded={open}
-          aria-controls="dropdown"
+          aria-controls={menuId}
           aria-label={switchLanguageLabel || ''}
         >
           <LanguageSkillIcon size={22} />
         </button>
       </div>
       <motion.div
-        id="dropdown"
+        id={menuId}
         className={`base-border absolute z-10 mt-2 w-32 rounded-2xl p-0 font-medium backdrop-blur transition-colors duration-1000 ${
           scrolled ? 'bg-(--overlay-color)' : ''
         }`}
@@ -128,7 +131,7 @@ export default function LanguageDropdown({
         <div
           className="space-y-1 p-1 text-sm"
           role="menu"
-          aria-labelledby="dropdownLanguageButton"
+          aria-labelledby={buttonId}
         >
           <div
             className={`flex items-center rounded-xl pl-3 ${locale === 'en' ? 'text-(--secondary)' : 'hover-effect'}`}
@@ -170,5 +173,5 @@ export default function LanguageDropdown({
         </div>
       </motion.div>
     </div>
-  );
+  )
 }

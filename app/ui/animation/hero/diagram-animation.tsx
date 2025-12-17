@@ -1,11 +1,12 @@
+/** biome-ignore-all lint/correctness/useUniqueElementIds: static ID is fine due to single global use */
 type Props = {
-  floatingLabel?: string | null;
-};
+  floatingLabel?: string | null
+}
 
 export default function DiagramAnimation({ floatingLabel }: Props) {
   return (
     <div className="group subtle-border relative size-72 shrink-0 rounded-xl bg-(--overlay-color)">
-      <div className="-inset-[1px] group-hover:-translate-x-3.5 group-hover:-translate-y-3.5 subtle-border pointer-events-none absolute rounded-xl bg-(--background-color) duration-400 ease-in-out">
+      <div className="subtle-border pointer-events-none absolute -inset-[1px] rounded-xl bg-(--background-color) duration-400 ease-in-out group-hover:-translate-x-3.5 group-hover:-translate-y-3.5">
         <svg
           className="absolute inset-0 rounded-xl"
           fill="none"
@@ -220,5 +221,5 @@ export default function DiagramAnimation({ floatingLabel }: Props) {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,20 +1,21 @@
-import Image from 'next/image';
-import type { Locale } from 'next-intl';
-import contentfulClient from '@/app/lib/contentful/client';
-import type { Metric } from '@/app/lib/contentful/generated/sdk';
-import { calculateAge } from '@/app/lib/date-utils';
-import ViewAnimation from '@/app/ui/animation/view-animation';
-import ExperienceCounter from '@/app/ui/counter/experience-counter';
+import Image from 'next/image'
+import type { Locale } from 'next-intl'
+import contentfulClient from '@/app/lib/contentful/client'
+import type { Metric } from '@/app/lib/contentful/generated/sdk'
+import { calculateAge } from '@/app/lib/date-utils'
+import ViewAnimation from '@/app/ui/animation/view-animation'
+import ExperienceCounter from '@/app/ui/counter/experience-counter'
 
 type Props = {
-  locale: Locale;
-};
+  locale: Locale
+}
 
 export default async function AboutSection({ locale }: Props) {
-  const query = await contentfulClient.aboutContent({ locale });
-  const content = query.aboutCollection?.items[0];
+  const query = await contentfulClient.aboutContent({ locale })
+  const content = query.aboutCollection?.items[0]
 
   return (
+    // biome-ignore lint/correctness/useUniqueElementIds: this id is globally unique by design
     <section id="about" className="relative py-24 md:py-52 lg:py-60">
       <div className="mx-auto max-w-(--breakpoint-xl) px-6">
         <div className="flex flex-col gap-8 md:flex-row lg:gap-10">
@@ -75,5 +76,5 @@ export default async function AboutSection({ locale }: Props) {
         </div>
       </div>
     </section>
-  );
+  )
 }

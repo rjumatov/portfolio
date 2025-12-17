@@ -1,44 +1,44 @@
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Geist, Geist_Mono } from 'next/font/google';
-import { notFound } from 'next/navigation';
-import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
-import { ThemeProvider } from 'next-themes';
-import { routing } from '@/i18n/routing';
-import '@/app/ui/globals.css';
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Geist, Geist_Mono } from 'next/font/google'
+import { notFound } from 'next/navigation'
+import { hasLocale, NextIntlClientProvider } from 'next-intl'
+import { setRequestLocale } from 'next-intl/server'
+import { ThemeProvider } from 'next-themes'
+import { routing } from '@/i18n/routing'
+import '@/app/ui/globals.css'
 
 if (process.env.NEXT_RUNTIME === 'nodejs' && process.env.MOCKS_ENABLED) {
   import('@/mocks/node').then(({ server }) =>
     server.listen({ onUnhandledRequest: 'error' }),
-  );
+  )
 }
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({ locale }))
 }
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
-});
+})
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
-});
+})
 
 export default async function RootLayout({
   children,
   params,
 }: LayoutProps<'/[locale]'>) {
-  const { locale } = await params;
+  const { locale } = await params
   if (!hasLocale(routing.locales, locale)) {
-    notFound();
+    notFound()
   }
 
   // Enable static rendering
-  setRequestLocale(locale);
+  setRequestLocale(locale)
 
   return (
     <html lang={locale} suppressHydrationWarning className="scroll-smooth">
@@ -54,5 +54,5 @@ export default async function RootLayout({
         <SpeedInsights />
       </body>
     </html>
-  );
+  )
 }

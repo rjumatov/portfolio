@@ -1,16 +1,16 @@
-import { StartUp01Icon } from 'hugeicons-react';
-import type { Locale } from 'next-intl';
-import contentfulClient from '@/app/lib/contentful/client';
-import Button from '@/app/ui/button/button';
-import { Link } from '@/i18n/navigation';
+import { StartUp01Icon } from 'hugeicons-react'
+import type { Locale } from 'next-intl'
+import contentfulClient from '@/app/lib/contentful/client'
+import Button from '@/app/ui/button/button'
+import { Link } from '@/i18n/navigation'
 
 type Props = {
-  locale: Locale;
-};
+  locale: Locale
+}
 
 export default async function NotFoundContent({ locale }: Props) {
-  const query = await contentfulClient.notFoundContent({ locale });
-  const content = query.notFoundCollection?.items[0];
+  const query = await contentfulClient.notFoundContent({ locale })
+  const content = query.notFoundCollection?.items[0]
 
   return (
     <>
@@ -27,9 +27,9 @@ export default async function NotFoundContent({ locale }: Props) {
           <span className="transition-transform duration-500 group-hover:translate-x-4">
             {content?.buttonLabel}
           </span>
-          <StartUp01Icon className="group-hover:-translate-y-9 ml-2 transition-transform duration-500" />
+          <StartUp01Icon className="ml-2 transition-transform duration-500 group-hover:-translate-y-9" />
         </Button>
       </Link>
     </>
-  );
+  )
 }

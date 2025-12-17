@@ -1,17 +1,17 @@
-'use client';
+'use client'
 
-import { motion } from 'motion/react';
+import { motion } from 'motion/react'
 
 type Props = {
-  top: number | string;
-  left: number | string;
-  radius: number;
-};
+  top: number | string
+  left: number | string
+  radius: number
+}
 
 export default function RadialAnimation({ top, left, radius }: Props) {
   return (
     <motion.div
-      className="-z-10 absolute inset-0 bg-radial from-(--radial-color) from-[1px] to-[1px] to-transparent [background-size:2px_2px]"
+      className="absolute inset-0 -z-10 bg-radial from-(--radial-color) from-[1px] to-[1px] to-transparent [background-size:2px_2px]"
       initial={{
         opacity: 0,
         maskImage: `radial-gradient(circle at ${top} ${left}, black 0%, transparent 0%)`,
@@ -26,5 +26,5 @@ export default function RadialAnimation({ top, left, radius }: Props) {
         ease: 'easeOut',
       }}
     />
-  );
+  )
 }

@@ -11,23 +11,23 @@ import {
   Section,
   Tailwind,
   Text,
-} from '@react-email/components';
-import type { Locale } from 'next-intl';
-import contentfulClient from '@/app/lib/contentful/client';
+} from '@react-email/components'
+import type { Locale } from 'next-intl'
+import contentfulClient from '@/app/lib/contentful/client'
 
 type Props = {
-  locale: Locale;
-  name: string;
-  verifyUrl: string;
-};
+  locale: Locale
+  name: string
+  verifyUrl: string
+}
 
 export default async function VerifyTemplate({
   locale,
   name,
   verifyUrl,
 }: Props) {
-  const query = await contentfulClient.emailContent({ locale });
-  const content = query.emailCollection?.items[0];
+  const query = await contentfulClient.emailContent({ locale })
+  const content = query.emailCollection?.items[0]
 
   return (
     <Tailwind
@@ -84,5 +84,5 @@ export default async function VerifyTemplate({
         </Body>
       </Html>
     </Tailwind>
-  );
+  )
 }

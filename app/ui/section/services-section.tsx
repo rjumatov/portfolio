@@ -1,20 +1,21 @@
-import type { Locale } from 'next-intl';
-import contentfulClient from '@/app/lib/contentful/client';
-import type { Service } from '@/app/lib/contentful/generated/sdk';
-import RadialAnimation from '@/app/ui/animation/radial-animation';
-import StaggerAnimation from '@/app/ui/animation/stagger-animation';
-import ViewAnimation from '@/app/ui/animation/view-animation';
-import ServiceCard from '@/app/ui/card/service-card';
+import type { Locale } from 'next-intl'
+import contentfulClient from '@/app/lib/contentful/client'
+import type { Service } from '@/app/lib/contentful/generated/sdk'
+import RadialAnimation from '@/app/ui/animation/radial-animation'
+import StaggerAnimation from '@/app/ui/animation/stagger-animation'
+import ViewAnimation from '@/app/ui/animation/view-animation'
+import ServiceCard from '@/app/ui/card/service-card'
 
 type Props = {
-  locale: Locale;
-};
+  locale: Locale
+}
 
 export default async function ServicesSection({ locale }: Props) {
-  const query = await contentfulClient.servicesContent({ locale });
-  const content = query.servicesCollection?.items[0];
+  const query = await contentfulClient.servicesContent({ locale })
+  const content = query.servicesCollection?.items[0]
 
   return (
+    // biome-ignore lint/correctness/useUniqueElementIds: this id is globally unique by design
     <section id="services" className="relative py-24 md:py-32">
       <RadialAnimation top="50%" left={0} radius={65} />
       <div className="mx-auto max-w-(--breakpoint-xl) px-6">
@@ -41,5 +42,5 @@ export default async function ServicesSection({ locale }: Props) {
         </StaggerAnimation>
       </div>
     </section>
-  );
+  )
 }

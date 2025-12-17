@@ -1,9 +1,9 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from 'react'
 
 type Props = {
-  children?: ReactNode;
-  title?: string | null;
-};
+  children?: ReactNode
+  title?: string | null
+}
 
 export default function TitledSection({ children, title }: Props) {
   return (
@@ -11,5 +11,5 @@ export default function TitledSection({ children, title }: Props) {
       <h4 className="mb-4 font-semibold text-lg md:text-xl">{title}</h4>
       {children}
     </section>
-  );
+  )
 }

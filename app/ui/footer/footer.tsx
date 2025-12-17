@@ -1,20 +1,20 @@
-import type { Locale } from 'next-intl';
-import contentfulClient from '@/app/lib/contentful/client';
-import BrandIcon from '@/app/ui/footer/icon/brand-icon';
-import GithubIcon from '@/app/ui/footer/icon/github-icon';
-import KofiIcon from '@/app/ui/footer/icon/kofi-icon';
-import ActiveStyledLink from '@/app/ui/link/active-styled-link';
-import ExternalIconLink from '@/app/ui/link/external-icon-link';
-import ExternalLink from '@/app/ui/link/external-link';
+import type { Locale } from 'next-intl'
+import contentfulClient from '@/app/lib/contentful/client'
+import BrandIcon from '@/app/ui/footer/icon/brand-icon'
+import GithubIcon from '@/app/ui/footer/icon/github-icon'
+import KofiIcon from '@/app/ui/footer/icon/kofi-icon'
+import ActiveStyledLink from '@/app/ui/link/active-styled-link'
+import ExternalIconLink from '@/app/ui/link/external-icon-link'
+import ExternalLink from '@/app/ui/link/external-link'
 
 type Props = {
-  locale: Locale;
-};
+  locale: Locale
+}
 
 export default async function Footer({ locale }: Props) {
-  const query = await contentfulClient.footerContent({ locale });
-  const content = query.footerCollection?.items[0];
-  const year = new Date().getFullYear();
+  const query = await contentfulClient.footerContent({ locale })
+  const content = query.footerCollection?.items[0]
+  const year = new Date().getFullYear()
 
   return (
     <footer className="bg-(--surface-color) drop-shadow-sm">
@@ -88,5 +88,5 @@ export default async function Footer({ locale }: Props) {
         </div>
       </div>
     </footer>
-  );
+  )
 }

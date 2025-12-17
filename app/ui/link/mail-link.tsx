@@ -1,6 +1,6 @@
 type Props = {
-  mail?: string | null;
-};
+  mail?: string | null
+}
 
 export default function MailLink({ mail }: Props) {
   return (
@@ -10,5 +10,5 @@ export default function MailLink({ mail }: Props) {
     >
       {mail}
     </a>
-  );
+  )
 }

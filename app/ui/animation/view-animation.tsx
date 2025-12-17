@@ -1,16 +1,16 @@
-'use client';
+'use client'
 
-import { motion } from 'motion/react';
-import type { ReactNode } from 'react';
+import { motion } from 'motion/react'
+import type { ReactNode } from 'react'
 
 type Props = {
-  children: ReactNode;
-  className?: string;
-  direction?: 'fromRight' | 'fromLeft' | 'fromTop' | 'fromBottom';
-  translation?: number;
-  duration?: number;
-  delay?: number;
-};
+  children: ReactNode
+  className?: string
+  direction?: 'fromRight' | 'fromLeft' | 'fromTop' | 'fromBottom'
+  translation?: number
+  duration?: number
+  delay?: number
+}
 
 export default function ViewAnimation({
   children,
@@ -25,7 +25,7 @@ export default function ViewAnimation({
     fromLeft: { opacity: 0, x: -translation },
     fromTop: { opacity: 0, y: -translation },
     fromBottom: { opacity: 0, y: translation },
-  };
+  }
 
   return (
     <motion.div
@@ -37,5 +37,5 @@ export default function ViewAnimation({
     >
       {children}
     </motion.div>
-  );
+  )
 }

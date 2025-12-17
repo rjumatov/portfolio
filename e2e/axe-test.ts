@@ -1,9 +1,9 @@
-import AxeBuilder from '@axe-core/playwright';
-import { test as base } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright'
+import { test as base } from '@playwright/test'
 
 type AxeFixture = {
-  axeBuilder: () => AxeBuilder;
-};
+  axeBuilder: () => AxeBuilder
+}
 
 export const test = base.extend<AxeFixture>({
   axeBuilder: async ({ page }, use) => {
@@ -14,8 +14,8 @@ export const test = base.extend<AxeFixture>({
         'wcag21a',
         'wcag21aa',
       ]),
-    );
+    )
   },
-});
+})
 
-export { expect } from '@playwright/test';
+export { expect } from '@playwright/test'

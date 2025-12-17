@@ -1,15 +1,12 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.3.8/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.3.10/schema.json",
+  "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
   "files": {
     "ignoreUnknown": false,
     "includes": [
       "**",
-      "!next-env.d.ts",
-      "!**/.next",
       "!**/app/lib/contentful/generated",
-      "!**/app/lib/supabase/generated",
-      "!**/test-results",
-      "!**/playwright-report"
+      "!**/app/lib/supabase/generated"
     ]
   },
   "css": {
@@ -21,24 +18,22 @@
     "enabled": true,
     "indentStyle": "space"
   },
-  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
+    "domains": {
+      "next": "all",
+      "react": "all"
+    },
     "rules": {
       "recommended": true,
-      "correctness": {
-        "noUnusedFunctionParameters": "error",
-        "noUnusedVariables": "error",
-        "noUnusedImports": "error"
-      },
       "style": {
+        "useComponentExportOnlyModules": "off",
         "useFilenamingConvention": {
           "level": "error",
           "options": {
             "filenameCases": ["kebab-case"]
           }
         },
-        "noHeadElement": "error",
         "noRestrictedImports": {
           "level": "error",
           "options": {
@@ -66,19 +61,17 @@
             "functions": ["cn"]
           }
         }
-      },
-      "suspicious": {
-        "noDocumentImportInPage": "error",
-        "noHeadImportInDocument": "error"
-      },
-      "performance": {
-        "noImgElement": "error"
       }
     }
   },
   "javascript": {
     "formatter": {
-      "quoteStyle": "single"
+      "quoteStyle": "single",
+      "semicolons": "asNeeded"
     }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": { "source": { "organizeImports": "on" } }
   }
 }

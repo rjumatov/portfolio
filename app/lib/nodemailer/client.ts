@@ -1,6 +1,6 @@
-'use server';
+'use server'
 
-import nodemailer from 'nodemailer';
+import nodemailer from 'nodemailer'
 
 const nodemailerClient = () =>
   nodemailer.createTransport({
@@ -11,6 +11,6 @@ const nodemailerClient = () =>
       user: process.env.EMAIL_SERVER_USER,
       pass: process.env.EMAIL_SERVER_PASSWORD,
     },
-  });
+  })
 
-export default nodemailerClient;
+export default nodemailerClient

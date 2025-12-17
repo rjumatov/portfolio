@@ -1,14 +1,14 @@
-'use client';
+'use client'
 
-import { AnimatePresence, motion } from 'motion/react';
-import type { ReactNode } from 'react';
+import { AnimatePresence, motion } from 'motion/react'
+import type { ReactNode } from 'react'
 
 type Props = {
-  children: ReactNode;
-  show: boolean;
-  className?: string;
-  withTranslation?: boolean;
-};
+  children: ReactNode
+  show: boolean
+  className?: string
+  withTranslation?: boolean
+}
 
 export default function PresenceAnimation({
   children,
@@ -29,5 +29,5 @@ export default function PresenceAnimation({
         </motion.div>
       )}
     </AnimatePresence>
-  );
+  )
 }

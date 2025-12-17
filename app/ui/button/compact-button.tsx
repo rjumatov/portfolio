@@ -1,12 +1,12 @@
-import type { MouseEventHandler, ReactNode } from 'react';
-import LoadingSpinner from '@/app/ui/loading/loading-spinner';
+import type { MouseEventHandler, ReactNode } from 'react'
+import LoadingSpinner from '@/app/ui/loading/loading-spinner'
 
 type Props = {
-  children: ReactNode;
-  onClick?: MouseEventHandler<HTMLButtonElement>;
-  disabled?: boolean;
-  isLoading?: boolean;
-};
+  children: ReactNode
+  onClick?: MouseEventHandler<HTMLButtonElement>
+  disabled?: boolean
+  isLoading?: boolean
+}
 
 export default function CompactButton({
   children,
@@ -30,5 +30,5 @@ export default function CompactButton({
         <LoadingSpinner size={24} />
       </span>
     </button>
-  );
+  )
 }

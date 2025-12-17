@@ -1,15 +1,15 @@
-import { CancelCircleIcon } from 'hugeicons-react';
-import type { Form } from '@/app/lib/contentful/generated/sdk';
-import ImplicitButton from '@/app/ui/button/implicit-button';
-import StatusCard from '@/app/ui/card/status-card';
-import MailLink from '@/app/ui/link/mail-link';
+import { CancelCircleIcon } from 'hugeicons-react'
+import type { Form } from '@/app/lib/contentful/generated/sdk'
+import ImplicitButton from '@/app/ui/button/implicit-button'
+import StatusCard from '@/app/ui/card/status-card'
+import MailLink from '@/app/ui/link/mail-link'
 
 type Props = {
-  content?: Form;
-  handleReturn: () => void;
-  handleRetry: () => void;
-  retryAttempts: number;
-};
+  content?: Form
+  handleReturn: () => void
+  handleRetry: () => void
+  retryAttempts: number
+}
 
 export default function FormErrorCard({
   content,
@@ -42,5 +42,5 @@ export default function FormErrorCard({
         <MailLink mail={content?.errorContactEmail} />.
       </p>
     </StatusCard>
-  );
+  )
 }

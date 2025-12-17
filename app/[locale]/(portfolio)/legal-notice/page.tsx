@@ -1,30 +1,30 @@
-import type { Metadata } from 'next';
-import type { Locale } from 'next-intl';
-import contentfulClient from '@/app/lib/contentful/client';
-import RevealAnimation from '@/app/ui/animation/reveal-animation';
-import MailLink from '@/app/ui/link/mail-link';
-import TitledSection from '@/app/ui/section/titled-section';
-import { Link } from '@/i18n/navigation';
+import type { Metadata } from 'next'
+import type { Locale } from 'next-intl'
+import contentfulClient from '@/app/lib/contentful/client'
+import RevealAnimation from '@/app/ui/animation/reveal-animation'
+import MailLink from '@/app/ui/link/mail-link'
+import TitledSection from '@/app/ui/section/titled-section'
+import { Link } from '@/i18n/navigation'
 
 type Props = {
-  params: Promise<{ locale: Locale }>;
-};
+  params: Promise<{ locale: Locale }>
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { locale } = await params;
-  const query = await contentfulClient.legalMetadataContent({ locale });
-  const metadata = query.metadataCollection?.items[0];
+  const { locale } = await params
+  const query = await contentfulClient.legalMetadataContent({ locale })
+  const metadata = query.metadataCollection?.items[0]
   return {
     title: metadata?.legalTitle,
     description: metadata?.legalDescription,
-  };
+  }
 }
 
 export default async function Page({ params }: Props) {
-  const { locale } = await params;
+  const { locale } = await params
 
-  const query = await contentfulClient.legalNoticeContent({ locale });
-  const content = query.legalNoticeCollection?.items[0];
+  const query = await contentfulClient.legalNoticeContent({ locale })
+  const content = query.legalNoticeCollection?.items[0]
 
   return (
     <div className="py-24 md:py-32">
@@ -73,5 +73,5 @@ export default async function Page({ params }: Props) {
         </TitledSection>
       </RevealAnimation>
     </div>
-  );
+  )
 }

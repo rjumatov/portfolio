@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from 'zod'
 
 export enum ValidationMessages {
   nameRequired = 'nameRequired',
@@ -12,7 +12,7 @@ export enum ValidationMessages {
   consentRequired = 'consentRequired',
 }
 
-export type ValidationMessageKey = keyof typeof ValidationMessages;
+export type ValidationMessageKey = keyof typeof ValidationMessages
 
 export const contactFormSchema = z.object({
   name: z
@@ -29,11 +29,11 @@ export const contactFormSchema = z.object({
     .max(1000, ValidationMessages.projectDetailsMaxLength)
     .refine(
       (val) => {
-        const v = val.trim();
-        if (/^[A-Za-z0-9]+$/.test(v)) return false; // pure gibberish
-        if (v.split(/\s+/).length < 3) return false; // too few words
-        if (/(.)\1{5,}/.test(v)) return false; // too much repetition
-        return true;
+        const v = val.trim()
+        if (/^[A-Za-z0-9]+$/.test(v)) return false // pure gibberish
+        if (v.split(/\s+/).length < 3) return false // too few words
+        if (/(.)\1{5,}/.test(v)) return false // too much repetition
+        return true
       },
       {
         message: ValidationMessages.projectDetailsInvalid,
@@ -42,6 +42,6 @@ export const contactFormSchema = z.object({
   consent: z.boolean().refine((val) => val, {
     message: ValidationMessages.consentRequired,
   }),
-});
+})
 
-export type ContactFormData = z.infer<typeof contactFormSchema>;
+export type ContactFormData = z.infer<typeof contactFormSchema>

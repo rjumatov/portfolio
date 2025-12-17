@@ -1,10 +1,10 @@
-import DashboardAnimation from '@/app/ui/animation/hero/dashboard-animation';
-import DiagramAnimation from '@/app/ui/animation/hero/diagram-animation';
-import WormholeAnimation from '@/app/ui/animation/hero/wormhole-animation';
+import DashboardAnimation from '@/app/ui/animation/hero/dashboard-animation'
+import DiagramAnimation from '@/app/ui/animation/hero/diagram-animation'
+import WormholeAnimation from '@/app/ui/animation/hero/wormhole-animation'
 
 type Props = {
-  floatingLabel?: string | null;
-};
+  floatingLabel?: string | null
+}
 
 export default function HeroAnimation({ floatingLabel }: Props) {
   return (
@@ -16,5 +16,5 @@ export default function HeroAnimation({ floatingLabel }: Props) {
         <DashboardAnimation />
       </div>
     </div>
-  );
+  )
 }

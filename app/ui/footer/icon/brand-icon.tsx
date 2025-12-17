@@ -1,9 +1,9 @@
-import { SourceCodeIcon } from 'hugeicons-react';
+import { SourceCodeIcon } from 'hugeicons-react'
 
 type Props = {
-  title?: string | null;
-  description?: string | null;
-};
+  title?: string | null
+  description?: string | null
+}
 
 export default function BrandIcon({ title, description }: Props) {
   return (
@@ -18,5 +18,5 @@ export default function BrandIcon({ title, description }: Props) {
         </span>
       </div>
     </div>
-  );
+  )
 }

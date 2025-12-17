@@ -1,10 +1,10 @@
-import type { MouseEventHandler, ReactNode } from 'react';
+import type { MouseEventHandler, ReactNode } from 'react'
 
 type Props = {
-  children: ReactNode;
-  onClick?: MouseEventHandler<HTMLButtonElement>;
-  label?: string | null;
-};
+  children: ReactNode
+  onClick?: MouseEventHandler<HTMLButtonElement>
+  label?: string | null
+}
 
 export default function ImplicitButton({ children, onClick, label }: Props) {
   return (
@@ -16,5 +16,5 @@ export default function ImplicitButton({ children, onClick, label }: Props) {
     >
       {children}
     </button>
-  );
+  )
 }

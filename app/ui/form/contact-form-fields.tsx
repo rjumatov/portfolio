@@ -1,19 +1,19 @@
-import type { FieldErrors, UseFormRegister } from 'react-hook-form';
-import type { SaveMessageStatus } from '@/app/lib/actions';
-import type { Form } from '@/app/lib/contentful/generated/sdk';
-import type { ContactFormData } from '@/app/lib/schemas';
-import SubmitButton from '@/app/ui/button/submit-button';
-import FormGdprCheckbox from '@/app/ui/form/input/form-gdpr-checkbox';
-import FormText from '@/app/ui/form/input/form-text';
-import FormTextarea from '@/app/ui/form/input/form-textarea';
+import type { FieldErrors, UseFormRegister } from 'react-hook-form'
+import type { SaveMessageStatus } from '@/app/lib/actions'
+import type { Form } from '@/app/lib/contentful/generated/sdk'
+import type { ContactFormData } from '@/app/lib/schemas'
+import SubmitButton from '@/app/ui/button/submit-button'
+import FormGdprCheckbox from '@/app/ui/form/input/form-gdpr-checkbox'
+import FormText from '@/app/ui/form/input/form-text'
+import FormTextarea from '@/app/ui/form/input/form-textarea'
 
 type Props = {
-  content?: Form;
-  state: SaveMessageStatus;
-  handleFormAction: (formData: FormData) => void;
-  errors: FieldErrors<ContactFormData>;
-  register: UseFormRegister<ContactFormData>;
-};
+  content?: Form
+  state: SaveMessageStatus
+  handleFormAction: (formData: FormData) => void
+  errors: FieldErrors<ContactFormData>
+  register: UseFormRegister<ContactFormData>
+}
 
 export default function ContactFormFields({
   content,
@@ -75,5 +75,5 @@ export default function ContactFormFields({
       />
       <SubmitButton key="submit">{content?.sendButtonLabel}</SubmitButton>
     </form>
-  );
+  )
 }

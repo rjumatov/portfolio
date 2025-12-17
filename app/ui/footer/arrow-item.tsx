@@ -1,9 +1,9 @@
-import { ArrowRight04Icon } from 'hugeicons-react';
-import type { ReactNode } from 'react';
+import { ArrowRight04Icon } from 'hugeicons-react'
+import type { ReactNode } from 'react'
 
 type Props = {
-  children: ReactNode;
-};
+  children: ReactNode
+}
 
 export default function ArrowItem({ children }: Props) {
   return (
@@ -11,5 +11,5 @@ export default function ArrowItem({ children }: Props) {
       <ArrowRight04Icon className="shrink-0 text-(--highlight)" />
       {children}
     </li>
-  );
+  )
 }

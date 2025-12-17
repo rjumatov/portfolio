@@ -1,7 +1,9 @@
+/** biome-ignore-all lint/correctness/useUniqueElementIds: static ID is fine due to single global use */
+
 export default function DashboardAnimation() {
   return (
     <div className="group subtle-border relative size-72 shrink-0 rounded-xl bg-(--overlay-color)">
-      <div className="group-hover:-translate-x-3.5 group-hover:-translate-y-3.5 -inset-[1px] subtle-border pointer-events-none absolute rounded-xl bg-(--background-color) duration-400 ease-in-out">
+      <div className="subtle-border pointer-events-none absolute -inset-[1px] rounded-xl bg-(--background-color) duration-400 ease-in-out group-hover:-translate-x-3.5 group-hover:-translate-y-3.5">
         <svg
           className="-translate-1/2 absolute top-1/2 left-1/2 rounded-xl"
           fill="none"
@@ -140,5 +142,5 @@ export default function DashboardAnimation() {
         </div>
       </div>
     </div>
-  );
+  )
 }

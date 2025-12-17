@@ -1,11 +1,11 @@
-import type { MouseEventHandler, ReactNode } from 'react';
+import type { MouseEventHandler, ReactNode } from 'react'
 
 type Props = {
-  children: ReactNode;
-  onClick?: MouseEventHandler<HTMLButtonElement>;
-  fullWidth?: boolean;
-  disabled?: boolean;
-};
+  children: ReactNode
+  onClick?: MouseEventHandler<HTMLButtonElement>
+  fullWidth?: boolean
+  disabled?: boolean
+}
 
 export default function Button({
   children,
@@ -22,5 +22,5 @@ export default function Button({
     >
       <span className="flex justify-center">{children}</span>
     </button>
-  );
+  )
 }

@@ -1,9 +1,10 @@
-import Image from 'next/image';
+/** biome-ignore-all lint/correctness/useUniqueElementIds: static ID is fine due to single global use */
+import Image from 'next/image'
 
 export default function WormholeAnimation() {
   return (
     <div className="group subtle-border relative size-72 shrink-0 rounded-xl bg-(--overlay-color)">
-      <div className="-inset-[1px] group-hover:-translate-x-3.5 group-hover:-translate-y-3.5 subtle-border pointer-events-none absolute rounded-xl bg-(--background-color) duration-400 ease-in-out">
+      <div className="subtle-border pointer-events-none absolute -inset-px rounded-xl bg-(--background-color) duration-400 ease-in-out group-hover:-translate-x-3.5 group-hover:-translate-y-3.5">
         <svg
           className="absolute inset-0 rounded-xl"
           fill="none"
@@ -181,12 +182,12 @@ export default function WormholeAnimation() {
           </g>
         </svg>
         <div className="absolute inset-0 transition-transform duration-700 [transition-timing-function:ease-in-out] group-hover:translate-x-[12%] group-hover:translate-y-[12%] group-hover:rotate-180 group-hover:scale-[60%] group-hover:delay-200">
-          <div className="-rotate-16 glass-effect top-[50%] left-[70%] flex size-14 items-center justify-center rounded-[1.25rem] backdrop-blur-xs">
+          <div className="glass-effect top-[50%] left-[70%] flex size-14 -rotate-16 items-center justify-center rounded-[1.25rem] backdrop-blur-xs">
             <div className="relative size-1/2 opacity-70 invert-0 dark:opacity-90 dark:invert">
               <Image src="/nextjs.svg" fill alt="Nextjs logo" />
             </div>
           </div>
-          <div className="glass-effect -rotate-16 top-[65%] left-[45%] flex size-14 items-center justify-center rounded-[1.25rem] backdrop-blur-xs">
+          <div className="glass-effect top-[65%] left-[45%] flex size-14 -rotate-16 items-center justify-center rounded-[1.25rem] backdrop-blur-xs">
             <div className="relative size-5/12 opacity-70 invert-0 dark:opacity-90 dark:invert">
               <Image src="/typescript.svg" fill alt="Typescript logo" />
             </div>
@@ -196,7 +197,7 @@ export default function WormholeAnimation() {
               <Image src="/react.svg" fill alt="React logo" />
             </div>
           </div>
-          <div className="glass-effect -rotate-33 top-[48%] left-[29%] flex size-7 items-center justify-center rounded-xl backdrop-blur-xs">
+          <div className="glass-effect top-[48%] left-[29%] flex size-7 -rotate-33 items-center justify-center rounded-xl backdrop-blur-xs">
             <div className="relative size-7/12 opacity-70 invert-0 dark:opacity-90 dark:invert">
               <Image src="/tailwindcss.svg" fill alt="Tailwindcss logo" />
             </div>
@@ -206,7 +207,7 @@ export default function WormholeAnimation() {
               <Image src="/kotlin.svg" fill alt="Kotlin logo" />
             </div>
           </div>
-          <div className="glass-effect -rotate-21 top-[28%] left-[68%] flex size-7 items-center justify-center rounded-xl backdrop-blur-xs">
+          <div className="glass-effect top-[28%] left-[68%] flex size-7 -rotate-21 items-center justify-center rounded-xl backdrop-blur-xs">
             <div className="relative size-7/12 opacity-70 invert-0 dark:opacity-90 dark:invert">
               <Image src="/spring.svg" fill alt="Spring logo" />
             </div>
@@ -218,5 +219,5 @@ export default function WormholeAnimation() {
         </div>
       </div>
     </div>
-  );
+  )
 }

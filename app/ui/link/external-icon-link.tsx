@@ -1,10 +1,10 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from 'react'
 
 type Props = {
-  children: ReactNode;
-  href?: string | null;
-  hrefLabel?: string | null;
-};
+  children: ReactNode
+  href?: string | null
+  hrefLabel?: string | null
+}
 
 export default function ExternalIconLink({ children, href, hrefLabel }: Props) {
   return (
@@ -12,11 +12,11 @@ export default function ExternalIconLink({ children, href, hrefLabel }: Props) {
       href={href || ''}
       target="_blank"
       rel="noopener noreferrer"
-      className="hover:-translate-y-1 relative text-(--secondary) duration-200 hover:text-(--primary)"
+      className="relative text-(--secondary) duration-200 hover:-translate-y-1 hover:text-(--primary)"
       aria-label={hrefLabel || ''}
     >
-      <span className="-inset-1.5 absolute" />
+      <span className="absolute -inset-1.5" />
       {children}
     </a>
-  );
+  )
 }

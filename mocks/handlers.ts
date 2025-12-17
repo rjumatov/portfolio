@@ -1,4 +1,4 @@
-import { graphql, HttpResponse, http } from 'msw';
+import { graphql, HttpResponse, http } from 'msw'
 import {
   AboutContentDocument,
   ContactContentDocument,
@@ -14,18 +14,18 @@ import {
   PrivacyPolicyContentDocument,
   ServicesContentDocument,
   VerifyContentDocument,
-} from '@/app/lib/contentful/generated/sdk';
+} from '@/app/lib/contentful/generated/sdk'
 
-const MOCK_IMAGE_URL = 'https://images.ctfassets.net/mock.png';
-const MOCK_URL = 'https://example.com';
-const MOCK_EMAIL = 'example@domain.com';
+const MOCK_IMAGE_URL = 'https://images.ctfassets.net/mock.png'
+const MOCK_URL = 'https://example.com'
+const MOCK_EMAIL = 'example@domain.com'
 
 const transparentPng = Uint8Array.from(
   atob(
     'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBg6fGbFgAAAAASUVORK5CYII=',
   ),
   (c) => c.charCodeAt(0),
-);
+)
 
 export const handlers = [
   http.get(MOCK_IMAGE_URL, () =>
@@ -644,4 +644,4 @@ export const handlers = [
       },
     }),
   ),
-];
+]

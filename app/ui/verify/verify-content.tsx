@@ -1,45 +1,45 @@
-'use client';
+'use client'
 
-import { CancelCircleIcon, CheckmarkCircle01Icon } from 'hugeicons-react';
-import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import type { Verify } from '@/app/lib/contentful/generated/sdk';
-import RadialAnimation from '@/app/ui/animation/radial-animation';
-import SpringAnimation from '@/app/ui/animation/spring-animation';
-import ViewAnimation from '@/app/ui/animation/view-animation';
-import MailLink from '@/app/ui/link/mail-link';
-import LoadingSpinner from '@/app/ui/loading/loading-spinner';
+import { CancelCircleIcon, CheckmarkCircle01Icon } from 'hugeicons-react'
+import { useSearchParams } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import type { Verify } from '@/app/lib/contentful/generated/sdk'
+import RadialAnimation from '@/app/ui/animation/radial-animation'
+import SpringAnimation from '@/app/ui/animation/spring-animation'
+import ViewAnimation from '@/app/ui/animation/view-animation'
+import MailLink from '@/app/ui/link/mail-link'
+import LoadingSpinner from '@/app/ui/loading/loading-spinner'
 
 type Props = {
-  content?: Verify;
-};
+  content?: Verify
+}
 
 export default function VerifyContent({ content }: Props) {
   const [status, setStatus] = useState<'loading' | 'success' | 'error'>(
     'loading',
-  );
-  const searchParams = useSearchParams();
+  )
+  const searchParams = useSearchParams()
 
   useEffect(() => {
     const verifyToken = async () => {
       try {
-        const token = searchParams.get('token');
+        const token = searchParams.get('token')
         if (!token) {
-          setStatus('error');
-          return;
+          setStatus('error')
+          return
         }
 
-        const response = await fetch(`/api/verify?token=${token}`);
-        const data = await response.json();
+        const response = await fetch(`/api/verify?token=${token}`)
+        const data = await response.json()
 
-        setStatus(data.success ? 'success' : 'error');
+        setStatus(data.success ? 'success' : 'error')
       } catch {
-        setStatus('error');
+        setStatus('error')
       }
-    };
+    }
 
-    void verifyToken();
-  }, [searchParams]);
+    void verifyToken()
+  }, [searchParams])
 
   return (
     <div className="relative flex flex-1 items-center text-center">
@@ -86,5 +86,5 @@ export default function VerifyContent({ content }: Props) {
         )}
       </div>
     </div>
-  );
+  )
 }

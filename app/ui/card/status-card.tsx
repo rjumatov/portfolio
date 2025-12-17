@@ -1,20 +1,20 @@
-import type { MouseEventHandler, ReactNode } from 'react';
-import CompactButton from '@/app/ui/button/compact-button';
+import type { MouseEventHandler, ReactNode } from 'react'
+import CompactButton from '@/app/ui/button/compact-button'
 
 type Props = {
-  children: ReactNode;
-  icon: ReactNode;
-  title?: string | null;
+  children: ReactNode
+  icon: ReactNode
+  title?: string | null
   button: {
-    label?: string | null;
-    onClick: MouseEventHandler<HTMLButtonElement>;
-    disabled?: boolean;
-    isLoading?: boolean;
-  };
-  attemptsLeft: number;
-  attemptsLabel?: string | null;
-  attemptLabel?: string | null;
-};
+    label?: string | null
+    onClick: MouseEventHandler<HTMLButtonElement>
+    disabled?: boolean
+    isLoading?: boolean
+  }
+  attemptsLeft: number
+  attemptsLabel?: string | null
+  attemptLabel?: string | null
+}
 
 export default function StatusCard({
   children,
@@ -45,5 +45,5 @@ export default function StatusCard({
         </CompactButton>
       </div>
     </div>
-  );
+  )
 }

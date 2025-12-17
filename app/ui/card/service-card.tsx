@@ -4,12 +4,12 @@ import {
   SoftwareLicenseIcon,
   SystemUpdate01Icon,
   WebDesign01Icon,
-} from 'hugeicons-react';
-import type { Service } from '@/app/lib/contentful/generated/sdk';
+} from 'hugeicons-react'
+import type { Service } from '@/app/lib/contentful/generated/sdk'
 
 type Props = {
-  content?: Service;
-};
+  content?: Service
+}
 
 const iconMapping = {
   WebDesign01Icon: <WebDesign01Icon size={36} />,
@@ -17,12 +17,12 @@ const iconMapping = {
   MentoringIcon: <MentoringIcon size={36} />,
   SoftwareLicenseIcon: <SoftwareLicenseIcon size={36} />,
   SystemUpdate01Icon: <SystemUpdate01Icon size={36} />,
-};
+}
 
 export default function ServiceCard({ content }: Props) {
   return (
     <div className="group glow-effect relative h-full overflow-hidden rounded-3xl bg-(--surface-color) px-4 py-6 duration-300 sm:px-12 md:px-6 md:py-8 lg:px-12 xl:px-6">
-      <div className="-left-1/2 absolute top-1/4 h-36 w-[200%] animate-spin-slow bg-(--highlight) opacity-0 transition-opacity duration-500 group-hover:opacity-80" />
+      <div className="absolute top-1/4 -left-1/2 h-36 w-[200%] animate-spin-slow bg-(--highlight) opacity-0 transition-opacity duration-500 group-hover:opacity-80" />
       <div className="absolute inset-1 rounded-3xl bg-(--surface-color)" />
       <div className="absolute inset-0 rounded-3xl bg-linear-to-tr/oklch from-(--highlight) to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-15 dark:group-hover:opacity-20" />
       <div className="relative flex flex-col items-center text-center">
@@ -47,5 +47,5 @@ export default function ServiceCard({ content }: Props) {
         </p>
       </div>
     </div>
-  );
+  )
 }
