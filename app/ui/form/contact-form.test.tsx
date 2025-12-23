@@ -156,7 +156,7 @@ describe('ContactForm', () => {
     await fillForm(validFormData)
     await user.click(screen.getByRole('button'))
 
-    const mockClient = supabaseClient()
+    const mockClient = await supabaseClient()
     const mockInsert = mockClient.from('contacts').insert
     expect(mockInsert).toHaveBeenNthCalledWith(1, supabaseData)
   })
@@ -172,7 +172,7 @@ describe('ContactForm', () => {
     await fillForm(validFormData)
     await user.click(screen.getByRole('button'))
 
-    const mockClient = nodemailerClient()
+    const mockClient = await nodemailerClient()
     const mockSend = mockClient.sendMail
     expect(mockSend).toHaveBeenCalledOnce()
 
@@ -194,7 +194,7 @@ describe('ContactForm', () => {
     await fillForm({ ...validFormData, email: FAIL_EMAIL })
     await user.click(screen.getByRole('button'))
 
-    const mockClient = supabaseClient()
+    const mockClient = await supabaseClient()
     const mockInsert = mockClient.from('contacts').insert
     expect(mockInsert).toHaveBeenCalledOnce()
 

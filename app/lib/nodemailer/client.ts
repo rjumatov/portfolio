@@ -2,7 +2,7 @@
 
 import nodemailer from 'nodemailer'
 
-const nodemailerClient = () =>
+const nodemailerClient = async () =>
   nodemailer.createTransport({
     host: process.env.EMAIL_SERVER_HOST,
     port: Number(process.env.EMAIL_SERVER_PORT),

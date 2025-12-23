@@ -45,7 +45,7 @@ export const saveMessage = async (
   }
 
   const { projectDetails, ...rest } = validatedFields.data
-  const { data, error } = await supabaseClient()
+  const { data, error } = await (await supabaseClient())
     .from('contacts')
     .insert({ ...rest, project_details: projectDetails })
     .select('verification_token')
@@ -98,7 +98,7 @@ export const sendVerificationEmail = async (
     await VerifyTemplate({ locale, name, verifyUrl }),
   )
 
-  await nodemailerClient().sendMail({
+  await (await nodemailerClient()).sendMail({
     from: `"${process.env.EMAIL_FROM_NAME}" <${process.env.EMAIL_FROM}>`,
     to: email,
     subject:
