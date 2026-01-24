@@ -50,7 +50,7 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
-    "@types/node": "^24.10.6",
+    "@types/node": "^24.10.9",
     "@types/nodemailer": "^7.0.5",
     "@types/react": "^19.2.9",
     "@types/react-dom": "^19.2.3",
@@ -63,7 +63,7 @@
     "supabase": "^2.72.8",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
-    "vite-tsconfig-paths": "^6.0.4",
-    "vitest": "^4.0.16"
+    "vite-tsconfig-paths": "^6.0.5",
+    "vitest": "^4.0.18"
   }
 }
