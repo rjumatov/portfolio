@@ -1,10 +1,18 @@
 # Freelance Developer Portfolio
 
+![⚠️ Deprecated](https://img.shields.io/badge/status-deprecated-red)
+
+> ⚠️ Note: This repository is not actively maintained anymore.
+> The current version of my portfolio is private and replaces this one.
+> You can see the live website here: [jumatov.com](https://jumatov.com)
+
+![opengraph-en.png](public/opengraph-en.png)
+
 ## Overview
 
 This repository contains the source code for my personal website, designed to highlight my expertise, experience, and services as a freelance software developer.
 
-## ✨ Features
+## Features
 
 - 🌍 **Multi-Language Support**: Fully localized content with [next-intl](https://next-intl.dev/) to cater to a global audience
 - ✅ **Form Validation**: Built with [react-hook-form](https://react-hook-form.com) and [zod](https://zod.dev) for reliable, smooth user experience
@@ -18,7 +26,7 @@ This repository contains the source code for my personal website, designed to hi
 - 🖋️ **Modern Typography**: Uses the [Geist font](https://vercel.com/font) from Vercel for clean, readable text
 - 🌀 **Smooth Animations**: Enhances the user experience with engaging animations powered by [Motion](https://motion.dev/)
 
-## 🛠 Commands
+## Commands
 
 Run these commands to interact with the project:
 
